@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { MapEditorLoader } from "@/components/MapEditorLoader";
 
 export const metadata: Metadata = {
   title: "Kaarteditor Reisadviezen",
@@ -8,14 +9,3 @@ export const metadata: Metadata = {
 export default function MapEditorPage() {
   return <MapEditorLoader />;
 }
-
-import dynamic from "next/dynamic";
-
-const MapEditorLoader = dynamic(() => import("@/components/MapEditor"), {
-  ssr: false,
-  loading: () => (
-    <div className="flex items-center justify-center h-[80vh]">
-      <p className="text-gray-500">Kaarteditor laden...</p>
-    </div>
-  ),
-});
