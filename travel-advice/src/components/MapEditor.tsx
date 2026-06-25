@@ -114,7 +114,7 @@ export default function MapEditor() {
   const [showSource, setShowSource] = useState(true);
   const [borderNeighborCountries, setBorderNeighborCountries] = useState<GeoJSON.FeatureCollection | null>(null);
   const mapRef = useRef<HTMLDivElement>(null);
-  const geoJsonKeyRef = useRef(0);
+  const [geoJsonKey, setGeoJsonKey] = useState(0);
 
   const fetchCountryData = useCallback(async (iso: string) => {
     setLoading(true);
@@ -182,7 +182,7 @@ export default function MapEditor() {
       setCities([]);
       setBorderZones([]);
       setCountryLevel("green");
-      geoJsonKeyRef.current++;
+      setGeoJsonKey((k) => k + 1);
       await fetchCountryData(country.iso);
       await fetchRegions(country.iso.toLowerCase());
     },
@@ -195,7 +195,7 @@ export default function MapEditor() {
         ...prev,
         [regionName]: { level: activePaint },
       }));
-      geoJsonKeyRef.current++;
+      setGeoJsonKey((k) => k + 1);
     },
     [activePaint]
   );
@@ -257,10 +257,10 @@ export default function MapEditor() {
       const level = regionData?.level || "none";
       return {
         fillColor: level === "none" ? RISK_COLORS[countryLevel] : RISK_COLORS[level],
-        fillOpacity: 0.6,
+        fillOpacity: 0.7,
         color: "#333",
         weight: 1,
-        opacity: 0.7,
+        opacity: 0.9,
       };
     },
     [regionStyles, countryLevel]
@@ -269,10 +269,10 @@ export default function MapEditor() {
   const countryStyle = useCallback(() => {
     return {
       fillColor: RISK_COLORS[countryLevel],
-      fillOpacity: 0.5,
+      fillOpacity: 0.7,
       color: "#333",
       weight: 2,
-      opacity: 0.8,
+      opacity: 0.9,
     };
   }, [countryLevel]);
 
@@ -396,7 +396,7 @@ export default function MapEditor() {
                   {(Object.keys(RISK_LABELS) as Array<Exclude<RiskLevel, "none">>).map((level) => (
                     <button
                       key={level}
-                      onClick={() => { setCountryLevel(level); geoJsonKeyRef.current++; }}
+                      onClick={() => { setCountryLevel(level); setGeoJsonKey((k) => k + 1); }}
                       className={`px-4 py-2 rounded-lg text-sm font-medium border-2 ${
                         countryLevel === level ? "border-gray-900" : "border-gray-200"
                       }`}
@@ -450,7 +450,7 @@ export default function MapEditor() {
                                 ...prev,
                                 [name]: { level: e.target.value as RiskLevel },
                               }));
-                              geoJsonKeyRef.current++;
+                              setGeoJsonKey((k) => k + 1);
                             }}
                           >
                             <option value="none">Land kleur</option>
@@ -712,7 +712,7 @@ export default function MapEditor() {
           {/* Country outline */}
           {countryGeoJson && !regionsGeoJson && (
             <GeoJSON
-              key={`country-${geoJsonKeyRef.current}`}
+              key={`country-${geoJsonKey}`}
               data={countryGeoJson}
               style={countryStyle}
             />
@@ -721,7 +721,7 @@ export default function MapEditor() {
           {/* Regions */}
           {regionsGeoJson && (
             <GeoJSON
-              key={`regions-${geoJsonKeyRef.current}`}
+              key={`regions-${geoJsonKey}`}
               data={regionsGeoJson}
               style={regionStyle}
               onEachFeature={(feature, layer) => {
@@ -741,7 +741,7 @@ export default function MapEditor() {
           {/* Country outline when regions are shown */}
           {countryGeoJson && regionsGeoJson && (
             <GeoJSON
-              key={`outline-${geoJsonKeyRef.current}`}
+              key={`outline-${geoJsonKey}`}
               data={countryGeoJson}
               style={() => ({
                 fillColor: "transparent",
@@ -757,7 +757,7 @@ export default function MapEditor() {
           {countryGeoJson && borderZones.length > 0 &&
             borderZones.map((bz) => (
               <GeoJSON
-                key={`border-${bz.id}-${geoJsonKeyRef.current}`}
+                key={`border-${bz.id}-${geoJsonKey}`}
                 data={countryGeoJson}
                 style={() => ({
                   fillColor: "transparent",
