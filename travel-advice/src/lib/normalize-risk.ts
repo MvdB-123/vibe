@@ -60,9 +60,13 @@ const NORMALIZATION: Record<string, NormalizationMap> = {
     "vær forsigtig": "yellow",
     "vær ekstra forsigtig": "yellow",
     "vær ekstra opmærksom": "yellow",
-    "fraråd ikke-nødvendige rejser": "orange",
+    "fråråd ikke-nødvendige rejser": "orange",
+    "frårådes ikke-nødvendige rejser": "orange",
+    "alle ikke-nødvendige rejser frårådes": "orange",
     "undgå ikke-nødvendige rejser": "orange",
-    "rejse frarådes": "red",
+    "rejse frårådes": "red",
+    "vi fråråder alle rejser": "red",
+    "fråråder alle rejser": "red",
     "undgå alle rejser": "red",
   },
   sweden: {
@@ -83,12 +87,13 @@ export function normalizeLevel(
 ): NormalizedLevel {
   const map = NORMALIZATION[sourceId];
   if (!map) return "unknown";
-  const key = rawLevel.toLowerCase().trim();
+  const key = rawLevel.normalize("NFC").toLowerCase().trim();
   // exact match first
   if (map[key]) return map[key];
   // partial match fallback
   for (const [pattern, level] of Object.entries(map)) {
-    if (key.includes(pattern) || pattern.includes(key)) return level;
+    const normPattern = pattern.normalize("NFC");
+    if (key.includes(normPattern) || normPattern.includes(key)) return level;
   }
   return "unknown";
 }
