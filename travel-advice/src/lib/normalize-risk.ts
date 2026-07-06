@@ -67,6 +67,7 @@ const NORMALIZATION: Record<string, NormalizationMap> = {
     "rejse frarådes": "red",
     "vi fraråder alle rejser": "red",
     "fraråder alle rejser": "red",
+    "frarådes": "red",
     "undgå alle rejser": "red",
   },
   sweden: {
