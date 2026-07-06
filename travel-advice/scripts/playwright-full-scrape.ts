@@ -98,7 +98,6 @@ async function getGermanyCountries(): Promise<Array<{ iso2: string; url: string 
       .filter((x): x is { iso2: string; url: string } => x !== null);
   } catch (err) {
     console.error("Failed to fetch Germany country list:", err);
-    // Fall back to just the known URLs
     return Object.entries(GERMANY_KNOWN_URLS).map(([iso2, url]) => ({ iso2, url }));
   }
 }
@@ -231,7 +230,7 @@ const SOURCES: Record<string, SourceDef> = {
   denmark: {
     id: "denmark",
     language: "Danish",
-    levels: ["Rejse frarådes", "Fraråd ikke-nødvendige rejser", "Vær ekstra opmærksom", "Vær forsigtig", "Vær opmærksom", "Ingen særlige advarsler"],
+    levels: ["Rejse frårådes", "Fråråd ikke-nødvendige rejser", "Vær ekstra opmærksom", "Vær forsigtig", "Vær opmærksom", "Ingen særlige advarsler"],
     getCountries: async () => getDenmarkCountries(),
     isPageMissing: (text: string) =>
       text.length < 400 || DENMARK_NO_ADVISORY_PATTERNS.some((p) => p.test(text)),
@@ -353,7 +352,6 @@ async function processSource(
 
   let ok = 0, skipped = 0, failed = 0;
 
-  // Process in batches for concurrency
   for (let i = 0; i < countries.length; i += CONCURRENCY) {
     const batch = countries.slice(i, i + CONCURRENCY);
     await Promise.allSettled(
@@ -367,7 +365,6 @@ async function processSource(
 
           if (!text || text.length < 200) { skipped++; return; }
 
-          // Denmark: silently skip pages with no advisory content
           if (def.isPageMissing?.(text)) { skipped++; return; }
 
           const extracted = await extractWithMistral(text, def, iso2);
@@ -389,7 +386,6 @@ async function processSource(
         }
       })
     );
-    // Small pause between batches to be polite
     if (i + CONCURRENCY < countries.length) {
       await new Promise((r) => setTimeout(r, 800));
     }
@@ -416,7 +412,17 @@ async function main() {
   }
 
   const { PrismaClient } = await import("@prisma/client");
-  const prisma = new PrismaClient();
+  const url = process.env.DATABASE_URL ?? "file:./dev.db";
+  let prisma: InstanceType<typeof PrismaClient>;
+  if (url.startsWith("postgres")) {
+    const { Pool } = await import("pg");
+    const { PrismaPg } = await import("@prisma/adapter-pg");
+    const pool = new Pool({ connectionString: url });
+    prisma = new PrismaClient({ adapter: new PrismaPg(pool) } as never);
+  } else {
+    const { PrismaBetterSqlite3 } = await import("@prisma/adapter-better-sqlite3");
+    prisma = new PrismaClient({ adapter: new PrismaBetterSqlite3({ url }) } as never);
+  }
   const browser = await chromium.launch({ headless: true });
   const scrapedAt = new Date();
 
