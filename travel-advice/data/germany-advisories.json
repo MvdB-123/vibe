@@ -9,7 +9,7 @@
   {
     "iso2": "SY",
     "rawLevel": "Reisewarnung",
-    "summary": "Für Syrien gilt eine Reisewarnung aufgrund der anhaltend angespannten Sicherheitslage. Die gesamte Region bleibt volatil, mit Risiko für terroristische Anschläge, bewaffnete Auseinandersetzungen und kriminelle Übergriffe. In Damaskus ist die Lage kontrolliert, während im Norden und Osten (z. B. Region Hassakeh, Umfeld Kobane) sowie in Küstengebieten erhöhte Gefahren durch Anschläge, Entführungen und extralegale Tötungen bestehen.",
+    "summary": "Für Syrien gilt eine Reisewarnung aufgrund der anhaltend angespannten Sicherheitslage. Die gesamte Region bleibt volatil, mit Risiko für terroristische Anschläge, bewaffnete Auseinandersetzungen und kriminelle Übergriffe. In Damaskus ist die Lage kontrolliert, während im Norden und Osten sowie in Küstengebieten erhöhte Gefahren durch Anschläge, Entführungen und extralegale Tötungen bestehen.",
     "url": "https://www.auswaertiges-amt.de/de/reiseundsicherheit/syriensicherheit-204278",
     "updatedAt": "2026-07-06"
   },
@@ -22,8 +22,8 @@
   },
   {
     "iso2": "LY",
-    "rawLevel": "Von nicht notwendigen Reisen abraten",
-    "summary": "Für Libyen wird von nicht notwendigen Reisen abgeraten. Die Sicherheitslage bleibt aufgrund anhaltender bewaffneter Konflikte, Terrorismusgefahr und willkürlicher Gewalt in weiten Teilen des Landes instabil. Besonders in den Regionen um Tripolis, Bengasi und im Süden des Landes besteht ein hohes Risiko für Entführungen und bewaffnete Auseinandersetzungen.",
+    "rawLevel": "Reisewarnung",
+    "summary": "Reisewarnung für Libyen. Das Auswärtige Amt warnt dringend vor Reisen nach Libyen. Die instabile politische Lage, bewaffnete Konflikte zwischen rivalisierenden Milizen und die Terrorgefahr machen Reisen äußerst riskant. Konsularische Hilfe ist stark eingeschränkt.",
     "url": "https://www.auswaertiges-amt.de/de/service/laender/libyen-node/libyensicherheit-202126",
     "updatedAt": "2026-07-04"
   },
@@ -36,8 +36,8 @@
   },
   {
     "iso2": "SS",
-    "rawLevel": "Keine besonderen Sicherheitshinweise",
-    "summary": "Für Südsudan (SS) gibt es derzeit keine besonderen Sicherheitshinweise des Auswärtigen Amts. Es liegen keine regionalen Ausnahmen mit höheren Warnstufen vor.",
+    "rawLevel": "Reisewarnung",
+    "summary": "Reisewarnung für Südsudan. Das Auswärtige Amt warnt dringend vor Reisen in den Südsudan. Bewaffnete Konflikte, interethnische Gewalt, extreme Armut und eine instabile Sicherheitslage machen Reisen äußerst gefährlich.",
     "url": "https://www.auswaertiges-amt.de/de/service/laender/suedsudan-node/suedsudansicherheit-217166",
     "updatedAt": "2026-07-04"
   },
@@ -57,8 +57,8 @@
   },
   {
     "iso2": "NE",
-    "rawLevel": "Keine besonderen Sicherheitshinweise",
-    "summary": "Für Norwegen insgesamt bestehen keine besonderen Sicherheitshinweise. Das Land gilt als sicher für Reisende. Es gibt keine regionalen Ausnahmen mit höheren Warnstufen.",
+    "rawLevel": "Reisewarnung",
+    "summary": "Reisewarnung für Niger. Das Auswärtige Amt warnt dringend vor Reisen nach Niger. Nach dem Militärputsch 2023 ist die Lage äußerst instabil. Terrorismus durch jihadistische Gruppen, Entführungsgefahr und willkürliche Festnahmen durch die Militärregierung stellen extreme Risiken dar.",
     "url": "https://www.auswaertiges-amt.de/de/service/laender/niger-node/nigersicherheit-218692",
     "updatedAt": "2026-07-04"
   },
@@ -71,29 +71,29 @@
   },
   {
     "iso2": "MM",
-    "rawLevel": "Keine besonderen Sicherheitshinweise",
-    "summary": "Für Myanmar (MM) gibt es derzeit keine besonderen Sicherheitshinweise des Auswärtigen Amts. Es werden keine regionalen Ausnahmen mit höheren Warnstufen genannt. Die allgemeine Lage wird als stabil eingestuft.",
+    "rawLevel": "Teilreisewarnung",
+    "summary": "Teilreisewarnung für Myanmar. Das Auswärtige Amt warnt vor Reisen in die meisten Teile Myanmars. Seit dem Militärputsch 2021 herrscht ein brutaler Bürgerkrieg. Reisewarnung für alle Gebiete außer Yangon-Stadt. Von nicht notwendigen Reisen in die Innenstadt von Yangon wird abgeraten.",
     "url": "https://www.auswaertiges-amt.de/de/service/laender/myanmar-node/myanmarsicherheit-206974",
     "updatedAt": "2026-07-04"
   },
   {
     "iso2": "IQ",
     "rawLevel": "Reisewarnung",
-    "summary": "Für den Irak gilt eine Reisewarnung aufgrund der anhaltend volatilen Sicherheitslage mit landesweitem Risiko für terroristische Anschläge und bewaffnete Auseinandersetzungen. Besonders gefährdet sind die Provinzen Anbar, Diyala, Kirkuk, Ninewa (inkl. Sindschar, Mossul und Grenze zu Syrien), Salah Al-Din sowie der Norden der Provinz Babel. Zudem besteht in der Region Kurdistan-Irak an den Grenzen zu Syrien, der Türkei und dem Iran ein erhöhtes Risiko durch militärische Konflikte und Angriffe.",
+    "summary": "Für den Irak gilt eine Reisewarnung aufgrund der anhaltend volatilen Sicherheitslage mit landesweitem Risiko für terroristische Anschläge und bewaffnete Auseinandersetzungen. Besonders gefährdet sind die Provinzen Anbar, Diyala, Kirkuk, Ninewa, Salah Al-Din sowie der Norden der Provinz Babel. In der Region Kurdistan-Irak besteht an den Grenzen zu Syrien, der Türkei und dem Iran ein erhöhtes Risiko durch militärische Konflikte.",
     "url": "https://www.auswaertiges-amt.de/de/reiseundsicherheit/iraksicherheit-202738",
     "updatedAt": "2026-07-06"
   },
   {
     "iso2": "ID",
-    "rawLevel": "Von nicht notwendigen Reisen abraten",
-    "summary": "Für Indonesien wird von nicht notwendigen Reisen in fünf der sechs Provinzen des indonesischen Teils der Insel Neuguinea (Papua, Papua Barat, Papua Pegunungan, Papua Tengah und Papua Selatan) abgeraten. Zudem besteht ein erhöhtes Risiko von Terroranschlägen in ganz Indonesien, insbesondere in Großstädten wie Jakarta, Bandung, Medan, Makassar, Surabaya und auf Bali. In den Gewässern der Celebessee, der Straße von Malakka und im Südchinesischen Meer gibt es Fälle von Piraterie, während in Grenzgebieten Ostkalimantans, Nord-Sulawesis und im indonesischen Teil Neuguineas Entführungsrisiken bestehen.",
+    "rawLevel": "Erhöhte Vorsicht",
+    "summary": "Erhöhte Vorsicht in Indonesien allgemein. Von nicht notwendigen Reisen in die Provinzen Papua, Papua Barat, Papua Pegunungan, Papua Tengah und Papua Selatan wird abgeraten wegen eines bewaffneten separatistischen Konflikts. Reisewarnung für Gebiete innerhalb von 10 km der Grenze zu Papua-Neuguinea in den betroffenen Provinzen.",
     "url": "https://www.auswaertiges-amt.de/de/service/laender/indonesien-node/indonesiensicherheit-212396",
     "updatedAt": "2026-07-06"
   },
   {
     "iso2": "TR",
     "rawLevel": "Erhöhte Vorsicht",
-    "summary": "Für die gesamte Türkei gilt eine erhöhte Vorsicht aufgrund der anhaltenden terroristischen Gefährdung und der regionalen Spannungen. Im Umfeld des NATO-Gipfels in Ankara (7./8. Juli 2026) werden die Sicherheitsmaßnahmen verschärft, mit Versammlungsverboten und Verkehrseinschränkungen. Zudem besteht ein Risiko durch mögliche militärische Auseinandersetzungen in der Region, die auch die Türkei betreffen könnten.",
+    "summary": "Für die gesamte Türkei gilt eine erhöhte Vorsicht aufgrund der anhaltenden terroristischen Gefährdung und der regionalen Spannungen. Von nicht notwendigen Reisen in die südöstlichen Provinzen Hakkari, Sirnak, Kilis und Hatay wird abgeraten. Reisewarnung für Gebiete innerhalb von 10 km der Grenze zu Syrien und Irak.",
     "url": "https://www.auswaertiges-amt.de/de/service/laender/tuerkei-node/tuerkeisicherheit-201962",
     "updatedAt": "2026-07-06"
   }

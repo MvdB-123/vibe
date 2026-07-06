@@ -1,15 +1,15 @@
 [
   {
     "iso2": "AF",
-    "rawLevel": "Ingen særlige advarsler",
-    "summary": "Der er ingen rejsevejledning for Afghanistan, hvilket indikerer, at der ikke er udstedt nogen specifik advarsel for landet. Andre lande kan have rejsevejledninger for Afghanistan, men den danske rejsevejledning indeholder ingen oplysninger.",
+    "rawLevel": "Rejse frarådes",
+    "summary": "Vi fraråder alle rejser til Afghanistan. Sikkerhedssituationen er ekstremt farlig under talibanernes styre. Terrorisme, vilkårlige anholdelser, ekstreme begrænsninger af menneskerettigheder og fraværet af retsstatsprincipper gør alle rejser livstruende. Danske statsborgere bør omgående forlade landet.",
     "url": "https://um.dk/rejse-og-ophold/rejse-til-udlandet/rejsevejledninger/afghanistan",
     "updatedAt": "2026-07-04"
   },
   {
     "iso2": "SY",
-    "rawLevel": "Ingen særlige advarsler",
-    "summary": "Der er ingen rejsevejledning for Syrien fra det danske Udenrigsministerium. Andre landes udenrigsministerier kan have rejsevejledninger for landet, men disse er ikke angivet her.",
+    "rawLevel": "Rejse frarådes",
+    "summary": "Vi fraråder alle rejser til Syrien. Trods Assadregimets fald er situationen ekstremt ustabil med igangværende væbnede konflikter, terrorisme og uklare magtforhold. Konsulær bistand kan ikke garanteres.",
     "url": "https://um.dk/rejse-og-ophold/rejse-til-udlandet/rejsevejledninger/syrien",
     "updatedAt": "2026-07-04"
   },
@@ -22,93 +22,93 @@
   },
   {
     "iso2": "LY",
-    "rawLevel": "Ingen særlige advarsler",
-    "summary": "Danmarks Udenrigsministerium har ingen rejsevejledning for Libyen, hvilket indikerer, at der ikke udstedes specifikke advarsler for landet. Der er derfor ingen officielle anbefalinger eller restriktioner for rejser til Libyen. Andre landes udenrigsministerier kan have rejsevejledninger for Libyen, som kan indeholde yderligere information.",
+    "rawLevel": "Rejse frarådes",
+    "summary": "Vi fraråder alle rejser til Libyen. Den ustabile politiske situation, væbnede konflikter mellem rivaliserende militser og terrortruslen gør rejser ekstremt risikable. Konsulær bistand er stærkt begrænset.",
     "url": "https://um.dk/rejse-og-ophold/rejse-til-udlandet/rejsevejledninger/libyen",
     "updatedAt": "2026-07-04"
   },
   {
     "iso2": "SO",
-    "rawLevel": "Ingen særlige advarsler",
-    "summary": "Der er ingen rejsevejledning for Somalia, hvilket indikerer, at der ikke er udstedt nogen specifik advarsel for landet. Der er således ingen oplysninger om generelle risici som krig, terrorisme eller kriminalitet, der gælder for hele landet.",
+    "rawLevel": "Rejse frarådes",
+    "summary": "Vi fraråder alle rejser til Somalia. Ekstremisme (al-Shabaab), pirater, klan-konflikter og en næsten ikke-eksisterende statsstruktur udgør ekstreme sikkerhedsrisici. Konsulær bistand er ikke mulig.",
     "url": "https://um.dk/rejse-og-ophold/rejse-til-udlandet/rejsevejledninger/somalia",
     "updatedAt": "2026-07-04"
   },
   {
     "iso2": "SS",
-    "rawLevel": "Ingen særlige advarsler",
-    "summary": "Der er ingen rejsevejledning for Sydsudan på siden. Andre landes udenrigsministerier kan have rejsevejledninger for landet, men ingen specifikke advarsler eller anbefalinger er angivet her.",
+    "rawLevel": "Rejse frarådes",
+    "summary": "Vi fraråder alle rejser til Sydsudan. Væbnede konflikter, interetnisk vold og en ekstremt ustabil sikkerhedssituation gør rejser meget farlige.",
     "url": "https://um.dk/rejse-og-ophold/rejse-til-udlandet/rejsevejledninger/sydsudan",
     "updatedAt": "2026-07-04"
   },
   {
     "iso2": "SD",
-    "rawLevel": "Ingen særlige advarsler",
-    "summary": "Der er ingen rejsevejledning for Sudan på siden. Udenrigsministeriet har således ikke udstedt nogen specifik advarsel eller anbefaling for landet. Andre lande kan have rejsevejledninger for Sudan, som kan indeholde yderligere oplysninger.",
+    "rawLevel": "Rejse frarådes",
+    "summary": "Vi fraråder alle rejser til Sudan. Siden april 2023 har de sudanesiske væbnede styrker og RSF-militsen ført en blodig borgerkrig. Darfur og Khartoum er særligt farlige. Konsulær bistand er næsten ikke mulig.",
     "url": "https://um.dk/rejse-og-ophold/rejse-til-udlandet/rejsevejledninger/sudan",
     "updatedAt": "2026-07-04"
   },
   {
     "iso2": "ML",
-    "rawLevel": "Ingen særlige advarsler",
-    "summary": "Der er ingen rejsevejledning for Mali på den danske udenrigsministeriets hjemmeside. Derfor gælder ingen specifikke advarsler eller anbefalinger for landet. Andre lande kan have rejsevejledninger for Mali, men disse er ikke angivet her.",
+    "rawLevel": "Rejse frarådes",
+    "summary": "Vi fraråder alle rejser til Mali. Jihadistiske terrorgrupper (bl.a. JNIM og IS) kontrollerer store dele af landet. Kidnapninger, angreb og væbnede røverier er hyppige. Rejser er ekstremt farlige.",
     "url": "https://um.dk/rejse-og-ophold/rejse-til-udlandet/rejsevejledninger/mali",
     "updatedAt": "2026-07-04"
   },
   {
     "iso2": "NE",
-    "rawLevel": "Ingen særlige advarsler",
-    "summary": "Der er ingen rejsevejledning for Niger på hjemmesiden. Derfor er der ingen specifikke advarsler eller anbefalinger for landet. Andre landes udenrigsministerier kan have rejsevejledninger for Niger, som kan indeholde yderligere information.",
+    "rawLevel": "Rejse frarådes",
+    "summary": "Vi fraråder alle rejser til Niger. Efter militærkuppet i 2023 er situationen ekstremt ustabil. Terrorisme fra jihadistgrupper, kidnapningsrisiko og vilkårlige anholdelser af militærregimet udgør ekstreme risici.",
     "url": "https://um.dk/rejse-og-ophold/rejse-til-udlandet/rejsevejledninger/niger",
     "updatedAt": "2026-07-04"
   },
   {
     "iso2": "MM",
-    "rawLevel": "Undgå alle rejser",
-    "summary": "Der frarådes alle rejser til hele Myanmar på grund af en betydelig sikkerhedsrisiko forårsaget af militærkuppet i 2021 og det fortsatte militærstyre. Landet er præget af væbnede konflikter, bombardementer og angreb fra militsgrupper. Der er også risiko for terror, kriminalitet og vilkårlig tilbageholdelse af udenlandske statsborgere. Flere områder er under undtagelsestilstand eller har væbnede konflikter.",
+    "rawLevel": "Alle ikke-nødvendige rejser frarådes",
+    "summary": "Vi fraråder alle rejser til størstedelen af Myanmar. Siden militærkuppet i 2021 pågår en brutal borgerkrig. Vi fraråder alle rejser undtagen til centrale Yangon. Vi fraråder alle ikke-nødvendige rejser til centrale Yangon. Grænseområderne mod Thailand, Kina, Indien og Bangladesh er særligt farlige.",
     "url": "https://um.dk/rejse-og-ophold/rejse-til-udlandet/rejsevejledninger/myanmar",
-    "updatedAt": "2026-06-02"
+    "updatedAt": "2026-07-04"
   },
   {
     "iso2": "AE",
-    "rawLevel": "Ingen særlige advarsler",
-    "summary": "Der er ingen generelle rejseadvarsler for De Forenede Arabiske Emirater (AE). Der er heller ingen specifikke regioner eller provinser med højere advarsler angivet.",
+    "rawLevel": "Vær ekstra forsigtig",
+    "summary": "Vær ekstra forsigtig i De Forenede Arabiske Emirater generelt. Vær opmærksom på den generelle sikkerhedssituation og følg anvisninger fra lokale myndigheder. Vær særlig opmærksom i grænseområderne mod Yemen, især i emiratet Abu Dhabi.",
     "url": "https://um.dk/rejse-og-ophold/rejse-til-udlandet/rejsevejledninger/de-forenede-arabiske-emirater",
     "updatedAt": "2026-06-22"
   },
   {
     "iso2": "UA",
-    "rawLevel": "Undgå alle rejser",
-    "summary": "Der frarådes alle rejser til hele Ukraine på grund af en meget høj sikkerhedsrisiko forårsaget af krigsmæssige forhold og ustabil sikkerhedssituation. Der er kamphandlinger i de sydlige og østlige regioner, herunder Sumy, Kharkiv, Luhansk, Donetsk, Zaporizjzja og Kherson. Den største risiko udgøres af russiske missil- og droneangreb, der rammer civile mål over hele landet.",
+    "rawLevel": "Rejse frarådes",
+    "summary": "Vi fraråder alle rejser til Ukraine på grund af den igangværende krig med Rusland. Russiske militære angreb finder sted over hele landet, herunder mod byer og civil infrastruktur. Danske statsborgere, der befinder sig i Ukraine, bør forlade landet hurtigst muligt, hvis det er sikkert at gøre.",
     "url": "https://um.dk/rejse-og-ophold/rejse-til-udlandet/rejsevejledninger/ukraine",
-    "updatedAt": "2026-05-01"
+    "updatedAt": "2026-07-04"
   },
   {
     "iso2": "EG",
-    "rawLevel": "Vær ekstra forsigtig",
-    "summary": "Hele Egypten er under advarselsniveauet 'Vær ekstra forsigtig' på grund af generel sikkerhedsrisiko, herunder terror, kidnapning og militære aktioner. Der frarådes alle rejser til den nordlige del af Sinai-halvøen, områder 20 km fra grænsen til Libyen samt områder 20 km fra grænsen til Sudan på grund af meget høj sikkerhedsrisiko. Der frarådes også alle ikke-nødvendige rejser til Ørkenområdet vest for Nilen (undtagen udvalgte kystområder), den sydlige del af Sinai-halvøen nord for vej 36 (undtagen turistområder og hovedveje) samt Fayoum-governoratet.",
+    "rawLevel": "Vær ekstra opmærksom",
+    "summary": "Egypten: øget opmærksomhed anbefales generelt undtagen i de orange og røde områder. Vi fraråder alle ikke-nødvendige rejser til ørkenområdet vest for Nilen og den sydlige del af Sinai-halvøen nord for vej 36. Vi fraråder alle rejser til den nordlige del af Sinai-halvøen, områder 20 km fra grænsen til Libyen samt 20 km fra grænsen til Sudan.",
     "url": "https://um.dk/rejse-og-ophold/rejse-til-udlandet/rejsevejledninger/egypten",
     "updatedAt": "2026-06-25"
   },
   {
     "iso2": "TH",
     "rawLevel": "Vær opmærksom",
-    "summary": "Hele Thailand er under generel rejsevejledning med niveauet 'Vær opmærksom' på grund af risikoen for terror og kriminalitet. De sydlige provinser Songkhla, Narathiwat, Yala og Pattani har højere advarselsniveau med frarådning af alle ikke-nødvendige rejser på grund af betydelige sikkerhedsrisici og terror. Grænseområdet til Cambodja i en zone på 20 km fra grænsen frarådes alle rejser på grund af ustabil sikkerhedssituation og mulige militære sammenstød.",
+    "summary": "Vær opmærksom i Thailand generelt. Vær ekstra opmærksom i grænseprovinser til Cambodja (Ubon Ratchathani, Sisaket, Surin, Buriram, Sa Kaew, Chantaburi og Trat) og ved grænsen til Myanmar (Mae Sot og Kanchanaburi). Vi fraråder alle ikke-nødvendige rejser til de sydlige provinser Songkhla, Narathiwat, Yala og Pattani. Vi fraråder alle rejser til grænseområdet med Cambodja inden for 20 km fra grænsen.",
     "url": "https://um.dk/rejse-og-ophold/rejse-til-udlandet/rejsevejledninger/thailand",
-    "updatedAt": "2026-06-29"
+    "updatedAt": "2026-07-04"
   },
   {
     "iso2": "ID",
-    "rawLevel": "Vær ekstra forsigtig",
-    "summary": "Hele landet Indonesien er under rejsevejledning med niveauet 'Vær ekstra forsigtig' på grund af generel risiko for terror og kriminalitet. Provinserne Aceh frarådes dog ikke-nødvendige rejser på grund af sharia-lovgivning. Derudover frarådes alle ikke-nødvendige rejser til provinserne Papua, Højlands Papua, Syd Papua og Central Papua på grund af risiko for væbnede sammenstød, voldelige uroligheder, terror, kriminalitet og kidnapning.",
+    "rawLevel": "Vær ekstra opmærksom",
+    "summary": "Vær ekstra opmærksom i Indonesien generelt. Vi fraråder alle ikke-nødvendige rejser til provinserne Papua, Højlands Papua, Syd Papua og Central Papua på grund af sikkerheds- og voldsrisici.",
     "url": "https://um.dk/rejse-og-ophold/rejse-til-udlandet/rejsevejledninger/indonesien",
     "updatedAt": "2026-06-29"
   },
   {
     "iso2": "TR",
-    "rawLevel": "Vær ekstra forsigtig",
-    "summary": "Hele landet er under niveauet 'Vær ekstra forsigtig' på grund af risikoen for uroligheder og terror. De sydøstlige provinser Hatay, Kilis, Sirnak og Hakkari frarådes alle ikke-nødvendige rejser på grund af høj sikkerhedsrisiko relateret til konflikten mellem tyrkiske myndigheder og kurdiske grupper. Der frarådes desuden alle rejser til områder inden for 10 km fra grænserne til Syrien og Irak på grund af meget høj risiko for terror og kamphandlinger.",
+    "rawLevel": "Vær ekstra opmærksom",
+    "summary": "Tyrkiet generelt: øget opmærksomhed anbefales. Vi fraråder alle ikke-nødvendige rejser til de sydøstlige provinser Hatay, Kilis, Sirnak og Hakkari på grund af sikkerhedsrisici og terrorisme. Vi fraråder alle rejser til områder inden for 10 km fra grænsen med Syrien og Irak.",
     "url": "https://um.dk/rejse-og-ophold/rejse-til-udlandet/rejsevejledninger/tyrkiet",
-    "updatedAt": "2026-06-17"
+    "updatedAt": "2026-07-04"
   }
 ]

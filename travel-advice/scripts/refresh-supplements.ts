@@ -2,20 +2,28 @@
 /**
  * Refreshes supplement advisory data using Playwright + Mistral AI.
  *
- * For each entry in the supplement JSON files (germany, sweden, denmark, australia),
- * visits the official advisory URL with a real browser (bypasses JS-rendering and
- * IP blocks), extracts the page text, and calls Mistral to extract:
+ * Visits each official advisory URL with a real browser (bypasses JS-rendering),
+ * extracts the page text, and calls Mistral to extract:
  *   - The advisory level (from a fixed vocabulary per source)
  *   - A summary in the source language
  *   - The last-updated date
  *
+ * IMPORTANT: Only runs for sources whose sites are accessible from GitHub Actions.
+ * Denmark (um.dk) and Australia (smartraveller.gov.au) are excluded because:
+ *   - um.dk: Many countries have no dedicated advisory page; Playwright gets generic
+ *     content and Mistral returns "no warnings" (causes dangerous downgrades).
+ *   - smartraveller.gov.au: Blocks GitHub Actions IPs with HTTP2 protocol errors.
+ * Those two sources use static supplement JSONs that are maintained manually.
+ *
+ * Safety guard: never downgrades an entry by more than one severity step.
+ * If a page returns green for a country that was red, the update is skipped.
+ *
  * Run from travel-advice/ directory. Requires MISTRAL_API_KEY in environment.
- * Playwright + Chromium must be installed before running (see workflow).
  *
  * Usage:
  *   npx tsx scripts/refresh-supplements.ts [source...]
- *   npx tsx scripts/refresh-supplements.ts              # all sources
- *   npx tsx scripts/refresh-supplements.ts sweden denmark
+ *   npx tsx scripts/refresh-supplements.ts          # all supported sources
+ *   npx tsx scripts/refresh-supplements.ts sweden germany
  */
 
 import * as fs from "fs";
@@ -29,6 +37,40 @@ if (!MISTRAL_API_KEY) {
 
 const DATA_DIR = path.join(__dirname, "../data");
 
+// ─── Severity map for safety guard ───────────────────────────────────────────
+// Higher number = more severe warning.
+// Never allow a drop of more than 1 step.
+
+const SEVERITY: Record<string, number> = {
+  // Germany
+  "keine besonderen sicherheitshinweise": 0,
+  "erhöhte vorsicht": 1,
+  "von nicht notwendigen reisen abraten": 2,
+  "teilreisewarnung": 2,
+  "reisewarnung": 3,
+  // Sweden
+  "inga särskilda restriktioner": 0,
+  "var extra uppmärksam": 1,
+  "avrådan från icke nödvändiga resor": 2,
+  "avrådan från alla resor": 3,
+  // Australia (text levels)
+  "exercise normal safety precautions": 0,
+  "exercise a high degree of caution": 1,
+  "reconsider your need to travel": 2,
+  "do not travel": 3,
+};
+
+function severity(level: string): number {
+  return SEVERITY[level.toLowerCase().trim()] ?? -1;
+}
+
+function isSafeDowngrade(oldLevel: string, newLevel: string): boolean {
+  const oldSev = severity(oldLevel);
+  const newSev = severity(newLevel);
+  if (oldSev === -1 || newSev === -1) return true; // unknown levels: allow
+  return oldSev - newSev <= 1; // allow drop of at most 1 step
+}
+
 // ─── Source configs ────────────────────────────────────────────────────────────
 
 interface SourceConfig {
@@ -39,6 +81,9 @@ interface SourceConfig {
   australiaLevelMap?: Record<string, number>;
 }
 
+// Only sources that actually work from GitHub Actions:
+// - Sweden (swedenabroad.se): JS-rendered but loads correctly with Playwright
+// - Germany (auswaertiges-amt.de): accessible for most key country pages
 const SOURCES: Record<string, SourceConfig> = {
   germany: {
     file: "germany-advisories.json",
@@ -60,37 +105,6 @@ const SOURCES: Record<string, SourceConfig> = {
       "Var extra uppmärksam",
       "Inga särskilda restriktioner",
     ],
-  },
-  denmark: {
-    file: "denmark-advisories.json",
-    language: "Danish",
-    levels: [
-      "Rejse frarådes",
-      "Undgå alle rejser",
-      "Fraråd ikke-nødvendige rejser",
-      "Vær ekstra opmærksom",
-      "Vær ekstra forsigtig",
-      "Vær forsigtig",
-      "Vær opmærksom",
-      "Ingen særlige advarsler",
-    ],
-  },
-  australia: {
-    file: "australia-advisories.json",
-    language: "English",
-    levels: [
-      "Do not travel",
-      "Reconsider your need to travel",
-      "Exercise a high degree of caution",
-      "Exercise normal safety precautions",
-    ],
-    isAustralia: true,
-    australiaLevelMap: {
-      "Do not travel": 4,
-      "Reconsider your need to travel": 3,
-      "Exercise a high degree of caution": 2,
-      "Exercise normal safety precautions": 1,
-    },
   },
 };
 
@@ -115,7 +129,7 @@ Extract exactly three things:
 
 1. LEVEL – Choose EXACTLY one option from this list (copy verbatim, including accents):
 ${levelsFormatted}
-   Rule: choose the level that applies to the ENTIRE country. If there are regional exceptions with higher warnings in specific provinces/zones, still choose the BASE level for the country overall (not the exception level).
+   Rule: choose the level that applies to the ENTIRE country. If there are regional exceptions with higher warnings in specific provinces/zones, still choose the BASE level for the country overall (not the exception level). If the page content seems unrelated to a travel advisory for ${iso2}, return the least severe option.
 
 2. SUMMARY – Write 2–4 sentences in ${config.language} (the same language as the page) that describe:
    - The general advisory level for the whole country and the main reason (war, terrorism, crime, etc.)
@@ -229,6 +243,7 @@ async function main() {
     for (const entry of entries) {
       const iso2 = String(entry.iso2 ?? "");
       const url = String(entry.url ?? "");
+      const existingLevel = String(entry.rawLevel ?? "");
       if (!iso2 || !url) continue;
 
       console.log(`  ${iso2}: ${url}`);
@@ -241,7 +256,6 @@ async function main() {
           waitUntil: "domcontentloaded",
           timeout: 30_000,
         });
-        // Extra wait for JS-rendered content (Sweden, Denmark)
         await page.waitForTimeout(2500);
         pageText = await page.evaluate(() => document.body?.innerText ?? "");
       } catch (err) {
@@ -264,16 +278,18 @@ async function main() {
         continue;
       }
 
-      // Apply extracted data
-      const before = JSON.stringify(entry);
-
-      if (config.isAustralia && config.australiaLevelMap) {
-        const numLevel = config.australiaLevelMap[extracted.level];
-        if (numLevel !== undefined) entry.level = numLevel;
-      } else {
-        entry.rawLevel = extracted.level;
+      // Safety guard: never allow a severe downgrade
+      if (!isSafeDowngrade(existingLevel, extracted.level)) {
+        console.warn(
+          `    BLOCKED: unsafe downgrade from "${existingLevel}" → "${extracted.level}" (page may be wrong/redirected)`,
+        );
+        await new Promise((r) => setTimeout(r, 500));
+        continue;
       }
 
+      // Apply extracted data
+      const before = JSON.stringify(entry);
+      entry.rawLevel = extracted.level;
       entry.summary = extracted.summary;
       if (extracted.updatedAt) {
         entry.updatedAt = extracted.updatedAt;
@@ -287,7 +303,6 @@ async function main() {
         console.log(`    – No change (${extracted.level})`);
       }
 
-      // Be gentle with rate limits
       await new Promise((r) => setTimeout(r, 1200));
     }
 
