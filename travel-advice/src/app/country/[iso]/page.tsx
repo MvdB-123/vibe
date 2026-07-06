@@ -491,8 +491,8 @@ export default async function CountryPage({
   const advisories: AdvisoryRow[] = country.advisories.map((a) => {
     const aiSummary = aiSummaries[isoUpper]?.[a.sourceId] ?? null;
     const storedLevel = a.normalizedLevel as NormalizedLevel;
-    // Recompute if stored level is unknown (e.g. DB written before normalize map was fixed)
-    const normalizedLevel: NormalizedLevel = storedLevel === "unknown"
+    // Recompute if stored level is unknown/null/empty (e.g. DB written before normalize map was fixed)
+    const normalizedLevel: NormalizedLevel = (!storedLevel || storedLevel === "unknown")
       ? normalizeLevel(a.sourceId, a.rawLevel)
       : storedLevel;
     const zones = getMultiLevelDisplay(a.sourceId, a.rawLevel, normalizedLevel, rawSummaries.get(a.sourceId) ?? "");
