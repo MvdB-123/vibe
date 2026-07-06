@@ -8,7 +8,7 @@ import {
   buildComparativeAnalysis,
   buildRecencyAnalysis,
 } from "@/lib/analysis";
-import { LEVEL_LABELS_NL } from "@/lib/normalize-risk";
+import { LEVEL_LABELS_NL, normalizeLevel } from "@/lib/normalize-risk";
 import { formatDateNl, ageDays } from "@/lib/format";
 import { RiskBadge } from "@/components/RiskBadge";
 import { ExportButtons } from "@/components/ExportButtons";
