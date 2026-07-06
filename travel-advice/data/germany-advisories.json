@@ -1,5 +1,12 @@
 [
   {
+    "iso2": "UA",
+    "rawLevel": "Reisewarnung",
+    "summary": "Reisewarnung für die Ukraine. Das Auswärtige Amt warnt dringend vor Reisen in die Ukraine wegen des anhaltenden Krieges mit Russland. Russische Raketen- und Drohnenangriffe treffen Ziele im gesamten Land, auch in Städten und ziviler Infrastruktur. Deutsche Staatsbürger in der Ukraine werden aufgefordert, das Land zu verlassen.",
+    "url": "https://www.auswaertiges-amt.de/de/reiseundsicherheit/ukrainesicherheit-201946",
+    "updatedAt": "2026-07-06"
+  },
+  {
     "iso2": "AF",
     "rawLevel": "Reisewarnung",
     "summary": "Für Afghanistan gilt eine Reisewarnung aufgrund der anhaltenden militärischen Auseinandersetzungen, insbesondere im Grenzgebiet zu Pakistan, sowie der erhöhten Gefahr terroristischer Anschläge und Entführungen. Die Sicherheitslage bleibt volatil, mit Risiko für erneute Luftangriffe und Einschränkungen des Flugverkehrs. In Kabul und Kandahar kam es zu militärischen Angriffen mit zivilen Opfern.",
