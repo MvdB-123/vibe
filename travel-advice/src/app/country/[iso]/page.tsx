@@ -19,8 +19,6 @@ import { clsx } from "clsx";
 import { SOURCES } from "@/config/sources";
 import { LiveAdvisory } from "@/components/LiveAdvisory";
 
-export const revalidate = 3600;
-
 type LevelLabel = { original: string; nl: string };
 
 // Per-source lookup keyed by rawLevel (lowercase)
