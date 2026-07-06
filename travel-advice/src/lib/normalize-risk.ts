@@ -89,6 +89,7 @@ export function normalizeLevel(
   const map = NORMALIZATION[sourceId];
   if (!map) return "unknown";
   const key = rawLevel.normalize("NFC").toLowerCase().trim();
+  if (!key) return "unknown";
   // exact match first
   if (map[key]) return map[key];
   // partial match fallback
