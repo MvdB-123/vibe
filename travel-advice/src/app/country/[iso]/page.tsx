@@ -208,6 +208,8 @@ function getMultiLevelDisplay(
         { level: "orange", area: "Deelgebieden" },
       ];
     }
+    // Whole country already at highest applicable level — no sub-region row needed
+    return [{ level: normalizedLevel, area: "Algemeen" }];
   }
 
   if (sourceId === "us") {
@@ -490,7 +492,11 @@ export default async function CountryPage({
 
   const advisories: AdvisoryRow[] = country.advisories.map((a) => {
     const aiSummary = aiSummaries[isoUpper]?.[a.sourceId] ?? null;
-    const normalizedLevel = a.normalizedLevel as NormalizedLevel;
+    const storedLevel = a.normalizedLevel as NormalizedLevel;
+    // Recompute if stored level is unknown (e.g. DB written before normalize map was fixed)
+    const normalizedLevel: NormalizedLevel = storedLevel === "unknown"
+      ? normalizeLevel(a.sourceId, a.rawLevel)
+      : storedLevel;
     const zones = getMultiLevelDisplay(a.sourceId, a.rawLevel, normalizedLevel, rawSummaries.get(a.sourceId) ?? "");
     // For compound advisories use the general (first) zone level for consensus/deviations
     const effectiveLevel = zones.length > 1 ? zones[0].level : normalizedLevel;
