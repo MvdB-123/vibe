@@ -630,7 +630,12 @@ export default async function CountryPage({
                       )}
                       <tr key={src.id} className="opacity-60">
                         <td className="px-4 py-3 font-medium text-gray-900">{src.flagEmoji} {src.nameNl}</td>
-                        <td colSpan={5} className="px-4 py-3 text-gray-400 text-sm italic">Geen data beschikbaar</td>
+                        <td colSpan={4} className="px-4 py-3 text-gray-400 text-sm italic">Geen data beschikbaar</td>
+                        <td className="px-4 py-3 text-right">
+                          <a href={src.baseUrl} target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:text-blue-700" title="Bekijk officiële site">
+                            <svg xmlns="http://www.w3.org/2000/svg" className="inline h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" /></svg>
+                          </a>
+                        </td>
                       </tr>
                     </>
                   );
