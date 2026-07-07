@@ -117,5 +117,12 @@
     "summary": "Reconsider your need to travel to Qatar due to the unpredictable security situation in Qatar and the Middle East region. There remains a risk of military action. Qatar airspace may open or close at short notice, impacting flights at Doha's international airport.",
     "url": "https://www.smartraveller.gov.au/destinations/middle-east/qatar",
     "updatedAt": "2026-06-30"
+  },
+  {
+    "iso2": "AE",
+    "level": 3,
+    "summary": "Reconsider your need to travel to the United Arab Emirates due to the unpredictable security situation in the UAE and the region. There remains a risk of military action. UAE airspace may open or close at short notice, impacting flights at Abu Dhabi and Dubai International Airports.",
+    "url": "https://www.smartraveller.gov.au/destinations/middle-east/united-arab-emirates",
+    "updatedAt": "2026-06-17"
   }
 ]
