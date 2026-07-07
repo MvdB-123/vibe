@@ -73,6 +73,8 @@ const NORMALIZATION: Record<string, NormalizationMap> = {
   sweden: {
     "inga särskilda restriktioner": "green",
     "ingen särskilda avrådanden": "green",
+    "borttagen avrådan": "green",
+    "avråder inte längre": "green",
     "var extra uppmärksam": "yellow",
     "var försiktig": "yellow",
     "avrådan från icke nödvändiga resor": "orange",

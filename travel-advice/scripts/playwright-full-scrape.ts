@@ -225,7 +225,7 @@ const SOURCES: Record<string, SourceDef> = {
   sweden: {
     id: "sweden",
     language: "Swedish",
-    levels: ["Avrådan från alla resor", "Avrådan från icke nödvändiga resor", "Var extra uppmärksam", "Inga särskilda restriktioner"],
+    levels: ["Avrådan från alla resor", "Avrådan från icke nödvändiga resor", "Var extra uppmärksam", "Inga särskilda restriktioner", "Borttagen avrådan"],
     getCountries: async () => getSwedenCountries(),
   },
   denmark: {
