@@ -1,15 +1,16 @@
 name: Playwright Full Scrape
 
 # Runs daily at 05:30 UTC (after trigger-scrape at 05:00).
-# Uses Playwright + Mistral AI to scrape Germany, Sweden and Denmark
+# Uses Playwright + Mistral AI to scrape Australia, Germany, Sweden and Denmark
 # travel advisories directly into the database — no supplement JSONs needed.
+# Australia uses --disable-features=HTTP2 to bypass smartraveller.gov.au blocking.
 # Denmark pages that don't exist are silently skipped.
 
 on:
   workflow_dispatch:
     inputs:
       sources:
-        description: 'Sources to scrape (space-separated: germany sweden denmark). Leave empty for all.'
+        description: 'Sources to scrape (space-separated: australia germany sweden denmark). Leave empty for all.'
         required: false
         default: ''
   schedule:

@@ -154,6 +154,74 @@ function getSwedenCountries(): Array<{ iso2: string; url: string }> {
   }));
 }
 
+// Australia: build URLs from slug map
+const AUSTRALIA_SLUGS: Record<string, string> = {
+  AF:"asia/afghanistan",AL:"europe/albania",DZ:"africa/algeria",AO:"africa/angola",
+  AR:"americas/argentina",AM:"europe/armenia",AT:"europe/austria",AZ:"europe/azerbaijan",
+  BH:"middle-east/bahrain",BD:"asia/bangladesh",BB:"americas/barbados",BY:"europe/belarus",
+  BE:"europe/belgium",BZ:"americas/belize",BJ:"africa/benin",BT:"asia/bhutan",
+  BO:"americas/bolivia",BA:"europe/bosnia-and-herzegovina",BW:"africa/botswana",BR:"americas/brazil",
+  BN:"asia/brunei",BG:"europe/bulgaria",BF:"africa/burkina-faso",BI:"africa/burundi",
+  CV:"africa/cabo-verde",KH:"asia/cambodia",CM:"africa/cameroon",CA:"americas/canada",
+  CF:"africa/central-african-republic",TD:"africa/chad",CL:"americas/chile",CN:"asia/china",
+  CO:"americas/colombia",KM:"africa/comoros",CD:"africa/democratic-republic-of-the-congo",
+  CG:"africa/republic-of-the-congo",CR:"americas/costa-rica",CI:"africa/cote-divoire",
+  HR:"europe/croatia",CU:"americas/cuba",CY:"europe/cyprus",CZ:"europe/czech-republic",
+  DK:"europe/denmark",DJ:"africa/djibouti",DM:"americas/dominica",DO:"americas/dominican-republic",
+  EC:"americas/ecuador",EG:"middle-east/egypt",SV:"americas/el-salvador",GQ:"africa/equatorial-guinea",
+  ER:"africa/eritrea",EE:"europe/estonia",SZ:"africa/eswatini",ET:"africa/ethiopia",
+  FJ:"pacific/fiji",FI:"europe/finland",FR:"europe/france",GA:"africa/gabon",
+  GM:"africa/gambia",GE:"europe/georgia",DE:"europe/germany",GH:"africa/ghana",
+  GR:"europe/greece",GD:"americas/grenada",GT:"americas/guatemala",GN:"africa/guinea",
+  GW:"africa/guinea-bissau",GY:"americas/guyana",HT:"americas/haiti",HN:"americas/honduras",
+  HU:"europe/hungary",IS:"europe/iceland",IN:"asia/india",ID:"asia/indonesia",
+  IR:"middle-east/iran",IQ:"middle-east/iraq",IE:"europe/ireland",IL:"middle-east/israel",
+  IT:"europe/italy",JM:"americas/jamaica",JP:"asia/japan",JO:"middle-east/jordan",
+  KZ:"asia/kazakhstan",KE:"africa/kenya",KI:"pacific/kiribati",KP:"asia/north-korea",
+  KR:"asia/south-korea",XK:"europe/kosovo",KW:"middle-east/kuwait",KG:"asia/kyrgyzstan",
+  LA:"asia/laos",LV:"europe/latvia",LB:"middle-east/lebanon",LS:"africa/lesotho",
+  LR:"africa/liberia",LY:"middle-east/libya",LI:"europe/liechtenstein",LT:"europe/lithuania",
+  LU:"europe/luxembourg",MG:"africa/madagascar",MW:"africa/malawi",MY:"asia/malaysia",
+  MV:"asia/maldives",ML:"africa/mali",MT:"europe/malta",MH:"pacific/marshall-islands",
+  MR:"africa/mauritania",MU:"africa/mauritius",MX:"americas/mexico",FM:"pacific/micronesia",
+  MD:"europe/moldova",MC:"europe/monaco",MN:"asia/mongolia",ME:"europe/montenegro",
+  MA:"africa/morocco",MZ:"africa/mozambique",MM:"asia/myanmar",NA:"africa/namibia",
+  NR:"pacific/nauru",NP:"asia/nepal",NL:"europe/netherlands",NZ:"pacific/new-zealand",
+  NI:"americas/nicaragua",NE:"africa/niger",NG:"africa/nigeria",MK:"europe/north-macedonia",
+  NO:"europe/norway",OM:"middle-east/oman",PK:"asia/pakistan",PW:"pacific/palau",
+  PS:"middle-east/palestinian-territories",PA:"americas/panama",PG:"pacific/papua-new-guinea",
+  PY:"americas/paraguay",PE:"americas/peru",PH:"asia/philippines",PL:"europe/poland",
+  PT:"europe/portugal",QA:"middle-east/qatar",RO:"europe/romania",RU:"europe/russia",
+  RW:"africa/rwanda",KN:"americas/saint-kitts-and-nevis",LC:"americas/saint-lucia",
+  VC:"americas/saint-vincent-and-the-grenadines",WS:"pacific/samoa",ST:"africa/sao-tome-and-principe",
+  SA:"middle-east/saudi-arabia",SN:"africa/senegal",RS:"europe/serbia",SC:"africa/seychelles",
+  SL:"africa/sierra-leone",SG:"asia/singapore",SK:"europe/slovakia",SI:"europe/slovenia",
+  SB:"pacific/solomon-islands",SO:"africa/somalia",ZA:"africa/south-africa",SS:"africa/south-sudan",
+  ES:"europe/spain",LK:"asia/sri-lanka",SD:"africa/sudan",SR:"americas/suriname",
+  SE:"europe/sweden",CH:"europe/switzerland",SY:"middle-east/syria",TW:"asia/taiwan",
+  TJ:"asia/tajikistan",TZ:"africa/tanzania",TH:"asia/thailand",TL:"asia/timor-leste",
+  TG:"africa/togo",TO:"pacific/tonga",TT:"americas/trinidad-and-tobago",TN:"africa/tunisia",
+  TR:"middle-east/turkiye",TM:"asia/turkmenistan",TV:"pacific/tuvalu",UG:"africa/uganda",
+  UA:"europe/ukraine",AE:"middle-east/united-arab-emirates",GB:"europe/united-kingdom",
+  US:"americas/united-states-of-america",UY:"americas/uruguay",UZ:"asia/uzbekistan",
+  VU:"pacific/vanuatu",VE:"americas/venezuela",VN:"asia/vietnam",YE:"middle-east/yemen",
+  ZM:"africa/zambia",ZW:"africa/zimbabwe",
+};
+
+const AUSTRALIA_NO_ADVISORY_PATTERNS = [
+  /page not found/i,
+  /404/,
+  /we couldn't find/i,
+  /no travel advice/i,
+];
+
+function getAustraliaCountries(): Array<{ iso2: string; url: string }> {
+  return Object.entries(AUSTRALIA_SLUGS).map(([iso2, slug]) => ({
+    iso2,
+    url: `https://www.smartraveller.gov.au/destinations/${slug}`,
+  }));
+}
+
 // Denmark: build URLs from slug map; pages that don't exist are silently skipped
 const DENMARK_SLUGS: Record<string, string> = {
   "AF": "afghanistan", "AL": "albanien", "DZ": "algeriet", "AO": "angola",
@@ -216,6 +284,14 @@ function getDenmarkCountries(): Array<{ iso2: string; url: string }> {
 // ─── Source configs ────────────────────────────────────────────────────────────
 
 const SOURCES: Record<string, SourceDef> = {
+  australia: {
+    id: "australia",
+    language: "English",
+    levels: ["Do not travel", "Reconsider your need to travel", "Exercise a high degree of caution", "Exercise normal safety precautions"],
+    getCountries: async () => getAustraliaCountries(),
+    isPageMissing: (text: string) =>
+      text.length < 300 || AUSTRALIA_NO_ADVISORY_PATTERNS.some((p) => p.test(text)),
+  },
   germany: {
     id: "germany",
     language: "German",
@@ -424,7 +500,7 @@ async function main() {
     const { PrismaBetterSqlite3 } = await import("@prisma/adapter-better-sqlite3");
     prisma = new PrismaClient({ adapter: new PrismaBetterSqlite3({ url }) } as never);
   }
-  const browser = await chromium.launch({ headless: true });
+  const browser = await chromium.launch({ headless: true, args: ["--disable-features=HTTP2"] });
   const scrapedAt = new Date();
 
   console.log(`Starting Playwright full scrape: ${toRun.join(", ")}`);
