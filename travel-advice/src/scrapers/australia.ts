@@ -144,6 +144,30 @@ function extractSummary(html: string): string {
     .slice(0, 1500);
 }
 
+async function fetchStaticSupplements(): Promise<RawAdvisory[]> {
+  try {
+    const url = "https://raw.githubusercontent.com/MvdB-123/vibe/main/travel-advice/data/australia-advisories.json";
+    const res = await fetch(url, { signal: AbortSignal.timeout(10_000) });
+    if (!res.ok) return [];
+    const data: Array<{ iso2: string; level: number; summary?: string; url?: string; updatedAt?: string }> = await res.json();
+    return data.flatMap((entry) => {
+      const rawLevel = LEVEL_MAP[entry.level];
+      if (!rawLevel) return [];
+      return [{
+        destIso2: entry.iso2,
+        rawLevel,
+        normalizedLevel: normalizeLevel("australia", rawLevel),
+        summary: entry.summary ?? rawLevel,
+        risks: [],
+        officialUpdatedAt: entry.updatedAt ? new Date(entry.updatedAt) : null,
+        sourceUrl: entry.url ?? "https://www.smartraveller.gov.au/destinations",
+      }];
+    });
+  } catch {
+    return [];
+  }
+}
+
 export const australiaScraper: Scraper = async () => {
   const scrapedAt = new Date();
 
@@ -180,38 +204,22 @@ export const australiaScraper: Scraper = async () => {
         });
       }
       if (advisories.length > 0) {
+        // Merge static supplement entries for countries missing from the API response
+        const staticAdvisories = await fetchStaticSupplements();
+        for (const s of staticAdvisories) {
+          if (!advisories.find((a) => a.destIso2 === s.destIso2)) {
+            advisories.push(s);
+          }
+        }
         return { sourceId: "australia", advisories, scrapedAt };
       }
     } catch { /* try next endpoint */ }
   }
 
-
   // Strategy 2: Use static fallback data from repo (populated manually or via local script)
-  try {
-    const fallbackUrl = "https://raw.githubusercontent.com/MvdB-123/vibe/main/travel-advice/data/australia-advisories.json";
-    const res = await fetch(fallbackUrl, { signal: AbortSignal.timeout(10_000) });
-    if (res.ok) {
-      const fallbackData: Array<{ iso2: string; level: number; summary?: string; url?: string; updatedAt?: string }> = await res.json();
-      const fallbackAdvisories: RawAdvisory[] = [];
-      for (const entry of fallbackData) {
-        const rawLevel = LEVEL_MAP[entry.level];
-        if (!rawLevel) continue;
-        fallbackAdvisories.push({
-          destIso2: entry.iso2,
-          rawLevel,
-          normalizedLevel: normalizeLevel("australia", rawLevel),
-          summary: entry.summary ?? `${rawLevel}`,
-          risks: [],
-          officialUpdatedAt: entry.updatedAt ? new Date(entry.updatedAt) : null,
-          sourceUrl: entry.url ?? `https://www.smartraveller.gov.au/destinations`,
-        });
-      }
-      if (fallbackAdvisories.length > 0) {
-        return { sourceId: "australia", advisories: fallbackAdvisories, scrapedAt, error: "Using static fallback data" };
-      }
-    }
-  } catch {
-    // Fall through
+  const fallbackAdvisories = await fetchStaticSupplements();
+  if (fallbackAdvisories.length > 0) {
+    return { sourceId: "australia", advisories: fallbackAdvisories, scrapedAt, error: "Using static fallback data" };
   }
 
   return { sourceId: "australia", advisories: [], scrapedAt, error: "All strategies failed - Smartraveller blocks cloud IPs" };
