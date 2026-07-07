@@ -39,6 +39,8 @@ interface SourceDef {
   levels: string[];
   getCountries: () => Promise<Array<{ iso2: string; url: string }>>;
   isPageMissing?: (text: string) => boolean;
+  // Override browser navigation with a custom fetch (e.g. for sites that block GitHub IPs)
+  fetchPageText?: (url: string) => Promise<string>;
 }
 
 // Germany: fetch country list + URLs from the opendata API
@@ -208,6 +210,24 @@ const AUSTRALIA_SLUGS: Record<string, string> = {
   ZM:"africa/zambia",ZW:"africa/zimbabwe",
 };
 
+const AUSTRALIA_PROXIES = [
+  (url: string) => `https://api.allorigins.win/raw?url=${encodeURIComponent(url)}`,
+  (url: string) => `https://api.cors.lol/?url=${encodeURIComponent(url)}`,
+  (url: string) => `https://api.codetabs.com/v1/proxy/?quest=${encodeURIComponent(url)}`,
+];
+
+async function fetchAustraliaPage(url: string): Promise<string> {
+  for (const buildProxy of AUSTRALIA_PROXIES) {
+    try {
+      const res = await fetch(buildProxy(url), { signal: AbortSignal.timeout(12_000) });
+      if (!res.ok) continue;
+      const text = await res.text();
+      if (text.length > 200) return text;
+    } catch { /* try next */ }
+  }
+  return "";
+}
+
 const AUSTRALIA_NO_ADVISORY_PATTERNS = [
   /page not found/i,
   /404/,
@@ -291,6 +311,7 @@ const SOURCES: Record<string, SourceDef> = {
     getCountries: async () => getAustraliaCountries(),
     isPageMissing: (text: string) =>
       text.length < 300 || AUSTRALIA_NO_ADVISORY_PATTERNS.some((p) => p.test(text)),
+    fetchPageText: fetchAustraliaPage,
   },
   germany: {
     id: "germany",
@@ -433,12 +454,22 @@ async function processSource(
     const batch = countries.slice(i, i + CONCURRENCY);
     await Promise.allSettled(
       batch.map(async ({ iso2, url }) => {
-        const page = await browser.newPage();
         try {
-          await page.goto(url, { waitUntil: "domcontentloaded", timeout: 25_000 });
-          await page.waitForTimeout(2000);
-          const text = await page.evaluate(() => document.body?.innerText ?? "");
-          await page.close();
+          let text: string;
+
+          if (def.fetchPageText) {
+            // Use custom fetch (e.g. via CORS proxy) instead of browser navigation
+            text = await def.fetchPageText(url);
+          } else {
+            const page = await browser.newPage();
+            try {
+              await page.goto(url, { waitUntil: "domcontentloaded", timeout: 25_000 });
+              await page.waitForTimeout(2000);
+              text = await page.evaluate(() => document.body?.innerText ?? "");
+            } finally {
+              await page.close().catch(() => {});
+            }
+          }
 
           if (!text || text.length < 200) { skipped++; return; }
 
@@ -457,7 +488,6 @@ async function processSource(
           console.log(`  ${iso2}: ${extracted.level}`);
           ok++;
         } catch (err) {
-          await page.close().catch(() => {});
           console.error(`  ${iso2} failed: ${String(err).slice(0, 80)}`);
           failed++;
         }
