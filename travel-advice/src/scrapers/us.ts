@@ -232,6 +232,8 @@ async function fetchCountryPage(iso2: string): Promise<RawAdvisory | null> {
       ?? html.match(/(?:Last\s+(?:Updated|Reviewed)|Date\s+Updated)[:\s]*(\w+ \d{1,2},?\s*\d{4})/i)
       ?? html.match(/<meta[^>]+(?:date|modified)[^>]*content="([^"]+)"/i)
       ?? html.match(/class="[^"]*(?:date|updated)[^"]*"[^>]*>[\s\S]*?(\w+ \d{1,2},?\s*\d{4})/i)
+      ?? html.match(/Travel\s+Advisory\s+(\w+ \d{1,2},?\s*\d{4})/i)
+      ?? html.match(/\b(January|February|March|April|May|June|July|August|September|October|November|December)\s+\d{1,2},?\s*\d{4}\b/i)
       ?? html.match(/(\d{4}-\d{2}-\d{2})/);
 
     const officialUpdatedAt = dateMatch ? new Date(dateMatch[1]) : null;
