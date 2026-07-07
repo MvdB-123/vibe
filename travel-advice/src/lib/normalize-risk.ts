@@ -97,6 +97,19 @@ export function normalizeLevel(
     const normPattern = pattern.normalize("NFC");
     if (key.includes(normPattern) || normPattern.includes(key)) return level;
   }
+  // diacritic-stripped fallback (handles OCR/AI typos like å→a)
+  const strip = (s: string) =>
+    s.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+  const strippedKey = strip(key);
+  for (const [pattern, level] of Object.entries(map)) {
+    const strippedPattern = strip(pattern.normalize("NFC"));
+    if (
+      strippedKey === strippedPattern ||
+      strippedKey.includes(strippedPattern) ||
+      strippedPattern.includes(strippedKey)
+    )
+      return level;
+  }
   return "unknown";
 }
 
