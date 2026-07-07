@@ -70,6 +70,7 @@ const GERMANY_KNOWN_URLS: Record<string, string> = {
   CD: "https://www.auswaertiges-amt.de/de/service/laender/kongo-demokratische-republik-node/kongodrsicherheit-201300",
   CF: "https://www.auswaertiges-amt.de/de/service/laender/zentralafrikanischerepublik-node/zentralafrikanischerepubliksicherheit-218674",
   LB: "https://www.auswaertiges-amt.de/de/service/laender/libanon-node/libanonsicherheit-204498",
+  QA: "https://www.auswaertiges-amt.de/de/service/laender/katar-node/katarsicherheit-202280",
   MX: "https://www.auswaertiges-amt.de/de/service/laender/mexiko-node/mexikosicherheit-200938",
   CO: "https://www.auswaertiges-amt.de/de/service/laender/kolumbien-node/kolumbiensicherheit-201108",
   VE: "https://www.auswaertiges-amt.de/de/service/laender/venezuela-node/venezuelasicherheit-201218",
