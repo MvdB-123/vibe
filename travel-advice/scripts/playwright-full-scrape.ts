@@ -193,7 +193,7 @@ const DENMARK_SLUGS: Record<string, string> = {
   "SY": "syrien", "TJ": "tadsjikistan", "TW": "taiwan", "TZ": "tanzania",
   "TH": "thailand", "TG": "togo", "TT": "trinidad-og-tobago",
   "TN": "tunesien", "TM": "turkmenistan", "TR": "tyrkiet", "UG": "uganda",
-  "UA": "ukraine", "AE": "de-forenede-arabiske-emirater", "US": "usa",
+  "UA": "ukraine", "AE": "forenede-arabiske-emirater", "US": "usa",
   "UY": "uruguay", "UZ": "usbekistan", "VE": "venezuela", "VN": "vietnam",
   "YE": "yemen", "ZM": "zambia", "ZW": "zimbabwe",
 };
