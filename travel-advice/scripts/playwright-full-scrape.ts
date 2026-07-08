@@ -354,7 +354,7 @@ Extract exactly three things:
 
 1. LEVEL – Choose EXACTLY one option from this list (copy verbatim):
 ${def.levels.map((l) => `  - "${l}"`).join("\n")}
-   Rule: choose the BASE level for the whole country. If specific regions have higher warnings, still choose the general country level (not the exception).
+   Rule: choose the BASE level for the WHOLE country overall. Many advisories contain both a general country-level warning AND stricter warnings for specific regions/border areas. ALWAYS choose the general country level, NOT the level for a specific region. Example: if the page says "generally be cautious, but avoid all travel near the border with X", choose the lower "be cautious" level, not "avoid all travel".
 
 2. SUMMARY – 2–4 sentences in ${def.language} describing:
    - General advisory level and main reason (war, terrorism, crime, etc.)
