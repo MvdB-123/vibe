@@ -48,6 +48,7 @@ const SOURCE_LEVEL_LABELS: Record<string, Record<string, LevelLabel>> = {
     "von nicht notwendigen reisen abraten": { original: "Von nicht notwendigen Reisen wird abgeraten", nl: "Niet-noodzakelijke reizen worden afgeraden" },
     "teilreisewarnung": { original: "Teilreisewarnung", nl: "Gedeeltelijke reiswaarschuwing" },
     "reisewarnung": { original: "Reisewarnung", nl: "Reiswaarschuwing - niet reizen" },
+    "von reisen wird dringend abgeraten": { original: "Von Reisen wird dringend abgeraten", nl: "Reizen wordt dringend afgeraden" },
   },
   france: {
     "vigilance normale": { original: "Vigilance normale", nl: "Normale waakzaamheid" },

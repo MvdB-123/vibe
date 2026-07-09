@@ -318,7 +318,7 @@ const SOURCES: Record<string, SourceDef> = {
   germany: {
     id: "germany",
     language: "German",
-    levels: ["Reisewarnung", "Teilreisewarnung", "Von nicht notwendigen Reisen abraten", "Erhöhte Vorsicht", "Keine besonderen Sicherheitshinweise"],
+    levels: ["Reisewarnung", "Von Reisen wird dringend abgeraten", "Teilreisewarnung", "Von nicht notwendigen Reisen abraten", "Erhöhte Vorsicht", "Keine besonderen Sicherheitshinweise"],
     getCountries: getGermanyCountries,
   },
   sweden: {

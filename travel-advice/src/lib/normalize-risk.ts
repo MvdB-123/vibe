@@ -45,6 +45,8 @@ const NORMALIZATION: Record<string, NormalizationMap> = {
     "von nicht notwendigen reisen wird abgeraten": "orange",
     "teilreisewarnung": "orange",
     "reisewarnung": "red",
+    "von reisen wird dringend abgeraten": "red",
+    "dringend abgeraten": "red",
   },
   france: {
     "sécurité normale": "green",
