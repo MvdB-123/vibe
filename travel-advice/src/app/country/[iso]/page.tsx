@@ -372,11 +372,11 @@ function getMultiLevelDisplay(
     // But if the whole country is red (hasRed without hasOrange), do not downgrade — it's a single-color advisory.
     const baseLevel = (normalizedLevel === "red" && hasOrange) ? "yellow" : normalizedLevel;
     if (hasRed && hasOrange) {
-      return [
-        { level: baseLevel, area: "Algemeen" },
-        { level: "orange", area: "Deelgebieden" },
-        { level: "red", area: "Grensgebieden" },
-      ];
+      const rows: Array<{ level: NormalizedLevel; area: string }> = [{ level: baseLevel, area: "Algemeen" }];
+      // Only add Deelgebieden: orange if base is lower than orange (avoid redundant row)
+      if (baseLevel !== "orange" && baseLevel !== "red") rows.push({ level: "orange", area: "Deelgebieden" });
+      rows.push({ level: "red", area: "Grensgebieden" });
+      return rows;
     }
     // Only compound if base is lower than red
     if (hasRed && baseLevel !== "red") {
