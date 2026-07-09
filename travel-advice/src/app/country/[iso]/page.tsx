@@ -403,6 +403,12 @@ function getMultiLevelDisplay(
         { level: "red", area: "Grensgebieden" },
       ];
     }
+    if (key === "vigilance renforcée" && hasRed) {
+      return [
+        { level: "yellow", area: "Algemeen" },
+        { level: "red", area: "Grensgebieden" },
+      ];
+    }
     if (key === "vigilance renforcée" && hasOrange) {
       return [
         { level: "yellow", area: "Algemeen" },
