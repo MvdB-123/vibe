@@ -26,5 +26,12 @@
     "summary": "Exercise a high degree of caution in Egypt overall due to ongoing tensions, the unpredictable security situation and the threat of terrorism. Avoid all travel to northern Sinai due to terrorist activity and ongoing military operations. Avoid all travel to the Western desert and Libyan border area due to smuggling, terrorist activities, the presence of armed groups and ongoing military operations.",
     "url": "https://travel.gc.ca/destinations/egypt",
     "updatedAt": "2026-07-06"
+  },
+  {
+    "iso2": "KW",
+    "rawLevel": "Avoid non-essential travel",
+    "summary": "Avoid non-essential travel to Kuwait due to the volatile security situation in the region. Regional risk: Border with Iraq - Avoid all travel to the area within 5 km of the border with Iraq due to the presence of unexploded ordnance.",
+    "url": "https://travel.gc.ca/destinations/kuwait",
+    "updatedAt": "2026-07-09"
   }
 ]
