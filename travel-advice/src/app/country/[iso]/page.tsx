@@ -253,6 +253,12 @@ function getMultiLevelDisplay(
         { level: "orange", area: "Deelgebieden" },
       ];
     }
+    if (key === "avoid non-essential travel" && hasRed) {
+      return [
+        { level: "orange", area: "Algemeen" },
+        { level: "red", area: "Grensgebieden" },
+      ];
+    }
   }
 
   if (sourceId === "germany") {
