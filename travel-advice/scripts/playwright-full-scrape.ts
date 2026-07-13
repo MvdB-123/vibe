@@ -363,7 +363,9 @@ ${def.levels.map((l) => `  - "${l}"`).join("\n")}
    - Specific regions/areas with HIGHER warnings and why
    No intro or closing. Factual only.
 
-3. UPDATED – Last update date in YYYY-MM-DD format, or null if not found.
+3. UPDATED – The MOST RECENT update date found anywhere on the page, in YYYY-MM-DD format, or null if not found.
+   Look for: explicit date labels, "OBS: DD.MM.YYYY" timestamps (Danish pages), "Stand:" or "Letzte Änderung:" (German), "Date de mise à jour" (French), or any timestamp near the top.
+   If multiple dates exist, return the LATEST one.
 
 Respond with JSON only: {"level": "...", "summary": "...", "updatedAt": "YYYY-MM-DD or null"}
 
@@ -480,10 +482,23 @@ async function processSource(
           const extracted = await extractWithMistral(text, def, iso2);
           if (!extracted) { failed++; return; }
 
+          // Override Mistral's date with a regex-extracted date when possible,
+          // since Mistral sometimes misses or picks an older date.
+          // Handles: "OBS: 10.07.2026" (Denmark), "Stand - 09.07.2026" (Germany)
+          let officialUpdatedAt: Date | null = extracted.updatedAt ? new Date(extracted.updatedAt) : null;
+          const obsMatch = text.match(/OBS:\s*(\d{2})\.(\d{2})\.(\d{4})/i)
+            ?? text.match(/Stand\s*[-–]\s*(\d{2})\.(\d{2})\.(\d{4})/i);
+          if (obsMatch) {
+            const d = new Date(`${obsMatch[3]}-${obsMatch[2]}-${obsMatch[1]}`);
+            if (!isNaN(d.getTime()) && (!officialUpdatedAt || d > officialUpdatedAt)) {
+              officialUpdatedAt = d;
+            }
+          }
+
           await writeToDb(
             prisma, def.id, iso2,
             extracted.level, extracted.summary, url,
-            extracted.updatedAt ? new Date(extracted.updatedAt) : null,
+            officialUpdatedAt,
             scrapedAt,
           );
 

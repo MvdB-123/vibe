@@ -162,7 +162,24 @@ export const franceScraper: Scraper = async () => {
           if (metaDate) {
             const d = new Date(metaDate[1]);
             if (!isNaN(d.getTime())) officialUpdatedAt = d;
-          } else {
+          }
+          // Also look for French visible date "Date de mise à jour le : 30 juin 2026"
+          // and prefer it if it is MORE RECENT than the meta tag (meta can lag behind)
+          const FR_MONTHS: Record<string, string> = {
+            janvier:"01",février:"02",mars:"03",avril:"04",mai:"05",juin:"06",
+            juillet:"07",août:"08",septembre:"09",octobre:"10",novembre:"11",décembre:"12",
+          };
+          const visibleDate = html.match(/mise\s+à\s+jour[^:]*:\s*(\d{1,2})\s+(\w+)\s+(\d{4})/i);
+          if (visibleDate) {
+            const month = FR_MONTHS[visibleDate[2].toLowerCase()];
+            if (month) {
+              const d = new Date(`${visibleDate[3]}-${month}-${visibleDate[1].padStart(2,"0")}`);
+              if (!isNaN(d.getTime()) && (!officialUpdatedAt || d > officialUpdatedAt)) {
+                officialUpdatedAt = d;
+              }
+            }
+          }
+          if (!officialUpdatedAt) {
             const frDate = html.match(/(\d{1,2})\/(\d{1,2})\/(\d{4})/);
             if (frDate) {
               const d = new Date(`${frDate[3]}-${frDate[2].padStart(2, "0")}-${frDate[1].padStart(2, "0")}`);
