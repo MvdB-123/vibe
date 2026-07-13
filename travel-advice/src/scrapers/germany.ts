@@ -4,11 +4,18 @@ import type { Scraper, RawAdvisory } from "./types";
 const LEVEL_PATTERNS: Array<{ pattern: RegExp; rawLevel: string; severity: number }> = [
   { pattern: /teilreisewarnung/i, rawLevel: "Teilreisewarnung", severity: 3 },
   { pattern: /reisewarnung/i, rawLevel: "Reisewarnung", severity: 4 },
+  { pattern: /dringend abgeraten/i, rawLevel: "Von Reisen wird dringend abgeraten", severity: 4 },
   { pattern: /von nicht notwendigen reisen|nicht notwendige reisen/i, rawLevel: "Von nicht notwendigen Reisen abraten", severity: 2 },
   { pattern: /erh.hte vorsicht|besondere vorsicht|sicherheitshinweise beachten/i, rawLevel: "Erhöhte Vorsicht", severity: 1 },
 ];
 
 function flagsToRaw(warning: boolean, partialWarning: boolean, situationWarning: boolean, situationPartWarning: boolean, contentHtml?: string): string {
+  // "dringend abgeraten" is a special red-level phrasing that the API doesn't flag separately.
+  // Check for it in HTML before falling back to API flags.
+  if (contentHtml && /dringend abgeraten/i.test(contentHtml)) {
+    return "Von Reisen wird dringend abgeraten";
+  }
+
   // Return the LOWEST applicable level — compound detection in page.tsx will show
   // higher regional zones from the summary keywords.
   if (situationWarning) return "Erhöhte Vorsicht";
