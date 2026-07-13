@@ -88,19 +88,25 @@ function extractRegionalRisk(html: string): string {
   // Extracting it ensures compound-zone detection works for all countries automatically.
   const stripped = html
     .replace(/<script[\s\S]*?<\/script>/gi, "")
-    .replace(/<style[\s\S]*?<\/style>/gi, "");
+    .replace(/<style[\s\S]*?<\/style>/gi, "")
+    .replace(/<nav[\s\S]*?<\/nav>/gi, ""); // Remove nav/TOC so we don't match nav links
 
-  // Find the Regional risk heading
-  const headingMatch = stripped.match(/Regional\s+risk/i);
+  // Prefer a heading element (<h2>/<h3>/<h4>) containing "Regional risk"
+  // This avoids matching the "On this page" TOC link which appears earlier in the HTML.
+  const headingMatch =
+    stripped.match(/<h[2-4][^>]*>[\s\S]*?Regional\s+risk[\s\S]*?<\/h[2-4]>/i) ??
+    stripped.match(/id="[^"]*regional[^"]*"/i) ??
+    stripped.match(/Regional\s+risk/i);
+
   if (!headingMatch || headingMatch.index === undefined) return "";
 
-  const slice = stripped.slice(headingMatch.index, headingMatch.index + 4000);
+  const slice = stripped.slice(headingMatch.index, headingMatch.index + 5000);
   return slice
     .replace(/<[^>]*>/g, " ")
     .replace(/&[a-z#0-9]+;/gi, " ")
     .replace(/\s+/g, " ")
     .trim()
-    .slice(0, 1500);
+    .slice(0, 2000);
 }
 
 function extractSummary(html: string, levelText: string): string {

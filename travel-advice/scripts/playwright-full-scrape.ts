@@ -330,7 +330,7 @@ const SOURCES: Record<string, SourceDef> = {
   denmark: {
     id: "denmark",
     language: "Danish",
-    levels: ["Rejse frårådes", "Fråråd ikke-nødvendige rejser", "Vær ekstra opmærksom", "Vær forsigtig", "Vær opmærksom", "Ingen særlige advarsler"],
+    levels: ["Rejse frårådes", "Fråråd ikke-nødvendige rejser", "Vær ekstra forsigtig", "Vær ekstra opmærksom", "Vær forsigtig", "Vær opmærksom", "Ingen særlige advarsler"],
     getCountries: async () => getDenmarkCountries(),
     isPageMissing: (text: string) =>
       text.length < 400 || DENMARK_NO_ADVISORY_PATTERNS.some((p) => p.test(text)),
