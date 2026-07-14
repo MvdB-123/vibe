@@ -31,7 +31,7 @@ const KNOWN_ISO_SLUGS: Record<string, string> = {
   "guinee-bissau": "GW", "guinee-equatoriale": "GQ", "guyana": "GY",
   "haiti": "HT", "honduras": "HN", "hongrie": "HU", "inde": "IN",
   "indonesie": "ID", "irak": "IQ", "iran": "IR", "irlande": "IE",
-  "islande": "IS", "israel-et-territoires-palestiniens": "IL", "italie": "IT",
+  "islande": "IS", "israel-et-territoires-palestiniens": "IL", "israel": "IL", "italie": "IT",
   "jamaique": "JM", "japon": "JP", "jordanie": "JO", "kazakhstan": "KZ",
   "kenya": "KE", "kirghizstan": "KG", "kiribati": "KI", "kosovo": "XK",
   "koweit": "KW", "laos": "LA", "lesotho": "LS", "lettonie": "LV",

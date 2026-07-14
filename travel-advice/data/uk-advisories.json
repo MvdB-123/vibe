@@ -14,6 +14,13 @@
     "updatedAt": "2026-07-04"
   },
   {
+    "iso2": "IL",
+    "rawLevel": "Advise against all travel to parts",
+    "summary": "The FCDO advises against all travel to Gaza due to the ongoing military conflict. The FCDO advises against all but essential travel to Israel and the West Bank overall due to the volatile security situation. The rest of Israel, including Tel Aviv and Jerusalem, is at elevated risk.",
+    "url": "https://www.gov.uk/foreign-travel-advice/israel",
+    "updatedAt": "2026-07-14"
+  },
+  {
     "iso2": "TH",
     "rawLevel": "Advise against all but essential travel to parts",
     "summary": "The FCDO advises against all but essential travel to the far south of Thailand: the provinces of Pattani, Yala, Narathiwat, and the area of Songkhla province south of the A43 road between Hat Yai and Sadam, due to an ongoing insurgency involving bombings, shootings, and arson attacks. The rest of Thailand, including Bangkok, Chiang Mai, Phuket, and Koh Samui, is considered safe for travel.",
