@@ -130,6 +130,9 @@ const KNOWN_ADVISORY_URLS: Record<string, string> = {
   MX: "https://www.auswaertiges-amt.de/de/service/laender/mexiko-node/mexikosicherheit-200938",
   CO: "https://www.auswaertiges-amt.de/de/service/laender/kolumbien-node/kolumbiensicherheit-201108",
   VE: "https://www.auswaertiges-amt.de/de/service/laender/venezuela-node/venezuelasicherheit-201218",
+  BH: "https://www.auswaertiges-amt.de/de/service/laender/bahrain-node/bahrainsicherheit-204112",
+  KW: "https://www.auswaertiges-amt.de/de/service/laender/kuwait-node/kuwaitsicherheit-204130",
+  QA: "https://www.auswaertiges-amt.de/de/service/laender/katar-node/katarsicherheit-202280",
 };
 
 function getSourceUrl(c: AACountry, iso2: string): string {
