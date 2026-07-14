@@ -40,7 +40,7 @@ const KNOWN_ISO_SLUGS: Record<string, string> = {
   "malawi": "MW", "maldives": "MV", "mali": "ML", "malte": "MT",
   "maroc": "MA", "marshalls": "MH", "mauritanie": "MR", "maurice": "MU",
   "mexique": "MX", "micronesie": "FM", "moldavie": "MD", "monaco": "MC",
-  "mongolie": "MN", "montenegro": "ME", "mozambique": "MZ", "myanmar": "MM",
+  "mongolie": "MN", "montenegro": "ME", "mozambique": "MZ", "myanmar": "MM", "birmanie": "MM",
   "namibie": "NA", "nauru": "NR", "nepal": "NP", "nicaragua": "NI",
   "niger": "NE", "nigeria": "NG", "macedoine-du-nord": "MK", "norvege": "NO",
   "nouvelle-zelande": "NZ", "oman": "OM", "ouganda": "UG", "ouzbekistan": "UZ",
@@ -58,7 +58,8 @@ const KNOWN_ISO_SLUGS: Record<string, string> = {
   "togo": "TG", "tonga": "TO", "trinite-et-tobago": "TT", "tunisie": "TN",
   "turkmenistan": "TM", "turquie": "TR", "tuvalu": "TV",
   "ukraine": "UA", "uruguay": "UY", "vanuatu": "VU", "venezuela": "VE",
-  "viet-nam": "VN", "yemen": "YE", "zambie": "ZM", "zimbabwe": "ZW",
+  "viet-nam": "VN", "vietnam": "VN", "yemen": "YE", "zambie": "ZM", "zimbabwe": "ZW",
+  "afrique-du-sud": "ZA", "bielorussie": "BY", "etats-unis": "US",
 };
 
 function extractLevelFromHtml(html: string): string {
