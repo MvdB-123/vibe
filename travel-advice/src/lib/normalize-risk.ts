@@ -138,9 +138,9 @@ export function levelIndex(level: NormalizedLevel): number {
 }
 
 export function strictest(levels: NormalizedLevel[]): NormalizedLevel {
-  return levels.reduce((a, b) =>
-    levelIndex(a) > levelIndex(b) ? a : b, "green"
-  );
+  const known = levels.filter((l) => l !== "unknown");
+  if (!known.length) return "unknown";
+  return known.reduce((a, b) => (levelIndex(a) > levelIndex(b) ? a : b));
 }
 
 export function mildest(levels: NormalizedLevel[]): NormalizedLevel {
