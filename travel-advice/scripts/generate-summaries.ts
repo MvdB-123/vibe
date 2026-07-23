@@ -61,7 +61,7 @@ async function generateSummary(
       Authorization: `Bearer ${MISTRAL_API_KEY}`,
     },
     body: JSON.stringify({
-      model: "mistral-small-latest",
+      model: "mistral-large-latest",
       temperature: 0,
       max_tokens: 280,
       messages: [
