@@ -60,7 +60,10 @@ jobs:
           git add data/germany-advisories.json \
                   data/sweden-advisories.json \
                   data/denmark-advisories.json \
-                  data/australia-advisories.json
+                  data/australia-advisories.json \
+                  data/uk-advisories.json \
+                  data/canada-advisories.json \
+                  data/france-advisories.json
           git diff --staged --quiet && echo "No changes to commit" && exit 0
           git commit -m "Refresh supplement data [$(date -u +%Y-%m-%d)]"
           git pull --rebase origin main

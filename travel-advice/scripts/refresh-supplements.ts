@@ -53,8 +53,24 @@ const SEVERITY: Record<string, number> = {
   "var extra uppmärksam": 1,
   "avrådan från icke nödvändiga resor": 2,
   "avrådan från alla resor": 3,
-  // Australia (text levels)
+  // UK
+  "no advice against travel": 0,
+  "advise against all but essential travel to parts": 1,
+  "advise against all but essential travel": 2,
+  "advise against all travel to parts": 2,
+  "advise against all travel": 3,
+  // Canada
   "exercise normal safety precautions": 0,
+  "exercise a high degree of caution": 1,
+  "avoid non-essential travel": 2,
+  "avoid all travel": 3,
+  // France
+  "sécurité normale": 0,
+  "vigilance normale": 0,
+  "vigilance renforcée": 1,
+  "déconseillé sauf raison impérative": 2,
+  "formellement déconseillé": 3,
+  // Australia (text levels)
   "exercise a high degree of caution": 1,
   "reconsider your need to travel": 2,
   "do not travel": 3,
@@ -104,6 +120,38 @@ const SOURCES: Record<string, SourceConfig> = {
       "Avrådan från icke nödvändiga resor",
       "Var extra uppmärksam",
       "Inga särskilda restriktioner",
+    ],
+  },
+  uk: {
+    file: "uk-advisories.json",
+    language: "English",
+    levels: [
+      "Advise against all travel",
+      "Advise against all travel to parts",
+      "Advise against all but essential travel",
+      "Advise against all but essential travel to parts",
+      "No advice against travel",
+    ],
+  },
+  canada: {
+    file: "canada-advisories.json",
+    language: "English",
+    levels: [
+      "Avoid all travel",
+      "Avoid non-essential travel",
+      "Exercise a high degree of caution",
+      "Exercise normal safety precautions",
+    ],
+  },
+  france: {
+    file: "france-advisories.json",
+    language: "French",
+    levels: [
+      "Formellement déconseillé",
+      "Déconseillé sauf raison impérative",
+      "Vigilance renforcée",
+      "Vigilance normale",
+      "Sécurité normale",
     ],
   },
 };
