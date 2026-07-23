@@ -21,6 +21,132 @@
     "updatedAt": "2026-07-14"
   },
   {
+    "iso2": "AE",
+    "rawLevel": "No advice against travel",
+    "summary": "The FCDO currently advises no specific travel restriction for the UAE overall. However, there is a risk of military escalation in the wider Middle East region, including the possibility of missile or drone attacks. The FCDO advises against all but essential travel to within 10 km of the border with Yemen in the emirate of Abu Dhabi due to the risk of cross-border attacks. Monitor FCDO advice closely as the situation can change rapidly.",
+    "url": "https://www.gov.uk/foreign-travel-advice/united-arab-emirates",
+    "updatedAt": "2026-07-22"
+  },
+  {
+    "iso2": "SA",
+    "rawLevel": "Advise against all but essential travel to parts",
+    "summary": "The FCDO advises against all but essential travel to areas within 10 km of the border with Yemen, including parts of the Jizan, Najran and Asir regions, due to the risk of cross-border attacks. The rest of Saudi Arabia, including Riyadh, Jeddah and the Red Sea coast, is generally considered safe. There is a general risk from terrorism and a volatile regional security situation.",
+    "url": "https://www.gov.uk/foreign-travel-advice/saudi-arabia",
+    "updatedAt": "2026-07-14"
+  },
+  {
+    "iso2": "EG",
+    "rawLevel": "Advise against all but essential travel to parts",
+    "summary": "The FCDO advises against all but essential travel to the Sinai Peninsula (except for the area within the Sharm el Sheikh perimeter barrier), the Western Desert and the area within 50 km of the border with Libya. The rest of Egypt, including Cairo, Luxor and Hurghada, is considered safe to visit with normal precautions. There is a general threat from terrorism throughout the country.",
+    "url": "https://www.gov.uk/foreign-travel-advice/egypt",
+    "updatedAt": "2026-07-14"
+  },
+  {
+    "iso2": "IQ",
+    "rawLevel": "Advise against all travel",
+    "summary": "The FCDO advises against all travel to Iraq due to the volatile security situation, ongoing threat of terrorism and risk of armed conflict. If you are in Iraq, you should leave if it is safe to do so. There is a high threat of kidnapping, particularly for western nationals.",
+    "url": "https://www.gov.uk/foreign-travel-advice/iraq",
+    "updatedAt": "2026-07-14"
+  },
+  {
+    "iso2": "IR",
+    "rawLevel": "Advise against all travel",
+    "summary": "The FCDO advises against all travel to Iran. There is a very high risk of arbitrary detention, including for British-Iranian dual nationals. The risk of regional military escalation involving Iran is significant. British nationals have previously been detained without cause and held for lengthy periods.",
+    "url": "https://www.gov.uk/foreign-travel-advice/iran",
+    "updatedAt": "2026-07-14"
+  },
+  {
+    "iso2": "LB",
+    "rawLevel": "Advise against all travel",
+    "summary": "The FCDO advises against all travel to Lebanon due to the volatile security situation and the risk of further escalation. If you are in Lebanon you should leave now while commercial routes remain available. The security situation can deteriorate rapidly and without warning.",
+    "url": "https://www.gov.uk/foreign-travel-advice/lebanon",
+    "updatedAt": "2026-07-14"
+  },
+  {
+    "iso2": "SY",
+    "rawLevel": "Advise against all travel",
+    "summary": "The FCDO advises against all travel to Syria. Despite the fall of the Assad regime, the security situation remains extremely dangerous with ongoing armed conflict, terrorism and unclear power dynamics. The British Embassy in Damascus is not currently able to provide consular services.",
+    "url": "https://www.gov.uk/foreign-travel-advice/syria",
+    "updatedAt": "2026-07-14"
+  },
+  {
+    "iso2": "AF",
+    "rawLevel": "Advise against all travel",
+    "summary": "The FCDO advises against all travel to Afghanistan. The security situation is extremely dangerous with a very high threat of terrorism, armed conflict, kidnapping and arbitrary detention under Taliban rule. The British Embassy in Kabul is closed and the UK has no ability to provide consular assistance in Afghanistan.",
+    "url": "https://www.gov.uk/foreign-travel-advice/afghanistan",
+    "updatedAt": "2026-07-14"
+  },
+  {
+    "iso2": "YE",
+    "rawLevel": "Advise against all travel",
+    "summary": "The FCDO advises against all travel to Yemen. The ongoing civil war, Houthi attacks on shipping and civilian infrastructure, terrorism and the catastrophic humanitarian situation make travel extremely dangerous. The UK has no diplomatic presence in Yemen.",
+    "url": "https://www.gov.uk/foreign-travel-advice/yemen",
+    "updatedAt": "2026-07-14"
+  },
+  {
+    "iso2": "LY",
+    "rawLevel": "Advise against all travel",
+    "summary": "The FCDO advises against all travel to Libya. The country has no effective government and large parts are controlled by armed militias. There is a high risk of kidnapping, terrorist attacks and armed conflict throughout the country.",
+    "url": "https://www.gov.uk/foreign-travel-advice/libya",
+    "updatedAt": "2026-07-14"
+  },
+  {
+    "iso2": "SO",
+    "rawLevel": "Advise against all travel",
+    "summary": "The FCDO advises against all travel to Somalia, including Somaliland. Al-Shabaab remains active and capable of carrying out attacks. There is a very high risk of kidnapping throughout the country. The British Embassy in Mogadishu has very limited capacity to provide consular assistance.",
+    "url": "https://www.gov.uk/foreign-travel-advice/somalia",
+    "updatedAt": "2026-07-14"
+  },
+  {
+    "iso2": "SD",
+    "rawLevel": "Advise against all travel",
+    "summary": "The FCDO advises against all travel to Sudan due to the ongoing civil war between the Sudanese Armed Forces and the RSF. The conflict has caused widespread destruction, mass displacement and a humanitarian catastrophe. Khartoum and Darfur are particularly affected.",
+    "url": "https://www.gov.uk/foreign-travel-advice/sudan",
+    "updatedAt": "2026-07-14"
+  },
+  {
+    "iso2": "SS",
+    "rawLevel": "Advise against all travel",
+    "summary": "The FCDO advises against all travel to South Sudan due to the volatile security situation, ongoing armed conflict and very high crime rate. There are significant risks of violence, including against aid workers and foreigners.",
+    "url": "https://www.gov.uk/foreign-travel-advice/south-sudan",
+    "updatedAt": "2026-07-14"
+  },
+  {
+    "iso2": "ML",
+    "rawLevel": "Advise against all travel",
+    "summary": "The FCDO advises against all travel to Mali. Jihadist groups including JNIM and ISGS control large parts of northern and central Mali. There is a very high risk of kidnapping. The political situation following the 2021 military coup remains unpredictable.",
+    "url": "https://www.gov.uk/foreign-travel-advice/mali",
+    "updatedAt": "2026-07-14"
+  },
+  {
+    "iso2": "CF",
+    "rawLevel": "Advise against all travel",
+    "summary": "The FCDO advises against all travel to the Central African Republic. Armed groups control large parts of the country, attacks on civilians are frequent and state authority is extremely weak. The security situation can deteriorate rapidly.",
+    "url": "https://www.gov.uk/foreign-travel-advice/central-african-republic",
+    "updatedAt": "2026-07-14"
+  },
+  {
+    "iso2": "MM",
+    "rawLevel": "Advise against all travel",
+    "summary": "The FCDO advises against all travel to Myanmar due to the ongoing armed conflict following the 2021 military coup. There is a risk of arbitrary detention. The FCDO advises against all but essential travel to Rakhine State and border areas. Yangon city centre carries elevated risk but travel is not entirely advised against.",
+    "url": "https://www.gov.uk/foreign-travel-advice/myanmar",
+    "updatedAt": "2026-07-14"
+  },
+  {
+    "iso2": "RU",
+    "rawLevel": "Advise against all travel",
+    "summary": "The FCDO advises against all travel to Russia due to the ongoing invasion of Ukraine. There is a risk of arbitrary detention of British nationals. Commercial flights to and from Russia are severely limited. Russians laws have been used to detain foreign nationals on politically motivated charges.",
+    "url": "https://www.gov.uk/foreign-travel-advice/russia",
+    "updatedAt": "2026-07-14"
+  },
+  {
+    "iso2": "BY",
+    "rawLevel": "Advise against all travel",
+    "summary": "The FCDO advises against all travel to Belarus due to the repressive political environment and the risk of arbitrary detention. The Lukashenko regime has detained foreign nationals on politically motivated charges. There is also a risk of being caught up in the conflict between Russia and Ukraine.",
+    "url": "https://www.gov.uk/foreign-travel-advice/belarus",
+    "updatedAt": "2026-07-14"
+  },
+  {
     "iso2": "KW",
     "rawLevel": "No advice against travel",
     "summary": "Kuwait is generally safe. However, the FCDO advises that the security situation in the wider Middle East region is unpredictable and there is a risk of escalation. There is a general threat from terrorism. You should monitor official advice and be vigilant in public places. The area near the Iraqi border carries additional risk.",
