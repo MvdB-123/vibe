@@ -24,11 +24,21 @@ const HASHES_PATH = path.join(__dirname, "../data/summaries-hashes.json");
 type SummaryData = Record<string, Record<string, string>>;
 type HashData = Record<string, Record<string, string>>;
 
-const PROMPT_VERSION = "v5";
+const PROMPT_VERSION = "v6";
 
 function hashText(text: string): string {
   return crypto.createHash("sha1").update(`${PROMPT_VERSION}:${text}`).digest("hex").slice(0, 12);
 }
+
+const EXTRACTION_SYSTEM_PROMPT = `Je bent een extractietool, geen samenvatter. Je krijgt de letterlijke tekst van een officieel reisadvies. Zet uitsluitend informatie die LETTERLIJK in de brontekst staat om naar beknopt Nederlands.
+STRIKTE REGELS:
+1. Neem ALLEEN feiten over die expliciet in de brontekst staan. Voeg NIETS toe uit eigen kennis over het land, de regio, grenzen, steden of risico's.
+2. Noem een plaats, regio of grensgebied ALLEEN als die letterlijk in de brontekst voorkomt.
+3. Staat er geen regionale differentiatie in de bron, schrijf dan geen regionale adviezen. Een korte samenvatting zonder regiodetails is CORRECT gedrag.
+4. Bij twijfel: weglaten.
+5. Gebruik idiomatische vertalingen: "exercise caution" → "wees voorzichtig", "exercise increased caution" → "wees extra voorzichtig", "reconsider travel" → "heroverweeg uw reis", "do not travel" → "reis niet naar", "avoid non-essential travel" → "vermijd niet-noodzakelijke reizen", "avoid all travel" → "vermijd alle reizen".
+6. Geen inleiding, afsluiting, Markdown-opmaak of asterisken. Maximaal 150 woorden.
+7. Jouw eigen kennis over het land is per definitie verouderd en irrelevant; alleen de brontekst telt.`;
 
 async function generateSummary(
   countryName: string,
@@ -39,22 +49,10 @@ async function generateSummary(
 ): Promise<string> {
   const hasScrapedText = scrapedSummary && scrapedSummary.trim().length > 20;
 
-  const prompt = hasScrapedText
-    ? `Vat het onderstaande reisadvies samen in vloeiend Nederlands. Maximaal 150 woorden.
-Regels:
-- Noem het algemene veiligheidsniveau voor het land
-- Noem voor elk risicogebied de exacte plaatsnamen én de reden van de waarschuwing (bijv. terrorisme, gewapend conflict, criminaliteit, politieke onrust)
-- Als er gebieden zijn met verhoogde waarschuwingen, beschrijf welke gebieden en waarom
-- Gebruik idiomatische vertalingen: "exercise caution" → "wees voorzichtig", "exercise increased caution" → "wees extra voorzichtig", "reconsider travel" → "heroverweeg uw reis", "do not travel" → "reis niet naar", "avoid non-essential travel" → "vermijd niet-noodzakelijke reizen", "avoid all travel" → "vermijd alle reizen"
-- Geen inleiding of afsluiting, alleen de samenvatting
-- Geen Markdown-opmaak, geen asterisken of andere opmaaktekens
-
-Bron: ${sourceNameNl} — reisadvies voor ${countryName} (niveau: ${levelNl})
-Te verwerken tekst:
-${scrapedSummary}`
-    : `Schrijf één zin in het Nederlands die het reisadvies van ${sourceNameNl} voor ${countryName} beschrijft.
-Niveau: ${rawLevel} (${levelNl}). Geen verdere details beschikbaar.
-Begin met "${sourceNameNl} adviseert..."`.trim();
+  // No source text: return a minimal factual sentence without inviting hallucination
+  if (!hasScrapedText) {
+    return `${sourceNameNl} classificeert ${countryName} als "${rawLevel}" (${levelNl}). Raadpleeg de officiële bron voor details.`;
+  }
 
   const res = await fetch("https://api.mistral.ai/v1/chat/completions", {
     method: "POST",
@@ -64,8 +62,12 @@ Begin met "${sourceNameNl} adviseert..."`.trim();
     },
     body: JSON.stringify({
       model: "mistral-small-latest",
+      temperature: 0,
       max_tokens: 280,
-      messages: [{ role: "user", content: prompt }],
+      messages: [
+        { role: "system", content: EXTRACTION_SYSTEM_PROMPT },
+        { role: "user", content: `Bron: ${sourceNameNl} — reisadvies voor ${countryName} (niveau: ${levelNl})\nHier is de brontekst van het reisadvies:\n${scrapedSummary}` },
+      ],
     }),
   });
 
