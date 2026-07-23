@@ -98,6 +98,13 @@
     "updatedAt": "2026-07-23"
   },
   {
+    "iso2": "IL",
+    "rawLevel": "Reisewarnung",
+    "summary": "Für Israel und die palästinensischen Gebiete gilt eine Reisewarnung aufgrund der anhaltenden militärischen Auseinandersetzungen und des Terrorismusrisikos. Der Gazastreifen ist von der Reisewarnung besonders betroffen, da dort aktive Kampfhandlungen stattfinden. Im Westjordanland besteht erhöhte Gefahr durch bewaffnete Übergriffe. Die Sicherheitslage im gesamten Land ist volatil.",
+    "url": "https://www.auswaertiges-amt.de/de/reiseundsicherheit/israelsicherheit-203814",
+    "updatedAt": "2026-07-14"
+  },
+  {
     "iso2": "TR",
     "rawLevel": "Erhöhte Vorsicht",
     "summary": "Für die gesamte Türkei gilt eine erhöhte Vorsicht aufgrund der anhaltenden terroristischen Gefährdung und regionaler Spannungen. In Ankara besteht während des NATO-Gipfels (7./8. Juli 2026) eine besonders angespannte Sicherheitslage mit Versammlungsverboten und Verkehrseinschränkungen. Zudem wird vor willkürlichen Festnahmen deutscher Staatsangehöriger in der Türkei gewarnt, insbesondere im Zusammenhang mit dem weit gefassten türkischen Terrorismusbegriff.",

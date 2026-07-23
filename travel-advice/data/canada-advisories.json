@@ -33,5 +33,12 @@
     "summary": "Avoid non-essential travel to Kuwait due to the volatile security situation in the region. Regional risk: Border with Iraq - Avoid all travel to the area within 5 km of the border with Iraq due to the presence of unexploded ordnance.",
     "url": "https://travel.gc.ca/destinations/kuwait",
     "updatedAt": "2026-07-09"
+  },
+  {
+    "iso2": "IL",
+    "rawLevel": "Avoid non-essential travel",
+    "summary": "Avoid non-essential travel to Israel and the West Bank due to the unpredictable security situation and the risk of terrorism. Avoid all travel to Gaza due to the ongoing military conflict. The security situation throughout the region remains highly volatile.",
+    "url": "https://travel.gc.ca/destinations/israel",
+    "updatedAt": "2026-07-14"
   }
 ]
