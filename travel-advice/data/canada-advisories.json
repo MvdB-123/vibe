@@ -2,37 +2,37 @@
   {
     "iso2": "ID",
     "rawLevel": "Exercise a high degree of caution",
-    "summary": "Exercise a high degree of caution in Indonesia overall. Avoid non-essential travel to the provinces of Papua and West Papua due to civil unrest and an ongoing armed separatist movement. Avoid non-essential travel to parts of Maluku province and Central Sulawesi (Poso region) due to ongoing security risks.",
+    "summary": "Indonesia is under a general advisory of 'Exercise a high degree of caution' due to political and social tensions, terrorism threats, and violent crime throughout the country. Specific regions with higher warnings include all provinces of Indonesian Papua (except Raja Ampat Regency islands and Sorong city) due to violent incidents, militant threats, and kidnapping risks, as well as Aceh province and East and West Kalimantan due to kidnapping threats.",
     "url": "https://travel.gc.ca/destinations/indonesia",
-    "updatedAt": "2026-07-04"
+    "updatedAt": "2026-07-22"
   },
   {
     "iso2": "TH",
     "rawLevel": "Exercise a high degree of caution",
-    "summary": "Exercise a high degree of caution in Thailand overall. Avoid all travel to the Thailand-Cambodia border area within 50 kilometres of the border due to ongoing tensions. Avoid all travel to the southern provinces of Narathiwat, Pattani, Yala and southern Songkhla province due to violent attacks from separatist insurgents.",
+    "summary": "Thailand is under an overall advisory of 'Exercise a high degree of caution' due to ongoing political tensions, sporadic demonstrations, and a persistent terrorism threat. Specific regions with higher warnings include the Thailand-Cambodia border (avoid all travel due to armed clashes and land mines) and the southern provinces of Narathiwat, Pattani, Yala, and southern Songkhla (avoid all travel due to violent separatist insurgent attacks). Political instability and military enforcement powers further contribute to the volatile security environment.",
     "url": "https://travel.gc.ca/destinations/thailand",
     "updatedAt": "2026-07-07"
   },
   {
     "iso2": "TR",
     "rawLevel": "Exercise a high degree of caution",
-    "summary": "Exercise a high degree of caution in Türkiye overall due to the threat of terrorist attacks and demonstrations. Avoid non-essential travel to the southeastern provinces due to ongoing insurgency and risk of terrorist attacks. Avoid all travel to within 10 km of the borders with Iraq and Syria due to unpredictable security situation and terrorism.",
+    "summary": "The Government of Canada advises exercising a high degree of caution in Türkiye due to the threat of terrorist attacks and the possibility of demonstrations throughout the country. Specific regions with higher warnings include areas within 10 km of the borders with Iraq and Syria, where travel should be avoided entirely, and the southeastern provinces of Hakkari and Şirnak, where non-essential travel is discouraged due to the unpredictable security situation.",
     "url": "https://travel.gc.ca/destinations/turkey",
-    "updatedAt": "2026-07-04"
+    "updatedAt": "2026-07-10"
   },
   {
     "iso2": "EG",
     "rawLevel": "Exercise a high degree of caution",
-    "summary": "Exercise a high degree of caution in Egypt overall due to ongoing tensions, the unpredictable security situation and the threat of terrorism. Avoid all travel to northern Sinai due to terrorist activity and ongoing military operations. Avoid all travel to the Western desert and Libyan border area due to smuggling, terrorist activities, the presence of armed groups and ongoing military operations.",
+    "summary": "The Government of Canada advises Canadians to exercise a high degree of caution in Egypt due to ongoing tensions, an unpredictable security situation, and the threat of terrorism. Specific regions with higher warnings include Northern Sinai (avoid all travel due to terrorist activity and military operations), the Western Desert and Libyan border area (avoid all travel due to smuggling, terrorist activities, and armed groups), and the northern part of South Sinai (avoid non-essential travel due to terrorism).",
     "url": "https://travel.gc.ca/destinations/egypt",
-    "updatedAt": "2026-07-06"
+    "updatedAt": "2026-07-22"
   },
   {
     "iso2": "KW",
-    "rawLevel": "Avoid non-essential travel",
-    "summary": "Avoid non-essential travel to Kuwait due to the volatile security situation in the region. Regional risk: Border with Iraq - Avoid all travel to the area within 5 km of the border with Iraq due to the presence of unexploded ordnance.",
+    "rawLevel": "Avoid all travel",
+    "summary": "The Government of Canada advises avoiding all travel to Kuwait due to the volatile security situation in the region, including ongoing military activity and missile/drone attacks that have struck targets, including civilian infrastructure. There is also an ongoing threat of terrorism, particularly at or near foreign military installations and places of worship. The Jleeb Al-Shuyoukh area in Kuwait City is noted for a high crime rate, including violent crime.",
     "url": "https://travel.gc.ca/destinations/kuwait",
-    "updatedAt": "2026-07-09"
+    "updatedAt": "2026-07-23"
   },
   {
     "iso2": "IL",
