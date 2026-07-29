@@ -36,9 +36,9 @@
   },
   {
     "iso2": "IL",
-    "rawLevel": "Exercise normal safety precautions",
-    "summary": "The Government of Canada's travel advisory page for Israel (IL) could not be retrieved, resulting in a 404 error. As no specific advisory level or updated information was available, the least severe option is applied by default.",
-    "url": "https://travel.gc.ca/destinations/israel",
-    "updatedAt": "2026-07-14"
+    "rawLevel": "Avoid non-essential travel",
+    "summary": "The Government of Canada advises to avoid non-essential travel to Israel and the West Bank due to the volatile security situation and ongoing conflict in the region. Avoid all travel to the Gaza Strip due to active military operations and the risk of arbitrary detention. Avoid all travel to within 40 km of the border with Lebanon due to cross-border fire and military activity.",
+    "url": "https://travel.gc.ca/destinations/israel-and-palestine",
+    "updatedAt": "2026-07-29"
   }
 ]
