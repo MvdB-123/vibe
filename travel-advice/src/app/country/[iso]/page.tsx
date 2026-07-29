@@ -330,7 +330,15 @@ function getMultiLevelDisplay(
         { level: "red", area: "Deelgebieden" },
       ];
     }
+    const hasUkRed = /\ball travel to\b(?! but essential)/i.test(sum) || /advise against all travel(?! but)/i.test(sum);
     if (key.includes("advise against all but essential travel to parts") || key === "advise against all but essential travel to parts") {
+      if (hasUkRed) {
+        return [
+          { level: "green", area: "Algemeen" },
+          { level: "orange", area: "Deelgebieden" },
+          { level: "red", area: "Grensgebieden" },
+        ];
+      }
       return [
         { level: "green", area: "Algemeen" },
         { level: "orange", area: "Deelgebieden" },
@@ -354,11 +362,10 @@ function getMultiLevelDisplay(
       ];
     }
     if (hasRed && hasOrange) {
-      return [
-        { level: baseLevel, area: "Algemeen" },
-        { level: "orange", area: "Deelgebieden" },
-        { level: "red", area: "Grensgebieden" },
-      ];
+      const rows: Array<{ level: NormalizedLevel; area: string }> = [{ level: baseLevel, area: "Algemeen" }];
+      if (baseLevel !== "orange" && baseLevel !== "red") rows.push({ level: "orange", area: "Deelgebieden" });
+      rows.push({ level: "red", area: "Grensgebieden" });
+      return rows;
     }
     // Only show compound zones when base level is lower than the regional maximum.
     // If the whole country is already red, "hasRed" just confirms the country level — no split needed.
