@@ -134,7 +134,8 @@ export const ukScraper: Scraper = async () => {
   try {
     slugs = await getCountrySlugs();
   } catch (err) {
-    return { sourceId: "uk", advisories: [], scrapedAt, error: `Index ophalen mislukt: ${err}` };
+    // Index fetch failed (gov.uk blocked from cloud): fall through to static supplement only
+    slugs = [];
   }
 
   const advisories: RawAdvisory[] = [];
