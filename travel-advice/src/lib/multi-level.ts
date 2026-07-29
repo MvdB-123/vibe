@@ -138,6 +138,8 @@ export function getMultiLevelDisplay(
   if (sourceId === "uk") {
     const sum = (summary || "").toLowerCase();
     const hasUkBothParts = /all but essential travel to|advise against all but essential/i.test(sum);
+    // Detects red zone: "all travel to X" where X is NOT qualified by "but essential"
+    const hasUkRed = /\ball travel to\b(?! but essential)/i.test(sum) || /advise against all travel(?! but)/i.test(sum);
     if (key.includes("advise against all travel to parts") || key === "advise against all travel to parts") {
       if (hasUkBothParts) {
         return [
@@ -152,6 +154,13 @@ export function getMultiLevelDisplay(
       ];
     }
     if (key.includes("advise against all but essential travel to parts") || key === "advise against all but essential travel to parts") {
+      if (hasUkRed) {
+        return [
+          { level: "green", area: "Algemeen" },
+          { level: "orange", area: "Deelgebieden" },
+          { level: "red", area: "Grensgebieden" },
+        ];
+      }
       return [
         { level: "green", area: "Algemeen" },
         { level: "orange", area: "Deelgebieden" },
