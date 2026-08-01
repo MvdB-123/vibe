@@ -6,23 +6,23 @@
     "france": "da5406a0d86f"
   },
   "AE": {
-    "uk": "91c08ad206eb",
+    "uk": "bf1c3f670d32",
     "us": "bdcb9fcddf56",
     "germany": "9131b457eee2",
     "canada": "7e444a2041e1",
     "france": "08063939a634",
-    "denmark": "711d604c6409",
-    "sweden": "d6749f924085",
+    "denmark": "b34ed33b8875",
+    "sweden": "f5b5500f416a",
     "australia": "8abdc600d898"
   },
   "AF": {
-    "uk": "14760b795a8b",
+    "uk": "aec3a2a963a2",
     "us": "b2640df8b3c4",
     "germany": "5eb46fdce89f",
     "canada": "93d8c48cedac",
     "france": "f001ef039688",
     "denmark": "680dcbb25026",
-    "sweden": "84118f9ecf07",
+    "sweden": "627d2eae95c1",
     "australia": "7b7bc58f98a0"
   },
   "AG": {
@@ -34,10 +34,10 @@
     "us": "2c757bf0f9a0",
     "germany": "45bf16601484",
     "canada": "31345c5d82e5",
-    "france": "3bea2d1e57b5",
+    "france": "2ebd26bb5a8a",
     "denmark": "00dedcd89aa9",
-    "sweden": "b15e5017b438",
-    "australia": "66c71e8b58a0"
+    "sweden": "2fdb51cc56fe",
+    "australia": "8f6ac10e55ce"
   },
   "AM": {
     "uk": "9aaabb936774",
@@ -591,17 +591,17 @@
     "canada": "540fc5c05b24",
     "france": "36a0f275eed9",
     "denmark": "00dedcd89aa9",
-    "sweden": "e56ff0eb4461",
+    "sweden": "6239b39ce4ad",
     "australia": "66cd43c5a822"
   },
   "HN": {
-    "us": "1dcad354c6a0",
+    "us": "bdcb9fcddf56",
     "germany": "45bf16601484",
-    "canada": "c4b19ed0b817",
+    "canada": "4392b6bb024b",
     "france": "ef570a4b95e6",
     "denmark": "00dedcd89aa9",
     "sweden": "0090e4d7683a",
-    "australia": "197c84f213d2"
+    "australia": "57bf933396ec"
   },
   "HR": {
     "us": "81dba348bfcb",
@@ -1158,14 +1158,14 @@
     "canada": "30695140a784",
     "france": "f658db76225c",
     "denmark": "00dedcd89aa9",
-    "sweden": "bf822cf3131d",
+    "sweden": "98a9ff40ad71",
     "australia": "5ae951d36bdf"
   },
   "PE": {
-    "uk": "70133f519c6b",
-    "us": "9099b3a20fb6",
+    "uk": "bf0109b24609",
+    "us": "2c757bf0f9a0",
     "germany": "45bf16601484",
-    "canada": "05bfcb2ef809",
+    "canada": "b8425c0c7fdd",
     "france": "69ac10f47086",
     "denmark": "ff2abed11621",
     "sweden": "f3a0d9474c06",
