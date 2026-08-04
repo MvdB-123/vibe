@@ -2,84 +2,84 @@
   {
     "iso2": "ID",
     "rawLevel": "Vigilance renforcée",
-    "summary": "L'Indonésie est globalement placée sous le niveau de vigilance renforcée en raison de risques persistants liés au terrorisme, à la piraterie maritime et à des tensions locales. Les zones déconseillées sauf raison impérative concernent les eaux intérieures (mers de Banda, de Java et de Célèbes) et les frontières avec Singapour, la Malaisie et les Philippines en raison de la piraterie, ainsi que la Papouasie indonésienne où les risques d'enlèvements et de violences persistent.",
+    "summary": "Le niveau de vigilance renforcée s'applique à l'ensemble de l'Indonésie en raison de risques persistants liés au terrorisme, à la piraterie maritime et à la délinquance. Les zones déconseillées sauf raison impérative concernent les eaux intérieures (mers de Banda, de Java et de Célèbes) et les frontières avec Singapour, la Malaisie et les Philippines en raison de la piraterie maritime, ainsi que la Papouasie indonésienne où les risques d'enlèvements et de violences persistent.",
     "url": "https://www.diplomatie.gouv.fr/fr/information-par-pays/indonesie/conseils-aux-voyageurs-securite",
     "updatedAt": "2026-07-22"
   },
   {
     "iso2": "IL",
     "rawLevel": "Déconseillé sauf raison impérative",
-    "summary": "Il est déconseillé aux ressortissants français, sauf pour des raisons impératives, de se rendre en Israël en raison de la situation sécuritaire marquée par des tensions persistantes et des risques d'affrontements. Plusieurs régions présentent des niveaux d'alerte plus élevés : les frontières nord et le plateau du Golan (tirs de roquettes depuis le Liban et la Syrie), le pourtour de la bande de Gaza (tirs de roquette réguliers), ainsi que la Cisjordanie (opérations militaires et violences de colons). Jérusalem est également déconseillée sauf raison impérative en raison de tensions récurrentes et de risques d'incidents.",
+    "summary": "Il est déconseillé aux ressortissants français, sauf pour des raisons impératives, de se rendre en Israël en raison de la situation sécuritaire marquée par des tensions et des risques d'affrontements. Plusieurs régions présentent des niveaux d'alerte plus élevés : le Frontières nord / Plateau du Golan et le pourtour de la bande de Gaza, où des tirs de roquettes ou des attaques de drones sont fréquents. À Jérusalem, les déplacements sont également déconseillés sauf raison impérative en raison de tensions récurrentes et de risques d'incidents.",
     "url": "https://www.diplomatie.gouv.fr/fr/information-par-pays/israel-palestine/conseils-aux-voyageurs-securite",
     "updatedAt": "2026-07-17"
   },
   {
     "iso2": "AF",
     "rawLevel": "Formellement déconseillé",
-    "summary": "La totalité du territoire afghan est formellement déconseillée en raison d'une situation sécuritaire très dégradée, fragile et instable. Le pays est fortement exposé au terrorisme, avec des menaces visant institutions, forces de sécurité, population, missions diplomatiques et organisations internationales. Le risque d'enlèvement, notamment pour les Occidentaux, et la criminalité de droit commun sont également très élevés. Les déplacements par la route sont proscrits en raison des attaques par engins explosifs improvisés.",
+    "summary": "La totalité du territoire afghan est formellement déconseillée en raison d'une situation sécuritaire très dégradée, fragile et instable. Les risques principaux incluent le terrorisme, les enlèvements ciblant notamment les Occidentaux, et une criminalité de droit commun en forte progression. Les déplacements par la route sont absolument proscrits en raison des attaques par engins explosifs improvisés et des accidents fréquents.",
     "url": "https://www.diplomatie.gouv.fr/fr/information-par-pays/afghanistan/conseils-aux-voyageurs-securite",
     "updatedAt": "2026-06-15"
   },
   {
     "iso2": "SY",
     "rawLevel": "Formellement déconseillé",
-    "summary": "L’ensemble du territoire syrien est formellement déconseillé en raison d’un climat de forte insécurité marqué par des conflits armés persistants, des risques très élevés d’attentats terroristes et d’enlèvements. Les lieux fréquentés par les Occidentaux sont également considérés comme des cibles potentielles. Les régions frontalières sont particulièrement sensibles et déconseillées.",
+    "summary": "L’ensemble du territoire syrien est formellement déconseillé en raison de conflits armés persistants, d’un climat d’insécurité généralisé et de risques très élevés d’attentats terroristes et d’enlèvements. Les lieux fréquentés par les Occidentaux sont particulièrement ciblés. Les déplacements dans les régions frontalières sont également formellement déconseillés en raison de leur sensibilité accrue.",
     "url": "https://www.diplomatie.gouv.fr/fr/information-par-pays/syrie/conseils-aux-voyageurs-securite",
     "updatedAt": "2026-07-01"
   },
   {
     "iso2": "YE",
     "rawLevel": "Formellement déconseillé",
-    "summary": "L’intégralité du territoire yéménite est formellement déconseillé en raison d’un risque élevé d’assassinat et d’enlèvement, ainsi que des combats persistants. Al Qaïda dans la Péninsule Arabique (AQPA) cible particulièrement les Français. Le sud de la mer Rouge et le golfe d’Aden sont également à proscrire en raison des attaques houthies et de la piraterie maritime.",
+    "summary": "L’intégralité du territoire yéménite est formellement déconseillée en raison d’un risque élevé d’assassinat et d’enlèvement, ainsi que de la présence de combats persistants. Al Qaïda dans la Péninsule Arabique (AQPA) cible particulièrement les étrangers, notamment les Français. Les zones maritimes du sud de la mer Rouge, du golfe d’Aden et du détroit de Bab el-Mandeb sont également à proscrire en raison des attaques houthies et des actes de piraterie.",
     "url": "https://www.diplomatie.gouv.fr/fr/information-par-pays/yemen/conseils-aux-voyageurs-securite",
     "updatedAt": "2026-06-09"
   },
   {
     "iso2": "LY",
     "rawLevel": "Formellement déconseillé",
-    "summary": "La Libye est formellement déconseillée pour l'ensemble du pays en raison d'une situation sécuritaire extrêmement volatile, marquée par une menace terroriste persistante, des risques d'enlèvements, des affrontements armés sporadiques et une criminalité accrue. Les villes de Misrata et Benghazi sont déconseillées sauf raison impérative en raison de risques spécifiques.",
+    "summary": "Le niveau de sécurité en Libye est globalement très élevé en raison d'une instabilité sécuritaire persistante, de la menace terroriste et de risques d'enlèvements. Le reste du pays, y compris la capitale Tripoli, est formellement déconseillé. Les déplacements dans les villes de Misrata et Benghazi sont déconseillés sauf raison impérative en raison d'un risque accru d'affrontements armés et de criminalité.",
     "url": "https://www.diplomatie.gouv.fr/fr/information-par-pays/libye/conseils-aux-voyageurs-securite",
     "updatedAt": "2026-06-09"
   },
   {
     "iso2": "SO",
-    "rawLevel": "Formellement déconseillé",
-    "summary": "Le niveau de vigilance pour l'ensemble de la Somalie est \"Formellement déconseillé\" en raison de la menace terroriste majeure, principalement liée à la milice Al Shabaab, qui contrôle une grande partie du centre et du sud du pays. Des actes de terrorisme, des enlèvements et des assassinats ciblés sont fréquents, notamment à Mogadiscio et dans les zones sous contrôle gouvernemental. Le Puntland et le Somaliland présentent également des risques élevés, avec une présence accrue de groupes terroristes et des tensions locales.",
+    "rawLevel": "Déconseillé sauf raison impérative",
+    "summary": "Le niveau de vigilance pour la Somalie est globalement \"Déconseillé sauf raison impérative\" en raison de la menace terroriste persistante, notamment liée au groupe Al Shabaab, et des risques d'enlèvements ciblant les étrangers. Les zones formellement déconseillées (en rouge) couvrent le centre et le sud du pays, ainsi que le Puntland et certaines parties du Somaliland, en raison de la présence active de milices, d'affrontements armés et de criminalité. Seules les villes d'Hargeisa et Berbera, ainsi que l'axe les reliant, sont classées en \"déconseillé sauf raison impérative\" (en orange), avec des mesures de sécurité renforcées.",
     "url": "https://www.diplomatie.gouv.fr/fr/information-par-pays/somalie/conseils-aux-voyageurs-securite",
     "updatedAt": "2026-06-09"
   },
   {
     "iso2": "SD",
     "rawLevel": "Formellement déconseillé",
-    "summary": "Il est formellement déconseillé de se rendre dans l’ensemble du territoire soudanais, y compris à Khartoum et à Port-Soudan, en raison d’un conflit meurtrier et d’une criminalité extrêmement forte. Les cinq États du Darfour, le Kordofan, le Djebel ‘Aouînât, la frontière avec l’Éthiopie et le parc naturel de Dinder sont également formellement déconseillés pour des raisons de violences intercommunautaires, de trafics et de présence de groupes armés. Le risque terroriste et la piraterie maritime sont signalés sur l’ensemble du pays.",
+    "summary": "Il est formellement déconseillé de se rendre dans l’ensemble du territoire soudanais, y compris à Khartoum et à Port-Soudan, en raison d’un conflit meurtrier et d’une criminalité élevée. Les cinq États du Darfour, le Kordofan, le Djebel ‘Aouînât, la frontière avec l’Éthiopie et le parc naturel de Dinder sont également formellement déconseillés pour des raisons de violence intercommunautaire, de trafics et de présence de groupes armés.",
     "url": "https://www.diplomatie.gouv.fr/fr/information-par-pays/soudan/conseils-aux-voyageurs-securite",
     "updatedAt": "2026-07-17"
   },
   {
     "iso2": "SS",
     "rawLevel": "Formellement déconseillé",
-    "summary": "L’ensemble du territoire sud-soudanais est placé en zone formellement déconseillée, à l’exception de sa capitale Djouba et des villes de Wau, Yambio et Aweil, où la situation est dans l’ensemble calme mais nécessite des précautions strictes. Le pays est en proie à un conflit interne depuis 2013, avec une stabilisation fragile et des risques persistants de violences locales, notamment d’origine ethnique ou liées à des luttes pour des ressources. Les déplacements par voie terrestre sont formellement déconseillés dans tout le pays.",
+    "summary": "L’ensemble du territoire sud-soudanais, à l’exception de sa capitale Djouba et des villes de Wau, Yambio et Aweil, est placé en zone formellement déconseillée en raison d’un risque sécuritaire élevé lié à un conflit interne persistant, à l’absence de contrôle étatique sur une grande partie du territoire et à une insécurité alimentaire généralisée. À Djouba, Wau, Yambio et Aweil, la situation est globalement calme mais reste sous vigilance renforcée en raison de risques de criminalité et d’incidents aux points de contrôle.",
     "url": "https://www.diplomatie.gouv.fr/fr/information-par-pays/soudan-du-sud/conseils-aux-voyageurs-securite",
     "updatedAt": "2026-07-12"
   },
   {
     "iso2": "ML",
     "rawLevel": "Formellement déconseillé",
-    "summary": "L’ensemble du territoire malien est classé en zone rouge en raison de fortes tensions régionales et de la présence de groupes terroristes. Le risque d’attentat et d’enlèvement est élevé sur tout le territoire, y compris à Bamako. Les zones du centre et du nord du pays présentent des risques accrus de criminalité et d’enlèvement. La circulation par la route en dehors de Bamako est déconseillée en raison des attaques fréquentes sur les axes routiers.",
+    "summary": "L’ensemble du territoire malien est classé en zone rouge en raison de fortes tensions régionales et de la présence de groupes terroristes. Les risques d’attentat, d’enlèvement et de criminalité sont élevés, notamment dans le centre et le nord du pays. Bamako et ses alentours présentent également des dangers accrus pour les Occidentaux. Aucun déplacement au Mali n’est recommandé, y compris pour des raisons touristiques ou familiales.",
     "url": "https://www.diplomatie.gouv.fr/fr/information-par-pays/mali/conseils-aux-voyageurs-securite",
     "updatedAt": "2026-07-09"
   },
   {
     "iso2": "NE",
     "rawLevel": "Formellement déconseillé",
-    "summary": "Tout déplacement au Niger est formellement déconseillé en raison d'un risque terroriste élevé, marqué par des attentats et des enlèvements ciblant les Occidentaux, ainsi que par des actions de grand banditisme dans les zones frontalières, notamment avec le Nigéria. Les groupes armés actifs aux frontières du Mali, du Burkina Faso, du Bénin, du Nigéria et du Tchad maintiennent une menace persistante malgré les efforts des forces de sécurité nigériennes. Les risques incluent également des inondations saisonnières dans le sud du pays.",
+    "summary": "Le déplacement au Niger est formellement déconseillé en raison d'un risque terroriste élevé, marqué par des attentats et des enlèvements ciblant les Occidentaux, notamment dans les zones frontalières avec le Mali, le Burkina Faso, le Bénin, le Nigéria et le Tchad. Des groupes armés y opèrent malgré les efforts des forces de sécurité nigériennes. Le grand banditisme et les risques routiers, ainsi que les inondations saisonnières, aggravent la situation sécuritaire.",
     "url": "https://www.diplomatie.gouv.fr/fr/information-par-pays/niger/conseils-aux-voyageurs-securite",
     "updatedAt": "2026-06-09"
   },
   {
     "iso2": "CF",
     "rawLevel": "Formellement déconseillé",
-    "summary": "L’intégralité du territoire de la République centrafricaine est formellement déconseillée en raison de la présence de groupes armés actifs et d’un niveau d’insécurité élevé, rendant les déplacements particulièrement dangereux. Les zones hors Bangui et Bimbo sont formellement déconseillées en raison d’une situation difficilement contrôlable. À Bangui et Bimbo, les déplacements sont déconseillés sauf raison impérative, avec des quartiers spécifiques (PK5, Colline aux Panthères) à éviter en raison de violences récurrentes.",
+    "summary": "L’intégralité du territoire de la République centrafricaine est formellement déconseillée ou déconseillée sauf raison impérative en raison de la présence de groupes armés actifs et d’un niveau d’insécurité élevé. Les déplacements en dehors de la capitale Bangui et de Bimbo sont à proscrire. À Bangui et Bimbo, les déplacements sont déconseillés sauf raison impérative, avec des zones spécifiques comme le 3e arrondissement (PK5) et la Colline aux Panthères à éviter en raison de troubles violents et de risques sécuritaires.",
     "url": "https://www.diplomatie.gouv.fr/fr/information-par-pays/republique-centrafricaine/conseils-aux-voyageurs-securite",
     "updatedAt": "2026-06-30"
   },
@@ -93,98 +93,98 @@
   {
     "iso2": "UA",
     "rawLevel": "Formellement déconseillé",
-    "summary": "L'intégralité du territoire ukrainien est formellement déconseillée en raison du contexte de guerre en cours depuis le 24 février 2022 et de l'état d'urgence reconduit trimestriellement. Un couvre-feu est instauré dans toute l'Ukraine, avec des horaires variables selon les localités. Les frappes russes ciblent notamment les stations-service aux abords des grandes villes de l'Est.",
+    "summary": "L'intégralité du territoire ukrainien est formellement déconseillée en raison du contexte de guerre en cours depuis le 24 février 2022. Un couvre-feu est instauré dans toute l'Ukraine, avec des horaires variables selon les localités. Les frappes russes ciblent notamment les stations-service aux abords des grandes villes de l'Est.",
     "url": "https://www.diplomatie.gouv.fr/fr/information-par-pays/ukraine/conseils-aux-voyageurs-securite",
     "updatedAt": "2026-07-02"
   },
   {
     "iso2": "RU",
     "rawLevel": "Formellement déconseillé",
-    "summary": "Dans le contexte de la guerre d’agression menée par la Russie en Ukraine, il est formellement déconseillé de se rendre dans l’ensemble du territoire de la Russie. Des risques industriels majeurs, une menace terroriste persistante (notamment après l’attentat du Crocus City Hall en mars 2024) et des zones de vigilance renforcée pour des raisons de sécurité sont signalés. La délinquance, la cybercriminalité et les risques naturels complètent les principaux dangers.",
+    "summary": "Dans le contexte de la guerre d’agression menée par la Russie en Ukraine, il est formellement déconseillé de se rendre dans l’ensemble du territoire de la Russie. Les risques encourus incluent des accidents industriels majeurs, une menace terroriste persistante (notamment après l’attentat du Crocus City Hall en mars 2024), une délinquance variable selon les régions, des cybermenaces et des risques naturels. Aucune région ne présente un niveau de vigilance inférieur à l’ensemble du pays.",
     "url": "https://www.diplomatie.gouv.fr/fr/information-par-pays/russie/conseils-aux-voyageurs-securite",
     "updatedAt": "2026-06-30"
   },
   {
     "iso2": "IQ",
     "rawLevel": "Vigilance renforcée",
-    "summary": "Le niveau de vigilance renforcée s'applique à l'ensemble de l'Irak en raison d'un risque terroriste élevé et d'une instabilité sécuritaire persistante dans plusieurs régions. Les zones frontalières avec la Syrie, la Turquie et l'Iran, ainsi que certaines provinces sous contrôle fédéral ou régional, présentent des niveaux de risque encore plus élevés, notamment en raison de la présence de groupes armés et d'opérations militaires. Les gouvernorats d'Al-Anbar, Salah-Al-Din, Tamim, Diyala, Ninive et Bagdad sont particulièrement concernés par des restrictions strictes.",
+    "summary": "Le niveau de vigilance renforcée s'applique à l'ensemble de l'Irak en raison d'un risque terroriste élevé et persistant dans plusieurs régions du pays. Les zones formellement déconseillées (rouge) incluent les frontières avec la Syrie, les massifs montagneux du Nord près des frontières turque et iranienne, ainsi que plusieurs gouvernorats sous contrôle fédéral ou régional. Les zones déconseillées sauf raison impérative (orange) concernent notamment Bagdad, Bassora, Mossoul et des axes routiers spécifiques.",
     "url": "https://www.diplomatie.gouv.fr/fr/information-par-pays/irak/conseils-aux-voyageurs-securite",
     "updatedAt": "2026-07-01"
   },
   {
     "iso2": "LB",
     "rawLevel": "Déconseillé sauf raison impérative",
-    "summary": "Le Liban est globalement déconseillé sauf raison impérative en raison de la dégradation de la situation sécuritaire régionale et de la menace terroriste constante. Plusieurs zones sont formellement déconseillées : le Liban-Nord au nord de la route Abdeh-Mechmech, la plaine de la Béqaa incluant Baalbek et Anjar, le Sud du Liban sur l'axe Saïda-Jezzine-Machghara, ainsi que les camps palestiniens et leurs abords. Des tensions confessionnelles et des affrontements armés récents, notamment à Beyrouth-Est et dans le Sud, aggravent les risques.",
+    "summary": "Le Liban est globalement placé en zone déconseillée sauf raison impérative en raison de la dégradation de la situation sécuritaire régionale, des risques terroristes persistants et des tensions internes. Plusieurs régions sont formellement déconseillées : le Liban-Nord au nord de la route Abdeh-Mechmech, la plaine de la Béqaa incluant Baalbek et Anjar, le Sud du Liban sur l'axe Saïda-Jezzine-Machghara, ainsi que les camps palestiniens et leurs abords. La ville de Tripoli (hors partie littorale) et ses quartiers sensibles, ainsi que la périphérie de Saïda, présentent également des risques accrus.",
     "url": "https://www.diplomatie.gouv.fr/fr/information-par-pays/liban/conseils-aux-voyageurs-securite",
     "updatedAt": "2026-06-30"
   },
   {
     "iso2": "BY",
     "rawLevel": "Formellement déconseillé",
-    "summary": "L'ensemble du territoire de la Biélorussie est formellement déconseillé en raison des tensions militaires entre l'Ukraine et la Biélorussie. Des risques politiques élevés, incluant la répression de l'opposition et des contrôles stricts des autorités, sont signalés. Le risque terroriste, bien que faible, persiste, notamment dans la capitale Minsk où des attentats ont eu lieu dans le métro en 2008 et 2011.",
+    "summary": "L'ensemble du territoire de la Biélorussie est formellement déconseillé en raison des tensions militaires entre l'Ukraine et la Biélorussie. Des risques politiques élevés, incluant la répression de l'opposition et des contrôles stricts des autorités, sont également signalés. Le risque terroriste, bien que faible, persiste, notamment avec des attentats passés dans le métro de Minsk.",
     "url": "https://www.diplomatie.gouv.fr/fr/information-par-pays/bielorussie/conseils-aux-voyageurs-securite",
     "updatedAt": "2026-06-30"
   },
   {
     "iso2": "TR",
     "rawLevel": "Vigilance renforcée",
-    "summary": "La Turquie est placée sous le niveau de vigilance renforcée en raison d'un risque terroriste élevé sur l'ensemble du territoire, lié notamment à la proximité avec des zones de conflit en Syrie et en Irak. Les zones frontalières avec ces pays sont formellement déconseillées, tandis que plusieurs départements du sud-est (Hatay, Kilis, Gaziantep, Şanlıurfa, Mardin, Diyarbakır, Batman) sont déconseillés sauf raison impérative en raison de contrôles renforcés et de restrictions possibles.",
+    "summary": "La Turquie est placée en vigilance renforcée en raison d'un risque terroriste élevé sur l'ensemble du territoire, lié à la proximité avec des zones de conflit en Syrie et en Irak. Les zones frontalières avec la Syrie et l'Irak sont formellement déconseillées, tandis que plusieurs départements du sud-est (Hatay, Kilis, Gaziantep, Şanlıurfa, Mardin, Diyarbakır, Batman) sont déconseillés sauf raison impérative en raison de contrôles renforcés et de restrictions d'accès possibles.",
     "url": "https://www.diplomatie.gouv.fr/fr/information-par-pays/turquie/conseils-aux-voyageurs-securite",
     "updatedAt": "2026-07-01"
   },
   {
     "iso2": "EG",
     "rawLevel": "Vigilance renforcée",
-    "summary": "Le niveau de vigilance renforcée s'applique à l'ensemble de l'Égypte en raison de risques sécuritaires persistants, notamment dans les zones frontalières et désertiques. Les régions formellement déconseillées incluent la zone frontalière du désert occidental (risque terroriste et trafics), la frontière avec le Soudan (conflit et milices) et le nord de la péninsule du Sinaï (risque terroriste). La zone des oasis du désert occidental (Siwa/désert blanc) nécessite une vigilance renforcée en raison de contrôles sécuritaires renforcés et de risques liés aux trafics.",
+    "summary": "L'Égypte est globalement placée en vigilance renforcée en raison de risques sécuritaires persistants, notamment dans les zones désertiques et frontalières. Les régions formellement déconseillées incluent la zone frontalière du désert occidental (risque terroriste et trafics), la frontière avec le Soudan (conflit et milices) et le nord de la péninsule du Sinaï (risque terroriste). La zone des oasis du désert occidental (Siwa, désert blanc) nécessite une vigilance renforcée en raison de contrôles sécuritaires renforcés et de risques liés aux trafics.",
     "url": "https://www.diplomatie.gouv.fr/fr/information-par-pays/egypte/conseils-aux-voyageurs-securite",
     "updatedAt": "2026-06-30"
   },
   {
     "iso2": "TH",
     "rawLevel": "Vigilance renforcée",
-    "summary": "La Thaïlande est globalement en vigilance renforcée en raison de risques politiques, de tensions frontalières et de la délinquance, notamment dans les zones frontalières avec la Birmanie et le Cambodge. Les provinces de l’extrême-sud (Narathiwat, Pattani, Yala) et certaines zones frontalières sont formellement déconseillées en raison d’attaques de mouvements séparatistes armés et de risques de brigandage. Bangkok et d’autres régions sont en vigilance renforcée, avec des risques liés aux manifestations et à la délinquance.",
+    "summary": "La Thaïlande est globalement en vigilance renforcée en raison des risques liés aux tensions politiques, aux manifestations, aux accidents routiers fréquents et à la délinquance. Les zones formellement déconseillées incluent les provinces de Narathiwat, Pattani, Yala et Songkhla dans l'extrême-sud, ainsi que les frontières avec la Birmanie et le Cambodge. Les provinces de Satun et Phatthalung sont déconseillées sauf raison impérative.",
     "url": "https://www.diplomatie.gouv.fr/fr/information-par-pays/thailande/conseils-aux-voyageurs-securite",
-    "updatedAt": "2026-07-01"
+    "updatedAt": "2026-08-03"
   },
   {
     "iso2": "PK",
     "rawLevel": "Déconseillé sauf raison impérative",
-    "summary": "Le Pakistan est globalement déconseillé sauf raison impérative en raison d'un risque terroriste élevé et persistant sur l'ensemble du territoire, avec des attentats fréquents ciblant les lieux publics et les forces de l'ordre. Les provinces du Baloutchistan, du Khyber-Pakhtunkhwa, les zones tribales (ex-FATA), l'Azad Jammu-et-Kashmir et la frontière avec l'Inde sont formellement déconseillées en raison d'un risque terroriste et d'affrontements armés très élevés. La province du Pendjab, à l'exception de la zone entre Faisalabad, Lahore et Islamabad, est également déconseillée sauf raison impérative.",
+    "summary": "Le Pakistan est globalement déconseillé sauf raison impérative en raison d'un risque terroriste élevé et persistant sur l'ensemble du territoire. Plusieurs provinces et zones frontalières sont formellement déconseillées en raison d'attaques terroristes fréquentes et d'affrontements armés : Baloutchistan, zones tribales (ex-FATA), Khyber-Pakhtunkhwa, Azad Jammu-et-Kashmir, ainsi que la frontière avec l'Inde. La province du Pendjab est également déconseillée sauf raison impérative, à l'exception de la zone entre Faisalabad, Lahore et Islamabad.",
     "url": "https://www.diplomatie.gouv.fr/fr/information-par-pays/pakistan/conseils-aux-voyageurs-securite",
     "updatedAt": "2026-06-30"
   },
   {
     "iso2": "SA",
     "rawLevel": "Vigilance renforcée",
-    "summary": "L'Arabie saoudite est placée en vigilance renforcée pour l'ensemble du territoire, en raison d'un risque terroriste persistant et de tensions régionales liées au conflit au Yémen. Les zones frontalières avec l'Irak et le Yémen, ainsi que certaines localités comme Al Awamiyah, Qatif et Al Qassim, sont formellement déconseillées ou déconseillées sauf raison impérative en raison de troubles, d'attaques terroristes ou de risques d'attaques aériennes.",
+    "summary": "L'Arabie saoudite est placée en vigilance renforcée pour l'ensemble du territoire. Le risque terroriste persiste, avec des attaques ciblant des intérêts étrangers, notamment français, et des zones frontalières avec l'Irak et le Yémen sont formellement déconseillées en raison de l'instabilité sécuritaire. Les provinces du Najran, d'Assir et du Djizan, ainsi que les localités de Mouawiya, Qatif et la région d'Al Qassim, présentent des niveaux de risque plus élevés.",
     "url": "https://www.diplomatie.gouv.fr/fr/information-par-pays/arabie-saoudite/conseils-aux-voyageurs-securite",
     "updatedAt": "2026-06-30"
   },
   {
     "iso2": "MX",
     "rawLevel": "Vigilance renforcée",
-    "summary": "Le Mexique présente un niveau de vigilance renforcée pour l'ensemble du pays en raison de la criminalité organisée, des affrontements armés entre cartels et de la délinquance ordinaire. Plusieurs États et zones spécifiques sont formellement déconseillés (Tamaulipas, Guerrero, Colima, Michoacán, Basse-Californie du Nord, Guanajuato, etc.) en raison de violences accrues, tandis que d'autres sont déconseillés sauf raison impérative (Basse-Californie du Nord, Chihuahua, Sinaloa, etc.).",
+    "summary": "Le Mexique est placé en vigilance renforcée pour l'ensemble du pays en raison de la criminalité organisée, des affrontements armés entre cartels et de la délinquance ordinaire persistante. Plusieurs États et zones frontalières présentent des niveaux d'alerte plus élevés, notamment le Tamaulipas, le Guerrero, le Colima, le Michoacán, la Basse-Californie du Nord, le Sinaloa, le Durango, le Zacatecas et le Morelos, où des déplacements sont formellement déconseillés ou soumis à restrictions impératives.",
     "url": "https://www.diplomatie.gouv.fr/fr/information-par-pays/mexique/conseils-aux-voyageurs-securite",
     "updatedAt": "2026-06-30"
   },
   {
     "iso2": "CO",
     "rawLevel": "Vigilance renforcée",
-    "summary": "La Colombie est placée sous le niveau de vigilance renforcée en raison d'une forte augmentation de la criminalité dans les grands centres urbains (Bogotá, Cali, Medellín, etc.) et de la présence de groupes criminels ou armés dans les zones rurales et isolées. Les zones frontalières avec le Venezuela, le Panama, l'Équateur, le Pérou et le Brésil sont formellement déconseillées en raison de trafics, d'attentats et de risques d'enlèvements. Les départements de l'est (Vichada, Guainía, etc.) et du sud (Amazonas, Caquetá, etc.) sont déconseillés sauf raison impérative en raison de violences élevées.",
+    "summary": "La Colombie est placée sous le niveau de vigilance renforcée en raison d'une forte augmentation de la criminalité, notamment dans les grands centres urbains comme Bogota, Cali, Medellín et d'autres villes. Les zones frontalières avec le Venezuela, le Panama, l'Équateur, le Pérou et le Brésil sont formellement déconseillées en raison de la présence de groupes criminels et de risques terroristes. Plusieurs départements de l'est, du sud et certaines zones spécifiques comme le Chocó et la côte pacifique sont également déconseillés sauf raison impérative.",
     "url": "https://www.diplomatie.gouv.fr/fr/information-par-pays/colombie/conseils-aux-voyageurs-securite",
     "updatedAt": "2026-06-30"
   },
   {
     "iso2": "VE",
-    "rawLevel": "Déconseillé sauf raison impérative",
-    "summary": "Le Vénézuéla présente une criminalité violente endémique et des conditions de sécurité structurellement dégradées. Les zones frontalières avec la Colombie, le Brésil et le Guyana, ainsi que l'arc minier (nord-est de l'État de Bolívar) et le Delta Amacuro, sont formellement déconseillées en raison de la présence de groupes armés et de trafics. La région côtière de l'État de Sucre, le golfe de Paria et la péninsule de Paraguana sont également à haut risque.",
+    "rawLevel": "Vigilance renforcée",
+    "summary": "Le Vénézuéla présente une criminalité violente endémique avec des conditions de sécurité structurellement dégradées. Les zones frontalières, l'arc minier du nord-est de l'État de Bolívar, le Delta Amacuro, le nord de l'État de Sucre, le golfe de Paria et la péninsule de Paraguaná sont formellement déconseillées en raison de la présence de groupes armés, de trafics et de piraterie. Caracas et son aéroport, ainsi que les grandes villes, restent en vigilance renforcée en raison des risques de violences et de criminalité.",
     "url": "https://www.diplomatie.gouv.fr/fr/information-par-pays/venezuela/conseils-aux-voyageurs-securite",
     "updatedAt": "2026-07-01"
   },
   {
     "iso2": "CN",
     "rawLevel": "Vigilance normale",
-    "summary": "L’ensemble du territoire chinois est placé en vigilance normale (vert), à l’exception de la région autonome ouïghoure du Xinjiang, placée en vigilance renforcée (jaune). Des restrictions d’accès à certaines zones peuvent intervenir de manière permanente ou ponctuelle, notamment en cas de troubles sociaux. Les conditions d’accès aux différents sites et régions sont susceptibles d’évoluer et doivent être vérifiées auprès des autorités locales.",
+    "summary": "L’ensemble du territoire chinois est placé en vigilance normale (vert), à l’exception de la région autonome ouïghoure du Xinjiang, placée en vigilance renforcée (jaune). La région autonome du Tibet impose des restrictions d’accès strictes nécessitant une autorisation spéciale et un guide obligatoire. Plusieurs districts ou communes dans les provinces du Qinghai, de Mongolie intérieure et du Sichuan sont interdits d’accès aux étrangers ou soumis à des restrictions temporaires.",
     "url": "https://www.diplomatie.gouv.fr/fr/information-par-pays/chine/conseils-aux-voyageurs-securite",
     "updatedAt": "2026-06-09"
   }
