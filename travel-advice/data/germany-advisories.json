@@ -2,23 +2,23 @@
   {
     "iso2": "UA",
     "rawLevel": "Reisewarnung",
-    "summary": "Für die gesamte Ukraine gilt eine Reisewarnung aufgrund anhaltender Kampfhandlungen und russischer Luftangriffe mit Raketen, Marschflugkörpern und Drohnen, die fast täglich stattfinden und alle Landesteile betreffen können. In den Oblasten Luhansk, Donezk, Saporischschja und Cherson ist die Einreise aufgrund der anhaltenden Kampfhandlungen nicht möglich. Die sieben westlichen Oblasten Wolhynien, Riwne, Lwiw, Ternopil, Transkarpatien, Iwano-Frankiwsk und Tscherniwzi sind weniger stark betroffen, jedoch weiterhin Angriffen ausgesetzt.",
+    "summary": "Für die gesamte Ukraine gilt eine Reisewarnung aufgrund anhaltender Kampfhandlungen und russischer Luftangriffe mit Raketen, Marschflugkörpern und Drohnen, die alle Landesteile betreffen können. In den westlichen Oblasten Wolhynien, Riwne, Lwiw, Ternopil, Transkarpatien, Iwano-Frankiwsk und Tscherniwzi sind die Angriffe seltener, aber ebenfalls möglich. Die annektierten Oblaste Luhansk, Donezk, Saporishshja und Cherson sowie die Krim sind aufgrund der Kampfhandlungen und fehlender konsularischer Unterstützung nicht bereisbar.",
     "url": "https://www.auswaertiges-amt.de/de/reiseundsicherheit/ukrainesicherheit-201946",
-    "updatedAt": "2026-08-05"
+    "updatedAt": "2026-08-06"
   },
   {
     "iso2": "AF",
     "rawLevel": "Reisewarnung",
-    "summary": "Für Afghanistan gilt eine Reisewarnung aufgrund der anhaltenden militärischen Auseinandersetzungen, insbesondere im Grenzgebiet zu Pakistan sowie in den Städten Kabul und Kandahar. Es besteht ein hohes Risiko für terroristische Anschläge, Entführungen und willkürliche Inhaftierungen, die sich auch gegen ausländische Staatsangehörige richten. Die Sicherheitslage bleibt extrem volatil, mit möglichen erneuten Einschränkungen des Flugverkehrs und flächendeckenden Internet- und Mobilfunkausfällen.",
+    "summary": "Für Afghanistan gilt eine Reisewarnung aufgrund der anhaltenden militärischen Auseinandersetzungen, insbesondere im Grenzgebiet zu Pakistan sowie in den Provinzen Kabul und Kandahar. Es besteht ein hohes Risiko für terroristische Anschläge, Entführungen und willkürliche Inhaftierungen, die sich auch gegen ausländische Staatsangehörige richten. Die Sicherheitslage bleibt extrem volatil, mit möglichen erneuten Einschränkungen des Flugverkehrs und flächendeckenden Internet- und Mobilfunkausfällen.",
     "url": "https://www.auswaertiges-amt.de/de/reiseundsicherheit/afghanistansicherheit-204692",
-    "updatedAt": "2026-08-05"
+    "updatedAt": "2026-08-06"
   },
   {
     "iso2": "SY",
     "rawLevel": "Reisewarnung",
-    "summary": "Für Syrien gilt eine Reisewarnung aufgrund der anhaltend angespannten Sicherheitslage. Im Zentrum von Damaskus kommt es wiederholt zu Anschlägen mit Sprengsätzen, die Tote und Verletzte fordern. In der Region Hassakeh und im Umfeld von Kobane besteht weiterhin ein erhöhtes Risiko bewaffneter Auseinandersetzungen. Im Norden und Osten des Landes sowie in den Küstengebieten sind Anschläge, Entführungen und extralegale Tötungen zu verzeichnen.",
+    "summary": "Für Syrien gilt eine Reisewarnung aufgrund der anhaltend instabilen und gefährlichen Sicherheitslage. Im Zentrum von Damaskus kommt es wiederholt zu Anschlägen mit Sprengsätzen, die Tote und Verletzte fordern. In der Region Hassakeh und um Kobane besteht weiterhin ein erhöhtes Risiko bewaffneter Auseinandersetzungen. Im Norden und Osten des Landes sind Anschläge mit Sprengfallen sowie Aktivitäten der Terrororganisation IS möglich.",
     "url": "https://www.auswaertiges-amt.de/de/reiseundsicherheit/syriensicherheit-204278",
-    "updatedAt": "2026-08-05"
+    "updatedAt": "2026-08-06"
   },
   {
     "iso2": "YE",
@@ -86,29 +86,29 @@
   {
     "iso2": "IQ",
     "rawLevel": "Reisewarnung",
-    "summary": "Für den Irak gilt eine Reisewarnung aufgrund der anhaltend volatilen Sicherheitslage mit erhöhtem Risiko militärischer Auseinandersetzungen, Drohnenangriffen und terroristischen Anschlägen. Besonders gefährdet sind die Provinzen Anbar, Diyala, Kirkuk, Ninewa (inkl. Sindschar, Mossul und Grenzregion zu Syrien), Salah Al-Din sowie der Norden der Provinz Babel. In der Region Kurdistan-Irak, insbesondere im Stadtgebiet von Erbil, kommt es vermehrt zu Drohnenangriffen und damit verbundenen Flugverkehrsunterbrechungen.",
+    "summary": "Für den Irak gilt eine Reisewarnung aufgrund der volatilen Sicherheitslage mit anhaltendem Risiko militärischer Auseinandersetzungen, terroristischen Anschlägen und bewaffneten Konflikten. Besonders gefährdet sind die Provinzen Anbar, Diyala, Kirkuk, Ninewa (inkl. Sindschar, Mossul und Grenze zu Syrien), Salah Al-Din sowie der Norden der Provinz Babel. In der Region Kurdistan-Irak (u.a. Erbil) kommt es vermehrt zu Drohnenangriffen und Unterbrechungen des Flugverkehrs.",
     "url": "https://www.auswaertiges-amt.de/de/reiseundsicherheit/iraksicherheit-202738",
-    "updatedAt": "2026-08-05"
+    "updatedAt": "2026-08-06"
   },
   {
     "iso2": "ID",
     "rawLevel": "Von nicht notwendigen Reisen abraten",
-    "summary": "Für fünf der sechs Provinzen des indonesischen Teils der Insel Neuguinea (Papua, Papua Barat, Papua Pegunungan, Papua Tengah und Papua Selatan) wird von nicht unbedingt erforderlichen Reisen abgeraten. Gründe sind gewaltsame Zusammenstöße zwischen Separatistengruppen und Sicherheitskräften, Entführungsrisiken und Anschläge. Im gesamten Land besteht ein erhöhtes Terrorrisiko, insbesondere in Großstädten wie Jakarta, Bandung, Medan, Makassar, Surabaya und auf Bali. Zudem gibt es in bestimmten Regionen Entführungs- und Pirateriegefahren.",
+    "summary": "Für den gesamten indonesischen Teil der Insel Neuguinea (Provinzen Papua, Papua Barat, Papua Pegunungan, Papua Tengah und Papua Selatan) wird von nicht notwendigen Reisen abgeraten. In diesen Regionen besteht ein erhöhtes Risiko durch gewaltsame Zusammenstöße zwischen Separatistengruppen und Sicherheitskräften, einschließlich Entführungen und Anschlägen. Im restlichen Indonesien gilt ein erhöhtes Risiko für Terroranschläge, insbesondere in Großstädten wie Jakarta, Bandung, Medan, Makassar, Surabaya und auf Bali, sowie für Piraterie in bestimmten Gewässern.",
     "url": "https://www.auswaertiges-amt.de/de/service/laender/indonesien-node/indonesiensicherheit-212396",
-    "updatedAt": "2026-08-05"
+    "updatedAt": "2026-08-06"
   },
   {
     "iso2": "IL",
     "rawLevel": "Von nicht notwendigen Reisen abraten",
     "summary": "Für Israel insgesamt wird von nicht notwendigen Reisen abgeraten, da sich das Land formell im Kriegszustand befindet und die Sicherheitslage volatil ist. Im Gazastreifen und im Westjordanland (außer Ost-Jerusalem) gilt eine Reisewarnung. Zudem wird dringend von Reisen in den Gaza-Envelope und den Norden Israels (nördlich der Straße 85) abgeraten.",
     "url": "https://www.auswaertiges-amt.de/de/reiseundsicherheit/israelsicherheit-203814",
-    "updatedAt": "2026-08-05"
+    "updatedAt": "2026-08-06"
   },
   {
     "iso2": "TR",
     "rawLevel": "Erhöhte Vorsicht",
-    "summary": "Die Türkei steht insgesamt unter dem Hinweis „Erhöhte Vorsicht“ aufgrund der allgemeinen terroristischen Gefährdung in allen Landesteilen sowie der aktuellen Waldbrandgefahr in mehreren Regionen. Besonders betroffen sind die Küstenregionen Muğla, Aydın und Antalya, die Regionen Balıkesir und Kütahya sowie die Städte Çanakkale und Yalova, wo Brände zu Straßensperren und Evakuierungen führen können. Zudem besteht ein erhöhtes Risiko für Einschränkungen des Flugverkehrs durch die volatile Sicherheitslage im Nahen und Mittleren Osten.",
+    "summary": "Für die gesamte Türkei gilt eine erhöhte Vorsicht aufgrund der allgemeinen terroristischen Gefährdung und der aktuellen Waldbrandgefahr. Besonders betroffen sind die Küstenregionen Mugla, Aydin und Antalya, die Regionen Balikesir und Kütahya sowie die Städte Canakkale und Yalova, wo durch Brände Straßensperren, Infrastrukturbeeinträchtigungen und Evakuierungen drohen. Zudem besteht ein Risiko für Einschränkungen des Flugverkehrs aufgrund der unsicheren Sicherheitslage im Nahen und Mittleren Osten.",
     "url": "https://www.auswaertiges-amt.de/de/service/laender/tuerkei-node/tuerkeisicherheit-201962",
-    "updatedAt": "2026-08-05"
+    "updatedAt": "2026-08-06"
   }
 ]
