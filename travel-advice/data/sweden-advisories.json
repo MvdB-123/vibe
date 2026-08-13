@@ -2,42 +2,42 @@
   {
     "iso2": "AF",
     "rawLevel": "Avrådan från alla resor",
-    "summary": "Utrikesdepartementet avråder sedan 2006 från alla resor till Afghanistan på grund av det allvarliga säkerhetsläget. Sedan augusti 2021 uppmanas alla svenskar att lämna landet. Ambassaden i Kabul har stängts sedan augusti 2024, och konsulärt stöd hanteras nu från Islamabad. Ingen regional skillnad i den generella avrådan förekommer.",
+    "summary": "Utrikesdepartementet avråder sedan 2006 från alla resor till Afghanistan på grund av det allvarliga säkerhetsläget. Sedan augusti 2021 uppmanas alla svenskar att lämna landet. Ambassaden i Kabul har stängts sedan augusti 2024, och konsulärt stöd hanteras nu från Islamabad. Inga specifika regioner med högre varningar nämns utöver den nationella avrådan.",
     "url": "https://www.swedenabroad.se/sv/om-utlandet-för-svenska-medborgare/afghanistan/reseinformation/ambassadens-reseinformation/",
     "updatedAt": "2026-07-14"
   },
   {
     "iso2": "SY",
     "rawLevel": "Avrådan från alla resor",
-    "summary": "Utrikesdepartementet avråder från alla resor till Syrien på grund av det rörliga och oförutsägbara säkerhetsläget, inklusive väpnade sammandrabbningar, terrorism och risk för kidnappningar. Särskilt höga risker råder i provinsen Suwayda, kustområdena samt landets södra och nordöstra delar. Terrorattacker, inklusive mot civila mål, förekommer regelbundet.",
+    "summary": "Utrikesdepartementet avråder från alla resor till Syrien på grund av det rörliga och oförutsägbara säkerhetsläget, inklusive väpnade sammandrabbningar, våld mot minoriteter, israeliska bombningar och aktivitet från terrorgrupper som Daesh. Särskilt höga risker råder i provinsen Suwayda och kustområdena. Flygplatserna i Aleppo och Damaskus är öppna men kan drabbas av störningar.",
     "url": "https://www.swedenabroad.se/sv/om-utlandet-för-svenska-medborgare/syrien/reseinformation/ambassadens-reseinformation/",
-    "updatedAt": "2026-08-04"
+    "updatedAt": "2026-08-12"
   },
   {
     "iso2": "YE",
     "rawLevel": "Avrådan från alla resor",
-    "summary": "Utrikesdepartementet avråder tills vidare från alla resor till Jemen på grund av det pågående krigstillståndet, omfattande stridigheter främst mellan regeringsstyrkor och houthierna i norra delar inklusive huvudstaden Sana’a, samt terroristhandlingar och kidnappningsrisker i stora delar av landet. I södra Jemen är säkerhetssituationen särskilt komplicerad med aktivitet från al-Qaeda och Daesh. Terrorattacker och kidnappningar av utlänningar har förekommit frekvent.",
+    "summary": "Utrikesdepartementet avråder tills vidare från alla resor till Jemen på grund av det pågående krigstillståndet, omfattande stridigheter mellan regeringsstyrkor och houthierna, terrorism och kidnappningsrisker. Södra delar av landet präglas av aktivitet från al-Qaeda och Daesh, medan norra delar, inklusive huvudstaden Sana’a, kontrolleras av houthierna. Terrorhandlingar och kidnappningar av utlänningar förekommer i stora delar av landet.",
     "url": "https://www.swedenabroad.se/sv/om-utlandet-för-svenska-medborgare/jemen/reseinformation/ambassadens-reseinformation/",
     "updatedAt": "2026-08-05"
   },
   {
     "iso2": "LY",
     "rawLevel": "Avrådan från alla resor",
-    "summary": "Utrikesdepartementet avråder från alla resor till hela Libyen på grund av ett komplicerat säkerhetsläge präglat av beväpnade miliser, terrorism och attacker mot både inhemska och utländska mål. Internationella flygplatser och hamnar kan stängas med kort varsel. Terroristattacker och kidnappningar av utländska medborgare förekommer. Risken för översvämningar och torka har också ökat i vissa regioner.",
+    "summary": "Utrikesdepartementet avråder från alla resor till hela Libyen på grund av ett komplicerat säkerhetsläge präglat av beväpnade miliser, terrorism och regelbundna attacker mot både inhemska och utländska mål. Internationella flygplatser och hamnar kan stängas eller öppnas med kort varsel. Risken för översvämningar och torka har också ökat i vissa regioner.",
     "url": "https://www.swedenabroad.se/sv/om-utlandet-för-svenska-medborgare/libyen/reseinformation/ambassadens-reseinformation/",
     "updatedAt": "2026-07-14"
   },
   {
     "iso2": "SO",
     "rawLevel": "Avrådan från alla resor",
-    "summary": "Utrikesdepartementet avråder från alla resor till Somalia på grund av det mycket allvarliga säkerhetsläget, präglat av terrorism, väpnade konflikter, klanmiliser och organiserad brottslighet. I Somaliland avråds från icke nödvändiga resor till staden Hargeysa, medan Puntland har en försämrad säkerhetssituation med ökad aktivitet från terroristgrupper som IS och Al-Shabaab.",
+    "summary": "Utrikesdepartementet avråder från alla resor till hela Somalia, inklusive regionerna Somaliland och Puntland, på grund av mycket allvarligt säkerhetsläge präglat av terrorism, väpnade konflikter, kidnappningar och organiserad brottslighet. Endast staden Hargeysa i Somaliland har en något lägre avrådanivå (icke nödvändiga resor) på grund av relativt lugnare förhållanden. Säkerhetsläget anses extremt farligt i hela landet, inklusive farvattnen.",
     "url": "https://www.swedenabroad.se/sv/om-utlandet-för-svenska-medborgare/somalia/reseinformation/ambassadens-reseinformation/",
     "updatedAt": "2026-07-17"
   },
   {
     "iso2": "SS",
     "rawLevel": "Avrådan från alla resor",
-    "summary": "Utrikesdepartementet avråder från alla resor till Sydsudan på grund av ett oförutsägbart säkerhetsläge med sporadiska stridigheter, etniska spänningar och hög kriminalitet. I Juba rekommenderas stor försiktighet med hänsyn till utegångsförbud och vägkontroller. De norra delarna (Jonglei, Upper Nile, Unity och Northern Bahr el Ghazal) samt Equatoria-delstaterna i södra Sydsudan har rapporterats ha högre risk på grund av stridigheter.",
+    "summary": "Utrikesdepartementet avråder från alla resor till Sydsudan med anledning av det osäkra säkerhetsläget, inklusive sporadiska stridigheter, etniska spänningar och hög kriminalitet. I Juba rekommenderas stor försiktighet på grund av utegångsförbud kvälls- och nattetid samt förekomst av vägkontroller. Flera regioner, särskilt Jonglei, Upper Nile, Unity, Northern Bahr el Ghazal och Equatoria-delstaterna, har högre risk på grund av pågående våldsamma incidenter.",
     "url": "https://www.swedenabroad.se/sv/om-utlandet-för-svenska-medborgare/sydsudan/reseinformation/ambassadens-reseinformation/",
     "updatedAt": "2026-07-01"
   },
@@ -51,28 +51,28 @@
   {
     "iso2": "ML",
     "rawLevel": "Avrådan från alla resor",
-    "summary": "Utrikesdepartementet avråder sedan den 4 november 2025 från alla resor till Mali på grund av ett instabilt säkerhetsläge präglat av terrorism, kidnappningar och politisk instabilitet. I huvudstaden Bamako avråds från icke nödvändiga resor på grund av risk för demonstrationer och attacker. Jihadister och beväpnade grupper utför regelbundet attacker i stora delar av landet, även riktade mot civilbefolkningen.",
+    "summary": "Utrikesdepartementet avråder sedan den 4 november 2025 från alla resor till Mali på grund av ett instabilt säkerhetsläge präglat av terrorism, kidnappningar och politisk instabilitet. I huvudstaden Bamako avråds från icke nödvändiga resor på grund av risk för demonstrationer och attacker. Jihadister och beväpnade grupper utför attacker i stora delar av landet, och civilbefolkningen drabbas hårt.",
     "url": "https://www.swedenabroad.se/sv/om-utlandet-för-svenska-medborgare/mali/reseinformation/ambassadens-reseinformation/",
     "updatedAt": "2026-04-25"
   },
   {
     "iso2": "NE",
     "rawLevel": "Avrådan från alla resor",
-    "summary": "Utrikesdepartementet avråder från alla resor till Niger på grund av det försämrade säkerhetsläget, inklusive förhöjd risk för terrorism, kidnappningar och väpnad kriminalitet. Säkerhetsläget är särskilt allvarligt i regionerna Tillaberi och Diffa, där undantagstillstånd råder och konflikten från Mali har spiller över. Även huvudstaden Niamey präglas av ökad brottslighet och risk för våldsamma demonstrationer.",
+    "summary": "Utrikesdepartementet avråder från alla resor till Niger på grund av det försämrade säkerhetsläget, inklusive förhöjd risk för terrorism, kidnappningar och väpnad kriminalitet. I regionerna Tillaberi och Diffa har säkerhetsläget förvärrats ytterligare, med undantagstillstånd och närvaro av väpnade grupper. Även huvudstaden Niamey präglas av ökad brottslighet och risk för våldsamma demonstrationer.",
     "url": "https://www.swedenabroad.se/sv/om-utlandet-för-svenska-medborgare/niger/reseinformation/ambassadens-reseinformation/",
     "updatedAt": "2025-12-20"
   },
   {
     "iso2": "MM",
     "rawLevel": "Avrådan från alla resor",
-    "summary": "Utrikesdepartementet avråder från alla resor till Myanmar på grund av omfattande väpnad konflikt, statskupp 2021 och pågående strider mellan militärjuntan och oppositionella grupper. Strider och våld förekommer i stora delar av landet, inklusive Yangon och Mandalay, med risk för sprängattentat och skjutningar. Dessutom råder krigslagar och utegångsförbud i många områden.",
+    "summary": "Utrikesdepartementet avråder från alla resor till Myanmar på grund av omfattande väpnad konflikt, statskupp 2021, militärjuntans maktövertagande och pågående strider i stora delar av landet. Sprängattentat, skjutningar och utegångsförbud förekommer i flera städer, inklusive Yangon och Mandalay. Regionen Sagaing och delar av Shan, Kachin och Rakhine har särskilt höga risknivåer på grund av intensiva strider och militärjuntans våld mot civilbefolkningen.",
     "url": "https://www.swedenabroad.se/sv/om-utlandet-för-svenska-medborgare/myanmar/reseinformation/ambassadens-reseinformation/",
     "updatedAt": "2026-07-29"
   },
   {
     "iso2": "UA",
     "rawLevel": "Avrådan från alla resor",
-    "summary": "Utrikesdepartementet avråder från alla resor till större delen av Ukraina på grund av det allvarliga säkerhetsläget, inklusive fullskalig invasion och upprepade luftanfall. För de västra regionerna Lviv, Transkarpatien, Ivano-Frankivsk, Ternopil, Tjernivtsi, Volyn, Rivne, Zjytomyr, Chmelnytskyj och Vynnytsia gäller avrådan från icke nödvändiga resor. Angrepp mot civil infrastruktur och utegångsförbud råder på många orter.",
+    "summary": "Utrikesdepartementet avråder från alla resor till större delen av Ukraina på grund av det allvarliga säkerhetsläget till följd av den fullskaliga invasionen och upprepade luftanfall. För västra Ukraina (regionerna Lviv, Transkarpatien, Ivano-Frankivsk, Ternopil, Tjernivtsi, Volyn, Rivne, Zjytomyr, Chmelnytskyj och Vynnytsia) avråds från icke nödvändiga resor. Angrepp mot civil infrastruktur medför återkommande problem med el- och vattenförsörjning, och utegångsförbud råder i många delar av landet.",
     "url": "https://www.swedenabroad.se/sv/om-utlandet-för-svenska-medborgare/ukraina/reseinformation/ambassadens-reseinformation/",
     "updatedAt": "2026-07-03"
   },
@@ -85,29 +85,29 @@
   },
   {
     "iso2": "TH",
-    "rawLevel": "Avrådan från alla resor",
-    "summary": "Utrikesdepartementet avråder från alla resor inom ett avstånd av 20 kilometer från gränsen till Kambodja på grund av väpnad konflikt och förekomst av landminor. Dessutom avråds från icke nödvändiga resor till provinserna Narathiwat, Yala, Pattani och Songkhla på grund av säkerhetsläget relaterat till terrorism och våld.",
+    "rawLevel": "Avrådan från icke nödvändiga resor",
+    "summary": "Utrikesdepartementet avråder från alla resor inom 20 kilometer från gränsen till Kambodja på grund av väpnad konflikt och förekomst av landminor. Dessutom avråds från icke nödvändiga resor till provinserna Narathiwat, Yala, Pattani och Songkhla på grund av säkerhetsläget kopplat till terrorism och våld. Övriga delar av Thailand omfattas av en generell avrådan från icke nödvändiga resor.",
     "url": "https://www.swedenabroad.se/sv/om-utlandet-för-svenska-medborgare/thailand/reseinformation/ambassadens-reseinformation/",
     "updatedAt": "2026-07-29"
   },
   {
     "iso2": "EG",
     "rawLevel": "Avrådan från icke nödvändiga resor",
-    "summary": "Utrikesdepartementet avråder från icke nödvändiga resor till delar av Egypten, inklusive södra Sinai-provinsen (utom vissa huvudvägar och kustområden), ökenområden väster om Nildalen och Nildeltat (utom vissa kustområden och väg 19). Norra Sinai-provinsen och gränsområdet mot Libyen inom 20 km från gränsen avråds från alla resor. Fayoum-provinsen undantas från avrådan. Huvudskälen är terrorism, särskilt riktad mot militär och polis, samt allmän säkerhetsrisk.",
+    "summary": "Utrikesdepartementet avråder från icke nödvändiga resor till stora delar av Egypten, inklusive södra Sinai-provinsen (utom vissa huvudvägar och kuststräckor), ökenområden väster om Nildalen och Nildeltat (utom vissa kustområden och väg 19), samt gränsområdet mot Libyen inom 20 km från gränsen. Norra Sinai-provinsen omfattas av total avrådan från alla resor. Huvudskälen är terrorism, särskilt riktad mot statliga representanter, och allmän säkerhetsrisk.",
     "url": "https://www.swedenabroad.se/sv/om-utlandet-för-svenska-medborgare/egypten/reseinformation/ambassadens-reseinformation/",
     "updatedAt": "2026-07-01"
   },
   {
     "iso2": "ID",
     "rawLevel": "Inga särskilda restriktioner",
-    "summary": "Indonesien har generellt sett ett relativt säkert läge för resenärer, men säkerhetsläget varierar mellan regioner. Naturkatastrofer och enstaka terrorattentat förekommer, men risken för utländska besökare är låg. Papua och Västpapua har dock ett mer instabilt säkerhetsläge med väpnade separatistgrupper och ökad kriminalitet, medan Aceh präglas av politiska spänningar och hög kriminalitet.",
+    "summary": "Indonesien har generellt sett ett relativt säkert säkerhetsläge, men naturkatastrofer och terrorism förekommer. Papua och Västpapua har ett mer instabilt läge med väpnade separatistgrupper och ökad kriminalitet, medan Aceh präglas av politiska spänningar och hög kriminalitet. Terrorattentat har minskat sedan 2000-talet men förekommer fortfarande, främst riktade mot inhemska mål.",
     "url": "https://www.swedenabroad.se/sv/om-utlandet-för-svenska-medborgare/indonesien/reseinformation/ambassadens-reseinformation/",
     "updatedAt": "2026-08-03"
   },
   {
     "iso2": "TR",
     "rawLevel": "Avrådan från icke nödvändiga resor",
-    "summary": "Utrikesdepartementet avråder från icke nödvändiga resor till gränsprovinserna Hatay, Kilis, Sirnak och Hakkari i sin helhet på grund av säkerhetsläget. Dessutom avråds alla resor till områden inom 10 kilometer från den syriska och irakiska gränsen. I sydöstra och östra Turkiet pågår periodvis sammandrabbningar mellan terrorgrupper och säkerhetsstyrkor, och vissa områden är klassade som temporära säkerhetszoner med tillträdesrestriktioner.",
+    "summary": "Utrikesdepartementet avråder från icke nödvändiga resor till gränsprovinserna Hatay, Kilis, Sirnak och Hakkari i sin helhet på grund av säkerhetsläget. För hela landet gäller en avrådan från icke nödvändiga resor med anledning av terrorism och regional orolighet, särskilt i sydöstra och östra provinser. Dessutom avråds från alla resor till närområdet mot Syrien och Irak, upp till 10 kilometer från gränsen.",
     "url": "https://www.swedenabroad.se/sv/om-utlandet-för-svenska-medborgare/turkiet/reseinformation/reseinformation-om-turkiet/",
     "updatedAt": "2026-08-01"
   }
