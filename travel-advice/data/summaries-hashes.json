@@ -6,17 +6,17 @@
     "france": "659ee7307b10"
   },
   "AE": {
-    "uk": "e033bb0152e7",
+    "uk": "bef39014db52",
     "us": "bdcb9fcddf56",
-    "germany": "cf37e2f960a2",
+    "germany": "30f9efac0e16",
     "canada": "7e444a2041e1",
     "france": "08063939a634",
-    "denmark": "8a60b61a58fd",
-    "sweden": "199790b242dc",
+    "denmark": "126cbc44d485",
+    "sweden": "1cf04750bb80",
     "australia": "8abdc600d898"
   },
   "AF": {
-    "uk": "5e0f29b4fee2",
+    "uk": "68c1c1d2d779",
     "us": "b2640df8b3c4",
     "germany": "6a945acb34ae",
     "canada": "93d8c48cedac",
@@ -146,7 +146,7 @@
     "australia": "eeb423fcf5f9"
   },
   "BH": {
-    "uk": "cf3cbacd9152",
+    "uk": "007864abd673",
     "us": "d97e00ac2012",
     "germany": "d136adff9c68",
     "canada": "5737c20725ac",
@@ -520,13 +520,13 @@
     "australia": "fa08aaef6f0a"
   },
   "GD": {
-    "us": "9099b3a20fb6",
+    "us": "2c757bf0f9a0",
     "germany": "45bf16601484",
-    "canada": "4f0d83d61356",
-    "france": "f353e8dfff6c"
+    "canada": "bd8760271696",
+    "france": "93102c30c4e6"
   },
   "GE": {
-    "uk": "9aaabb936774",
+    "uk": "3a7e0f74b9d4",
     "us": "d5a853d49c32",
     "germany": "45bf16601484",
     "canada": "043aa1601ffd",
@@ -1038,11 +1038,11 @@
     "uk": "70133f519c6b",
     "us": "063e3e3dd2d1",
     "germany": "45bf16601484",
-    "canada": "26f98bd6341a",
-    "france": "628b85a5a81a",
-    "denmark": "8b2774799171",
+    "canada": "3228f6acc3eb",
+    "france": "b39b2bb916c0",
+    "denmark": "8e45bf726b0f",
     "sweden": "238fbf54b582",
-    "australia": "29bb4b6862fd"
+    "australia": "ed866f0fc8d6"
   },
   "MY": {
     "uk": "bf0109b24609",
@@ -1612,11 +1612,11 @@
     "uk": "007864abd673",
     "us": "bad732de644e",
     "germany": "45bf16601484",
-    "canada": "45028916c8ac",
-    "denmark": "ff8ff8f57854",
+    "canada": "bd71e23a7674",
+    "denmark": "fdf811e98332",
     "sweden": "3c002a6f90a3",
-    "australia": "b450705f26b1",
-    "france": "ebf2f5a93688"
+    "australia": "1c307074a077",
+    "france": "1c57e55b4605"
   },
   "VU": {
     "us": "d321fab1eb8d",
