@@ -2,21 +2,21 @@
   {
     "iso2": "ID",
     "rawLevel": "Exercise a high degree of caution",
-    "summary": "The Government of Canada advises exercising a high degree of caution for travel to Indonesia due to political and social tensions, terrorism threats, and violent crime throughout the country. Specific regions with higher warnings include all provinces of Indonesian Papua (except Raja Ampat Regency and Sorong city) due to violent incidents, militant threats, and kidnapping risks, as well as Aceh province and East and West Kalimantan due to kidnapping threats.",
+    "summary": "Indonesia is under an overall advisory of 'Exercise a high degree of caution' due to political and social tensions, terrorism threats, and violent crime throughout the country. Specific regions with higher warnings include all provinces of Indonesian Papua (except Raja Ampat Regency and Sorong city) due to violent incidents, militant threats, and kidnapping risks, as well as Aceh province and parts of East and West Kalimantan due to kidnapping threats. Terrorist attacks remain a risk in crowded places, tourist areas, and public transportation.",
     "url": "https://travel.gc.ca/destinations/indonesia",
     "updatedAt": "2026-08-15"
   },
   {
     "iso2": "TH",
     "rawLevel": "Exercise a high degree of caution",
-    "summary": "Thailand is under an overall advisory of 'Exercise a high degree of caution' due to ongoing political tensions, sporadic demonstrations, and a persistent terrorism threat. Specific regions face higher warnings: the Thailand-Cambodia border area (within 50 km) is under 'Avoid all travel' due to armed clashes and land mines, and the southern provinces of Narathiwat, Pattani, Yala, and parts of Songkhla are also 'Avoid all travel' because of violent separatist insurgent attacks. Political instability and potential military-enforced restrictions further contribute to the advisory.",
+    "summary": "Thailand is under an overall advisory of 'Exercise a high degree of caution' due to ongoing political tensions, sporadic demonstrations, and a persistent terrorism threat. Specific regions with higher warnings include the Thailand-Cambodia border (avoid all travel due to armed clashes and land mines) and the southern provinces of Narathiwat, Pattani, Yala, and southern Songkhla (avoid all travel due to violent separatist insurgent attacks). Political instability and military enforcement powers further contribute to the volatile security environment.",
     "url": "https://travel.gc.ca/destinations/thailand",
     "updatedAt": "2026-08-21"
   },
   {
     "iso2": "TR",
     "rawLevel": "Exercise a high degree of caution",
-    "summary": "Exercise a high degree of caution is advised for the entire country of Türkiye due to the threat of terrorist attacks and possible demonstrations. Specific regions with higher warnings include the borders with Iraq and Syria, where travel should be avoided entirely, and the southeastern provinces of Hakkari and Şirnak, where non-essential travel is discouraged. The advisory cites ongoing military activity, terrorism, and unpredictable security situations as primary concerns.",
+    "summary": "The Government of Canada advises exercising a high degree of caution for travel to Türkiye due to the threat of terrorist attacks and possible demonstrations throughout the country. Specific regions with higher warnings include the borders with Iraq and Syria, where travel is avoided entirely due to terrorism and military activity, and the southeastern provinces of Hakkari and Şirnak, where non-essential travel is discouraged due to an unpredictable security situation.",
     "url": "https://travel.gc.ca/destinations/turkey",
     "updatedAt": "2026-07-29"
   },
@@ -30,14 +30,14 @@
   {
     "iso2": "KW",
     "rawLevel": "Avoid non-essential travel",
-    "summary": "The Government of Canada advises Canadians to avoid non-essential travel to Kuwait due to the volatile security situation in the region, including missile and drone attacks striking targets in Kuwait, such as civilian infrastructure. There is also an ongoing threat of terrorism targeting foreign military installations, places of worship, government buildings, and public areas frequented by foreigners. Additionally, the border area with Iraq within 5 km is under a higher advisory level of 'Avoid all travel' due to the presence of unexploded ordnance from the 1991 Gulf War.",
+    "summary": "The Government of Canada advises Canadians to avoid non-essential travel to Kuwait due to the volatile security situation in the region, including missile and drone attacks striking civilian infrastructure. There is an ongoing threat of terrorism, particularly near foreign military installations, places of worship, and public areas frequented by foreigners. The border area with Iraq, within 5 km of the border, is under a higher advisory level of 'Avoid all travel' due to unexploded ordnance from the 1991 Gulf War.",
     "url": "https://travel.gc.ca/destinations/kuwait",
     "updatedAt": "2026-08-21"
   },
   {
     "iso2": "IL",
     "rawLevel": "Avoid non-essential travel",
-    "summary": "The Government of Canada advises Canadians to avoid non-essential travel to Israel due to the volatile security situation in the region, including ongoing military activity and potential travel disruptions. Specific areas with higher warnings include Jerusalem (avoid non-essential travel), the Golan Heights bordering Syria (avoid all travel), the area within 5 km of the Lebanon border (avoid all travel), and the area within 10 km of the Gaza Strip border (avoid all travel). The advisory also highlights severe humanitarian conditions and infrastructure damage in the Gaza Strip.",
+    "summary": "The Government of Canada advises avoiding non-essential travel to Israel due to the volatile security situation in the region. Specific areas with higher warnings include Jerusalem (avoid non-essential travel), the Golan Heights bordering Syria (avoid all travel east of Highway 98), the Lebanon border zone (avoid all travel within 5 km), and the Gaza Strip border zone (avoid all travel within 10 km). The advisory cites ongoing military activity, rocket and mortar fire risks, and unstable humanitarian conditions as primary concerns.",
     "url": "https://travel.gc.ca/destinations/israel-and-palestine",
     "updatedAt": "2026-08-10"
   }
