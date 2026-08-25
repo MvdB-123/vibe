@@ -6,13 +6,13 @@
     "france": "659ee7307b10"
   },
   "AE": {
-    "uk": "bed61e2f78af",
+    "uk": "40f244e12bf2",
     "us": "bdcb9fcddf56",
-    "germany": "726caad57e24",
+    "germany": "9f0354b2ebec",
     "canada": "7e444a2041e1",
     "france": "08063939a634",
-    "denmark": "7d2ec4524a81",
-    "sweden": "1cf04750bb80",
+    "denmark": "7012e62b2f5a",
+    "sweden": "b132c2e54bcb",
     "australia": "8abdc600d898"
   },
   "AF": {
@@ -373,17 +373,17 @@
   "DE": {
     "us": "e324fb2544ce",
     "canada": "05ad475c03f8",
-    "france": "632d89c02141",
+    "france": "f5ef914840bf",
     "australia": "1d1e3b9d8dc4"
   },
   "DJ": {
-    "us": "9099b3a20fb6",
+    "us": "2c757bf0f9a0",
     "germany": "45bf16601484",
     "canada": "81b4a042b9c7",
     "france": "8bce420b0014",
     "denmark": "00dedcd89aa9",
-    "sweden": "ca8105178e18",
-    "australia": "d03aa2898acf"
+    "sweden": "d0ab61a9e3f1",
+    "australia": "60810874aac2"
   },
   "DK": {
     "us": "9099b3a20fb6",
@@ -908,15 +908,15 @@
     "germany": "45bf16601484",
     "canada": "6b565a420f08",
     "france": "ba95e9ef297b",
-    "denmark": "4fc4fbfeb02b",
-    "sweden": "05842acdffb6",
+    "denmark": "044ce44f5985",
+    "sweden": "6034857ffca6",
     "australia": "47f5ba568a08"
   },
   "MC": {
-    "us": "9099b3a20fb6",
+    "us": "2c757bf0f9a0",
     "germany": "45bf16601484",
     "canada": "b8d2f746ec1c",
-    "france": "bbc74e9509eb"
+    "france": "7604a962b096"
   },
   "MD": {
     "us": "1f0b789c54ec",
@@ -1443,17 +1443,17 @@
     "australia": "8742d265309f"
   },
   "TG": {
-    "us": "9099b3a20fb6",
+    "us": "2c757bf0f9a0",
     "germany": "795ab774e3bf",
     "canada": "b7bbeb4cdd3d",
     "france": "b40176b17c15",
     "denmark": "00dedcd89aa9",
-    "sweden": "aa6e415a16ef"
+    "sweden": "fad6c9b8b6e5"
   },
   "TH": {
-    "uk": "7c6e61f3ce31",
+    "uk": "be6132f22e3c",
     "us": "d5a853d49c32",
-    "germany": "cc6c7e76da49",
+    "germany": "600b9dd21f4b",
     "canada": "ecbf37ed3702",
     "australia": "9c3ca7925057",
     "france": "c1a23cb21fac",
