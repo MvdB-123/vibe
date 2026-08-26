@@ -2,147 +2,147 @@
   {
     "iso2": "TR",
     "rawLevel": "Advise against all travel to parts",
-    "summary": "The FCDO advises against all travel to parts of Turkey, specifically within 10km of the border with Syria due to fighting and a heightened risk of terrorism. The overall advisory level for the entire country is not uniform, as the warning applies only to certain regions. Regional tensions in the Middle East, including strikes and retaliatory attacks, may pose indirect risks to travelers in Turkey.",
+    "summary": "The FCDO advises against all travel to parts of Turkey, specifically within 10km of the border with Syria due to fighting and a heightened risk of terrorism. The overall advisory level for the entire country is not uniform, as most regions are not subject to travel restrictions. Regional tensions in the Middle East, including strikes and retaliatory attacks, may pose indirect risks. There is also a high risk of wildfires during the summer season from April to October.",
     "url": "https://www.gov.uk/foreign-travel-advice/turkey",
     "updatedAt": "2026-07-22"
   },
   {
     "iso2": "UA",
-    "rawLevel": "Advise against all travel",
-    "summary": "The FCDO advises against all travel to parts of Ukraine due to the ongoing Russian invasion, frequent missile and drone attacks, and heightened security risks. Crimea and areas within 50km of the Belarusian border in Volyn, Rivne, and Zhytomyr regions are specifically warned against all travel. Western regions such as Zakarpattia, Ivano-Frankivsk, Ternopil, Chernivtsi, and Lviv are advised against all but essential travel.",
+    "rawLevel": "Advise against all travel to parts",
+    "summary": "The UK Foreign, Commonwealth and Development Office (FCDO) advises against all travel to parts of Ukraine due to the ongoing Russian invasion, frequent missile and drone attacks, and heightened security risks. Crimea and areas within 50km of the Belarusian border in Volyn, Rivne, and Zhytomyr regions are advised against all travel. Western regions such as Zakarpattia, Ivano-Frankivsk, Ternopil, Chernivtsi, and Lviv are advised against all but essential travel.",
     "url": "https://www.gov.uk/foreign-travel-advice/ukraine",
     "updatedAt": "2026-08-14"
   },
   {
     "iso2": "IL",
-    "rawLevel": "Advise against all travel to parts",
-    "summary": "The FCDO advises against all travel to parts of Israel due to ongoing regional tensions and security risks. Specific regions with higher warnings include Gaza (all travel), areas near the Gaza border within 500m, Tulkarm, Jenin, Tubas Governorates in the West Bank, and northern Israel/Occupied Golan Heights north of certain routes. The rest of the West Bank is under an 'all but essential travel' advisory, with exceptions for certain areas.",
+    "rawLevel": "Advise against all but essential travel to parts",
+    "summary": "The FCDO advises against all travel to parts of Israel, including Gaza, areas near the Gaza border, Tulkarm, Jenin, Tubas, northern Israel, and parts of the Golan Heights. It advises against all but essential travel to the rest of the West Bank, excluding specific areas like East Jerusalem and Bethlehem. The main reasons include regional tensions, ongoing conflict, and risks from missile and drone attacks, as well as potential retaliatory strikes by Iran.",
     "url": "https://www.gov.uk/foreign-travel-advice/israel",
     "updatedAt": "2026-07-22"
   },
   {
     "iso2": "AE",
     "rawLevel": "No advice against travel",
-    "summary": "The overall travel advisory for the United Arab Emirates (AE) is 'No advice against travel,' as the page does not issue a blanket warning against travel to the country. However, regional tensions in the Middle East, including strikes and retaliatory attacks by Iran, pose potential risks. The advisory highlights the unpredictable situation and advises caution, particularly regarding flight cancellations, airspace closures, and travel disruptions. No specific regions within the UAE are mentioned with higher warnings.",
+    "summary": "The overall travel advisory for the United Arab Emirates (AE) is 'No advice against travel'. The main reason cited is regional tensions in the Middle East, including potential strikes and retaliatory attacks by Iran, which pose risks to travel but do not warrant a blanket warning against visiting the country. Specific regions with higher warnings include areas near security or military facilities, where there is an elevated risk of conflict-related incidents.",
     "url": "https://www.gov.uk/foreign-travel-advice/united-arab-emirates",
     "updatedAt": "2026-07-24"
   },
   {
     "iso2": "SA",
     "rawLevel": "Advise against all but essential travel to parts",
-    "summary": "The FCDO advises against all but essential travel to parts of Saudi Arabia due to regional tensions and security risks. All travel is discouraged within 10km of the Saudi-Yemen border, while areas between 10km and 80km from the border are restricted to essential travel only. The Houthis have launched air strikes against Saudi territory and shipping vessels in the Red Sea, including attacks on airports and ports in Riyadh, Jeddah, and Abha.",
+    "summary": "The FCDO advises against all but essential travel to parts of Saudi Arabia due to regional tensions and security risks. All travel is discouraged within 10km of the Saudi-Yemen border, while areas between 10km and 80km from the border are subject to stricter restrictions. The Houthis have launched air strikes against Saudi territory and shipping vessels in the Red Sea, posing risks to airports and ports in cities like Riyadh, Jeddah, and Abha.",
     "url": "https://www.gov.uk/foreign-travel-advice/saudi-arabia",
     "updatedAt": "2026-07-25"
   },
   {
     "iso2": "EG",
     "rawLevel": "Advise against all but essential travel to parts",
-    "summary": "The FCDO advises against all but essential travel to parts of Egypt due to regional tensions, terrorism risks, and conflict-related instability. Specific regions with higher warnings include the Egypt-Libya border (within 20km, except El Salloum), North Sinai Governorate, northern South Sinai (beyond St Catherine-Nuweibaa road), and the eastern Ismailiyah Governorate (east of the Suez Canal). Additional areas with restricted travel include the Western Desert (excluding certain oases and routes) and the Hala’ib Triangle/Bir Tawil Trapezoid.",
+    "summary": "The FCDO advises against all but essential travel to parts of Egypt due to regional tensions and security risks. Specific areas where travel is discouraged include the Egypt-Libya border (except El Salloum), North Sinai Governorate, northern South Sinai (beyond the St Catherine-Nuweibaa road), and the eastern part of Ismailiyah Governorate. The advisory also highlights risks from regional conflicts, including potential retaliatory attacks and unpredictable situations involving US and Israeli interests.",
     "url": "https://www.gov.uk/foreign-travel-advice/egypt",
-    "updatedAt": "2026-08-04"
+    "updatedAt": "2026-08-26"
   },
   {
     "iso2": "IQ",
-    "rawLevel": "Advise against all but essential travel to parts",
-    "summary": "The FCDO advises against all travel to specific regions in Iraq due to ongoing regional tensions, including strikes and retaliatory attacks by Iran targeting US military and civilian infrastructure. Higher warnings apply to parts of Anbar, Diyala, Kirkuk, Ninewa, Salah al-Din, Babil (excluding Jurf al-Sakr), Baghdad (excluding Sadr City), Wasit, Maysan, Basra (excluding certain areas), and areas near Iraq’s borders with Iran, Saudi Arabia, and Kuwait. The Kurdistan Region of Iraq is also subject to an 'all but essential travel' advisory.",
+    "rawLevel": "Advise against all but essential travel",
+    "summary": "The FCDO advises against all but essential travel to parts of Iraq due to regional tensions, including strikes and retaliatory attacks by Iran targeting US military and civilian infrastructure. Specific regions with higher warnings include Anbar, Diyala, Kirkuk, Ninewa, Salah al-Din, Babil (excluding Jurf al-Sakr), Baghdad (excluding Sadr City), Wasit, Maysan, and Basra (excluding certain areas). The Kurdistan Region of Iraq is also under the same higher advisory level.",
     "url": "https://www.gov.uk/foreign-travel-advice/iraq",
     "updatedAt": "2026-07-22"
   },
   {
     "iso2": "IR",
     "rawLevel": "Advise against all travel",
-    "summary": "The FCDO advises against all travel to Iran due to significant risks including regional tensions, potential military strikes, and the very high risk of arrest or detention for British nationals, including dual nationals. Air, sea, and land routes may close abruptly, and communications are disrupted. No specific regions within Iran are highlighted with higher warnings beyond the national advisory.",
+    "summary": "The FCDO advises against all travel to Iran due to significant risks including regional tensions, potential military strikes, and the very high risk of arrest or detention for British nationals and dual nationals. British and British-Iranian dual nationals face heightened risks of detention by Iranian authorities. Regional tensions in the Middle East remain unpredictable, with ongoing strikes and retaliatory attacks affecting infrastructure and travel routes.",
     "url": "https://www.gov.uk/foreign-travel-advice/iran",
     "updatedAt": "2026-08-13"
   },
   {
     "iso2": "LB",
     "rawLevel": "Advise against all travel to parts",
-    "summary": "The FCDO advises against all travel to parts of Lebanon due to regional tensions and security risks, including areas near the border with Syria and Palestinian refugee camps. Specific regions with higher warnings include South and Nabatiyeh Governorates, parts of Beqaa Governorate, Baalbek-Hermel Governorate, and Akkar Governorate, where all travel is discouraged. Additionally, some areas in Beirut, Mount Lebanon, and Tripoli are subject to either all travel or all but essential travel advisories.",
+    "summary": "The UK Foreign, Commonwealth & Development Office (FCDO) advises against all travel to parts of Lebanon due to regional tensions and security risks. Specific areas with higher warnings include South and Nabatiyeh Governorates, parts of Beirut and Mount Lebanon Governorates, Beqaa Governorate, Baalbek-Hermel Governorate, Akkar Governorate, and Palestinian refugee camps. The advisory also highlights risks in Tripoli and other regions, citing unpredictable regional tensions and potential conflict.",
     "url": "https://www.gov.uk/foreign-travel-advice/lebanon",
     "updatedAt": "2026-08-10"
   },
   {
     "iso2": "SY",
     "rawLevel": "Advise against all travel",
-    "summary": "The FCDO advises against all travel to Syria due to unpredictable security conditions and the threat of terrorist attacks. Regional tensions in the Middle East, including strikes and retaliatory attacks by Iran, further increase risks of unforeseen escalation. Consular support is not available from within Syria. The advisory applies uniformly across the entire country.",
+    "summary": "The FCDO advises against all travel to Syria due to unpredictable security conditions and the threat of terrorist attacks. Regional tensions in the Middle East, including strikes and retaliatory attacks by Iran, further increase risks. There are no specific regions with higher warnings beyond the national advisory.",
     "url": "https://www.gov.uk/foreign-travel-advice/syria",
     "updatedAt": "2026-07-22"
   },
   {
     "iso2": "AF",
     "rawLevel": "Advise against all travel",
-    "summary": "The FCDO advises against all travel to Afghanistan due to the volatile security situation, high risk of detention or kidnapping for British nationals, and limited consular support. Terrorists frequently target locations frequented by foreigners. Border regions with Pakistan are particularly dangerous due to ongoing tensions and violent clashes.",
+    "summary": "The FCDO advises against all travel to Afghanistan due to a volatile security situation, high risks of detention or kidnapping for British nationals, and limited consular support. Terrorists frequently target locations frequented by foreigners, and tensions between Afghanistan and Pakistan have led to violent clashes in border regions. Travel throughout the country is extremely dangerous, with several border crossings currently closed.",
     "url": "https://www.gov.uk/foreign-travel-advice/afghanistan",
     "updatedAt": "2026-07-30"
   },
   {
     "iso2": "YE",
     "rawLevel": "Advise against all travel",
-    "summary": "The FCDO advises against all travel to the whole of Yemen due to unpredictable security conditions, including ongoing conflict, regional tensions, and threats from the Houthis. The advisory applies uniformly across the country, with no regional exceptions noted. The situation is exacerbated by recent military escalations, air strikes, and potential for further violence.",
+    "summary": "The FCDO advises against all travel to the whole of Yemen due to unpredictable security conditions, including ongoing conflict, regional tensions, and threats from the Houthis. The advisory highlights severe limitations on UK government support, with no evacuation procedures in place. Specific regions with higher risks include areas near the Yemen-Saudi border and the Red Sea, where military escalation and air strikes have occurred.",
     "url": "https://www.gov.uk/foreign-travel-advice/yemen",
     "updatedAt": "2026-07-31"
   },
   {
     "iso2": "LY",
     "rawLevel": "Advise against all but essential travel to parts",
-    "summary": "The FCDO advises against all but essential travel to specific cities in Libya, including Tripoli, Benghazi, Al-Bayda, Derna, and Misrata, as well as the surrounding areas such as Jebel Akhdar and regions between Al-Maqrun and Al-Tamimi. The advisory is primarily due to ongoing conflict, terrorism, and the risk of kidnapping. The rest of Libya is not subject to a travel advisory.",
+    "summary": "The FCDO advises against all but essential travel to specific cities in Libya, including Tripoli, Benghazi, Al-Bayda, Derna, and Misrata, as well as the surrounding areas such as Jebel Akhdar and regions between Al-Maqrun and Al-Tamimi. The advisory cites risks including conflict, terrorism, and crime. The rest of Libya is subject to a higher warning level, with FCDO advising against all travel to areas outside these specified cities and regions.",
     "url": "https://www.gov.uk/foreign-travel-advice/libya",
     "updatedAt": "2026-07-21"
   },
   {
     "iso2": "SO",
     "rawLevel": "Advise against all travel to parts",
-    "summary": "The FCDO advises against all travel to parts of Somalia, including Somaliland, due to the threat from terrorist groups and continuing violence. The regions of Awdal, Maroodijeh, and Sahil are the only areas where travel is permitted, but only essential travel is advised. This is due to ongoing fighting between al-Shabaab and the Somali Government, particularly near the capital Mogadishu.",
+    "summary": "The FCDO advises against all travel to parts of Somalia, including Somaliland, due to the threat from terrorist groups and ongoing violence. The regions of Awdal, Maroodijeh, and Sahil are the exceptions, where FCDO advises against all but essential travel for the same reasons. There has been an increase in fighting between al-Shabaab and the Somali Government near Mogadishu.",
     "url": "https://www.gov.uk/foreign-travel-advice/somalia",
     "updatedAt": "2026-06-04"
   },
   {
     "iso2": "SD",
-    "rawLevel": "Advise against all travel to parts",
-    "summary": "The FCDO advises against all travel to Sudan due to the ongoing military conflict in Khartoum and other parts of the country. The Hala’ib Triangle and the Bir Tawil Trapezoid are exceptions, where the FCDO advises against all but essential travel. Ceasefires have been repeatedly broken, and the British Embassy in Khartoum is closed, severely limiting consular support.",
+    "rawLevel": "Advise against all but essential travel to parts",
+    "summary": "The FCDO advises against all travel to Sudan due to the ongoing military conflict in Khartoum and other parts of the country. The Hala’ib Triangle and the Bir Tawil Trapezoid are exceptions, where the FCDO advises against all but essential travel. Ceasefires have been repeatedly broken, and the British Embassy in Khartoum is closed with no consular support available.",
     "url": "https://www.gov.uk/foreign-travel-advice/sudan",
     "updatedAt": "2026-05-11"
   },
   {
     "iso2": "SS",
     "rawLevel": "Advise against all travel",
-    "summary": "The FCDO advises against all travel to South Sudan due to the risk of armed violence and criminality, as well as an unpredictable political and security situation that could deteriorate rapidly. The entire country is affected, with no regions exempt from this advisory. Consular assistance for British nationals is severely limited.",
+    "summary": "The FCDO advises against all travel to South Sudan due to the risk of armed violence and criminality, as well as an unpredictable political and security situation that could deteriorate rapidly. The entire country is affected by these risks, with no regions exempt from the advisory. Consular assistance is severely limited, and routes into and out of the country may be blocked without warning.",
     "url": "https://www.gov.uk/foreign-travel-advice/south-sudan",
-    "updatedAt": "2026-05-26"
+    "updatedAt": "2026-08-25"
   },
   {
     "iso2": "ML",
     "rawLevel": "Advise against all travel",
-    "summary": "The FCDO advises against all travel to the whole of Mali due to unpredictable security conditions, including high threats of terrorism and kidnapping. Terrorist group JNIM has implemented blockades on key routes in Southern and Western Mali, including Bamako, targeting fuel trucks and enforcing checkpoints. There is also a high threat of criminal activity across the country.",
+    "summary": "The FCDO advises against all travel to the whole of Mali due to unpredictable security conditions, including high threats of terrorism and kidnapping. Terrorist group JNIM has implemented blockades and checkpoints on key routes, particularly in Southern and Western Mali, including Bamako. There is also significant criminal activity across the country.",
     "url": "https://www.gov.uk/foreign-travel-advice/mali",
     "updatedAt": "2026-07-10"
   },
   {
     "iso2": "CF",
-    "rawLevel": "Advise against all but essential travel",
-    "summary": "The FCDO advises against all travel to the whole of the Central African Republic, including areas such as Bimbo, Begoua, and Coline, except to the capital, Bangui. Within Bangui, including Bangui M’Poko International Airport, the FCDO advises against all but essential travel. The advisory cites severe security risks and limited consular support as primary concerns.",
+    "rawLevel": "Advise against all travel to parts",
+    "summary": "The FCDO advises against all travel to the whole of the Central African Republic, including specific areas such as Bimbo, Begoua, and Coline. However, it advises against all but essential travel to the capital, Bangui, including Bangui M’Poko International Airport. The advisory is primarily due to widespread insecurity, including armed conflict, terrorism, and crime.",
     "url": "https://www.gov.uk/foreign-travel-advice/central-african-republic",
     "updatedAt": "2026-05-28"
   },
   {
     "iso2": "MM",
-    "rawLevel": "Advise against all but essential travel",
-    "summary": "The FCDO advises against all but essential travel to parts of Myanmar (Burma) due to a volatile security situation, potential for rapid deterioration, and travel restrictions imposed by the military regime. FCDO advises against all travel to Chin State, Kachin State, Kayah State, Kayin State, Mon State, Rakhine State, Sagaing and Magway regions, Tanintharyi Region (excluding Myeik township and areas south of Tanintharyi township), Shan State North, northern Mandalay Region, and eastern Bago region. Higher warnings apply to Shan State South and East, Mandalay Region, Tanintharyi Region south of Tanintharyi township, the rest of Bago region, and specific townships in Ayeyarwady region, where FCDO advises against all but essential travel.",
+    "rawLevel": "Advise against all travel to parts",
+    "summary": "The FCDO advises against all travel to multiple regions in Myanmar due to the volatile security situation, including active conflict zones such as Chin State, Kachin State, Kayah State, Kayin State, Mon State, Rakhine State, Sagaing and Magway regions, Shan State North, and parts of Tanintharyi Region. Additionally, the FCDO advises against all but essential travel to Shan State South and East, Mandalay Region, and other specified areas due to ongoing instability and potential for sudden deterioration. The military regime may impose travel restrictions at any time.",
     "url": "https://www.gov.uk/foreign-travel-advice/myanmar",
     "updatedAt": "2026-08-04"
   },
   {
     "iso2": "RU",
     "rawLevel": "Advise against all travel",
-    "summary": "The UK Foreign, Commonwealth & Development Office (FCDO) advises against all travel to Russia due to significant risks stemming from its ongoing invasion of Ukraine, including security incidents such as drone attacks, Russian air defence activity, and a high likelihood of terrorist attacks in major cities. The advisory also highlights limited flight availability to return to the UK and restricted consular support. Additionally, there is an increased risk of British nationals being detained, particularly if suspected of activities against Russian law. The North Caucasus region is noted for having very limited UK government support due to the security situation.",
+    "summary": "The FCDO advises against all travel to Russia due to significant risks stemming from its ongoing invasion of Ukraine, including security incidents such as drone attacks, Russian air defence activity, and a high likelihood of terrorist attacks in major cities. The advisory highlights limited flight availability to return to the UK and restricted consular support from the British government. There is also an increased risk of British nationals being detained, particularly if suspected of activities against Russian law.",
     "url": "https://www.gov.uk/foreign-travel-advice/russia",
     "updatedAt": "2026-07-03"
   },
   {
     "iso2": "BY",
     "rawLevel": "Advise against all travel",
-    "summary": "The FCDO advises against all travel to Belarus due to a significant risk of arrest for activities now considered illegal by the Belarusian regime. There is also a low risk that direct conflict linked to the war in Ukraine may spread to Belarus. Dual nationals face additional risks as Belarus does not recognize dual nationality, and the authorities may consider them Belarusian regardless of passport used.",
+    "summary": "The FCDO advises against all travel to Belarus due to a significant risk of arrest for engaging in activities considered illegal by the Belarusian regime. There is also a low risk that direct conflict linked to the war in Ukraine may spread to Belarus. Dual nationals face additional risks as Belarus does not recognize dual nationality, and the authorities may detain individuals regardless of their travel documents.",
     "url": "https://www.gov.uk/foreign-travel-advice/belarus",
     "updatedAt": "2026-05-11"
   },
@@ -156,7 +156,7 @@
   {
     "iso2": "TH",
     "rawLevel": "Advise against all but essential travel to parts",
-    "summary": "The FCDO advises against all but essential travel to parts of Thailand due to ongoing security risks. Specific regions with higher warnings include the Thailand-Malaysia border provinces (Pattani, Yala, Narathiwat) and districts in southern Songkhla Province, where regular attacks occur. Additionally, areas within 20km of the Thailand-Cambodia border are advised against due to recent clashes, suspended crossings, and unexploded landmines.",
+    "summary": "The FCDO advises against all but essential travel to parts of Thailand due to ongoing security risks. Specific regions with higher warnings include areas near the Thailand-Malaysia border (Pattani, Yala, Narathiwat provinces, and certain districts in Songkhla Province) due to regular attacks, and areas within 20km of the Thailand-Cambodia border due to recent fighting, landmines, and suspended crossings. The advisory also notes risks from escalation in the Middle East affecting travel plans.",
     "url": "https://www.gov.uk/foreign-travel-advice/thailand",
     "updatedAt": "2026-06-30"
   }
