@@ -181,8 +181,12 @@ ${levelsFormatted}
 
 2. SUMMARY – Write 2–4 sentences in ${config.language} (the same language as the page) that describe:
    - The general advisory level for the whole country and the main reason (war, terrorism, crime, etc.)
-   - Any specific regions/provinces with HIGHER warnings: name each region and the reason
-   Keep it factual, no recommendations. Do not add intro or closing phrases.
+   - Any specific regions/provinces with HIGHER warnings: use the EXACT wording from the page for region names and warning levels (e.g. "avoid all travel", "formellement déconseillé")
+   STRICT RULES for the summary:
+   - ONLY include information that appears VERBATIM or near-verbatim in the provided page text. Do NOT add place names, cities, or figures from your training knowledge.
+   - ONLY include content about country ${iso2}. Ignore any information about neighbouring or other countries mentioned on the same page.
+   - If a region has a higher warning level, state the level explicitly and verbatim so the distinction from the general level is clear.
+   - Keep it factual. No intro or closing phrases.
 
 3. UPDATED – The date this advisory was last updated, in YYYY-MM-DD format. Return null if not found.
 

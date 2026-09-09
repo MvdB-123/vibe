@@ -452,8 +452,12 @@ ${def.levels.map((l) => `  - "${l}"`).join("\n")}
 
 2. SUMMARY – 2–4 sentences in ${def.language} describing:
    - General advisory level and main reason (war, terrorism, crime, etc.)
-   - Specific regions/areas with HIGHER warnings and why
-   No intro or closing. Factual only.
+   - Specific regions/areas with HIGHER warnings and why, using the EXACT wording from the page (e.g. "border with Syria and Iraq", not paraphrased names)
+   STRICT RULES for the summary:
+   - ONLY include information that appears VERBATIM or near-verbatim in the provided page text. Do NOT add place names, cities, provinces, or statistics from your training knowledge.
+   - ONLY include content about country ${iso2}. If the page mentions other countries, ignore those completely.
+   - If a region with higher warnings exists, state its advisory level explicitly (e.g. "avoid all travel", "do not travel") so the level difference is clear.
+   - No intro or closing phrases. Factual only.
 
 3. UPDATED – The MOST RECENT update date found anywhere on the page, in YYYY-MM-DD format, or null if not found.
    Look for: explicit date labels, "OBS: DD.MM.YYYY" timestamps (Danish pages), "Stand:" or "Letzte Änderung:" (German), "Date de mise à jour" (French), or any timestamp near the top.
@@ -576,14 +580,29 @@ async function processSource(
 
           // Override Mistral's date with a regex-extracted date when possible,
           // since Mistral sometimes misses or picks an older date.
-          // Handles: "OBS: 10.07.2026" (Denmark), "Stand - 09.07.2026" (Germany)
+          // Handles: "OBS: 10.07.2026" (Denmark), "Stand - 09.07.2026" (Germany),
+          //          "Updated: 02 September 2026" (Australia)
           let officialUpdatedAt: Date | null = extracted.updatedAt ? new Date(extracted.updatedAt) : null;
+          const MONTH_MAP: Record<string, string> = {
+            january:"01",february:"02",march:"03",april:"04",may:"05",june:"06",
+            july:"07",august:"08",september:"09",october:"10",november:"11",december:"12",
+          };
           const obsMatch = text.match(/OBS:\s*(\d{2})\.(\d{2})\.(\d{4})/i)
             ?? text.match(/Stand\s*[-–]\s*(\d{2})\.(\d{2})\.(\d{4})/i);
           if (obsMatch) {
             const d = new Date(`${obsMatch[3]}-${obsMatch[2]}-${obsMatch[1]}`);
             if (!isNaN(d.getTime()) && (!officialUpdatedAt || d > officialUpdatedAt)) {
               officialUpdatedAt = d;
+            }
+          }
+          const ausMatch = text.match(/Updated:\s*(\d{1,2})\s+([A-Za-z]+)\s+(\d{4})/i);
+          if (ausMatch) {
+            const month = MONTH_MAP[ausMatch[2].toLowerCase()];
+            if (month) {
+              const d = new Date(`${ausMatch[3]}-${month}-${ausMatch[1].padStart(2, "0")}`);
+              if (!isNaN(d.getTime()) && (!officialUpdatedAt || d > officialUpdatedAt)) {
+                officialUpdatedAt = d;
+              }
             }
           }
 
