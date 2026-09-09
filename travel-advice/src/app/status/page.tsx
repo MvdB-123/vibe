@@ -103,6 +103,40 @@ export default async function StatusPage() {
         </table>
       </div>
 
+      {/* Manual overrides section — only shown when active overrides exist */}
+      <div className="rounded-xl border border-amber-200 bg-amber-50 p-4 space-y-2">
+        <h2 className="text-sm font-semibold text-amber-800">⚠ Actieve handmatige overrides</h2>
+        <p className="text-xs text-amber-700">
+          De onderstaande bronnen tonen voor één of meer landen een vaste (handmatige) samenvatting
+          in plaats van de live scrape. De data beweegt <strong>niet automatisch mee</strong> met
+          wijzigingen op de bronsites. Verwijder de override zodra Bug 0/2 (Mistral
+          compound-extractie) is opgelost.
+        </p>
+        <table className="w-full text-xs mt-1">
+          <thead>
+            <tr className="text-left text-amber-700">
+              <th className="py-1 pr-4 font-semibold">Bron</th>
+              <th className="py-1 pr-4 font-semibold">Land</th>
+              <th className="py-1 font-semibold">Reden</th>
+            </tr>
+          </thead>
+          <tbody className="divide-y divide-amber-100 text-amber-900">
+            {[
+              { source: "🇬🇧 Verenigd Koninkrijk", country: "Jordanië (JO)", reason: "Compound-zones niet betrouwbaar geëxtraheerd door scraper" },
+              { source: "🇫🇷 Frankrijk", country: "Jordanië (JO)", reason: "Compound-zones niet betrouwbaar geëxtraheerd door scraper" },
+              { source: "🇩🇰 Denemarken", country: "Jordanië (JO)", reason: "Compound-zones niet betrouwbaar geëxtraheerd door scraper" },
+              { source: "🇨🇦 Canada", country: "Jordanië (JO)", reason: "Compound-zones niet betrouwbaar geëxtraheerd door scraper" },
+            ].map((row) => (
+              <tr key={row.source + row.country}>
+                <td className="py-1 pr-4">{row.source}</td>
+                <td className="py-1 pr-4">{row.country}</td>
+                <td className="py-1">{row.reason}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+
       <div className="text-sm text-gray-500 space-y-1">
         <p>Update-interval: elke 6 uur via cron-job</p>
         <p>Scrapers worden geleidelijk toegevoegd naarmate het project vordert</p>
