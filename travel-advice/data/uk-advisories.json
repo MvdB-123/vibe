@@ -1,5 +1,12 @@
 [
   {
+    "iso2": "JO",
+    "rawLevel": "Advise against all but essential travel to parts",
+    "summary": "The FCDO advises against all but essential travel to parts of Jordan, including areas near the borders with Syria and Iraq. The FCDO advises against all travel to the Syria border area north of Ruwayshid to the Iraqi border, and areas near the Iraqi border. Terrorist attacks could be indiscriminate, including in places visited by foreigners.",
+    "url": "https://www.gov.uk/foreign-travel-advice/jordan",
+    "updatedAt": "2026-08-29"
+  },
+  {
     "iso2": "TR",
     "rawLevel": "Advise against all travel to parts",
     "summary": "The FCDO advises against all travel to parts of Turkey, specifically within 10km of the border with Syria due to fighting and a heightened risk of terrorism. The overall advisory level for the country is not uniform, as the warning applies only to certain regions. Regional tensions in the Middle East, including strikes and retaliatory attacks, may also pose risks in affected areas.",
