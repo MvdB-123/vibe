@@ -508,6 +508,23 @@ ${pageText.slice(0, 5000)}`;
   }
 }
 
+// ─── Severity guard ────────────────────────────────────────────────────────────
+// Never allow Playwright/Mistral to downgrade more than 1 severity step.
+// This prevents a bad scrape (wrong page, Mistral confusion) from silently
+// overwriting correct data with "Keine besonderen Sicherheitshinweise" etc.
+
+const SEVERITY_ORDER: Record<string, number> = {
+  green: 0, unknown: 0, yellow: 1, orange: 2, red: 3,
+};
+
+function isSafeWrite(existingLevel: string | null, newLevel: string): boolean {
+  if (!existingLevel) return true;
+  const oldSev = SEVERITY_ORDER[existingLevel] ?? -1;
+  const newSev = SEVERITY_ORDER[newLevel] ?? -1;
+  if (oldSev === -1 || newSev === -1) return true;
+  return oldSev - newSev <= 1;
+}
+
 // ─── DB write ──────────────────────────────────────────────────────────────────
 
 async function writeToDb(
@@ -537,6 +554,10 @@ async function writeToDb(
   });
 
   if (existing) {
+    if (!isSafeWrite(existing.normalizedLevel, normalizedLevel)) {
+      console.warn(`  ${iso2}: BLOCKED unsafe downgrade ${existing.normalizedLevel} → ${normalizedLevel} (page may be wrong/redirected)`);
+      return;
+    }
     await prisma.advisory.update({ where: { id: existing.id }, data });
   } else {
     const country = await prisma.country.findUnique({ where: { isoAlpha2: iso2 } });

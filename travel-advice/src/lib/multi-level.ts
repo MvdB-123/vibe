@@ -121,16 +121,14 @@ export function getMultiLevelDisplay(
     }
     if (key === "von nicht notwendigen reisen abraten" && hasRed) {
       return [
-        { level: "yellow", area: "Algemeen" },
-        { level: "orange", area: "Deelgebieden" },
+        { level: "orange", area: "Algemeen" },
         { level: "red", area: "Grensgebieden" },
       ];
     }
     if (key === "reisewarnung" && hasOrange) {
       return [
-        { level: "yellow", area: "Algemeen" },
         { level: "orange", area: "Deelgebieden" },
-        { level: "red", area: "Grensgebieden" },
+        { level: "red", area: "Algemeen" },
       ];
     }
     if (key === "reisewarnung" && /teilreise|part|gebiet|provinz|region/i.test(sum)) {
