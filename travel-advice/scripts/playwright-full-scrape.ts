@@ -37,7 +37,7 @@ interface SourceDef {
   id: string;
   language: string;
   levels: string[];
-  getCountries: () => Promise<Array<{ iso2: string; url: string }>>;
+  getCountries: (browser: import("playwright").Browser) => Promise<Array<{ iso2: string; url: string }>>;
   isPageMissing?: (text: string) => boolean;
   // Override browser navigation with a custom fetch (e.g. for sites that block GitHub IPs)
   fetchPageText?: (url: string) => Promise<string>;
@@ -47,6 +47,7 @@ interface SourceDef {
 const GERMANY_KNOWN_URLS: Record<string, string> = {
   AE: "https://www.auswaertiges-amt.de/de/reiseundsicherheit/vereinigtearabischeemiratesicherheit-202332",
   IL: "https://www.auswaertiges-amt.de/de/reiseundsicherheit/israelsicherheit-203814",
+  JO: "https://www.auswaertiges-amt.de/de/service/laender/jordanien-node/jordaniensicherheit-218008",
   RU: "https://www.auswaertiges-amt.de/de/reiseundsicherheit/russischefoedsicherheit-201536",
   UA: "https://www.auswaertiges-amt.de/de/reiseundsicherheit/ukrainesicherheit-201946",
   CN: "https://www.auswaertiges-amt.de/de/reiseundsicherheit/chinasicherheit-200466",
@@ -105,6 +106,90 @@ async function getGermanyCountries(): Promise<Array<{ iso2: string; url: string 
     console.error("Failed to fetch Germany country list:", err);
     return Object.entries(GERMANY_KNOWN_URLS).map(([iso2, url]) => ({ iso2, url }));
   }
+}
+
+// US: scrape main advisories page to discover country URLs dynamically
+const US_NAME_TO_ISO2: Record<string, string> = {
+  "afghanistan":"AF","albania":"AL","algeria":"DZ","andorra":"AD","angola":"AO",
+  "antigua and barbuda":"AG","argentina":"AR","armenia":"AM","australia":"AU",
+  "austria":"AT","azerbaijan":"AZ","bahamas":"BS","bahrain":"BH","bangladesh":"BD",
+  "barbados":"BB","belarus":"BY","belgium":"BE","belize":"BZ","benin":"BJ",
+  "bhutan":"BT","bolivia":"BO","bosnia and herzegovina":"BA","botswana":"BW",
+  "brazil":"BR","brunei":"BN","bulgaria":"BG","burkina faso":"BF","burundi":"BI",
+  "cabo verde":"CV","cambodia":"KH","cameroon":"CM","canada":"CA",
+  "central african republic":"CF","chad":"TD","chile":"CL","china":"CN",
+  "colombia":"CO","comoros":"KM","congo, democratic republic of the":"CD",
+  "congo, republic of the":"CG","costa rica":"CR","cote d'ivoire":"CI",
+  "croatia":"HR","cuba":"CU","cyprus":"CY","czech republic":"CZ","czechia":"CZ",
+  "denmark":"DK","djibouti":"DJ","dominica":"DM","dominican republic":"DO",
+  "ecuador":"EC","egypt":"EG","el salvador":"SV","equatorial guinea":"GQ",
+  "eritrea":"ER","estonia":"EE","eswatini":"SZ","ethiopia":"ET","fiji":"FJ",
+  "finland":"FI","france":"FR","gabon":"GA","gambia":"GM","georgia":"GE",
+  "germany":"DE","ghana":"GH","greece":"GR","grenada":"GD","guatemala":"GT",
+  "guinea":"GN","guinea-bissau":"GW","guyana":"GY","haiti":"HT","honduras":"HN",
+  "hungary":"HU","iceland":"IS","india":"IN","indonesia":"ID","iran":"IR",
+  "iraq":"IQ","ireland":"IE","israel":"IL","israel, the west bank and gaza":"IL",
+  "italy":"IT","jamaica":"JM","japan":"JP","jordan":"JO","kazakhstan":"KZ",
+  "kenya":"KE","kiribati":"KI","kosovo":"XK","kuwait":"KW","kyrgyzstan":"KG",
+  "laos":"LA","latvia":"LV","lebanon":"LB","lesotho":"LS","liberia":"LR",
+  "libya":"LY","liechtenstein":"LI","lithuania":"LT","luxembourg":"LU",
+  "madagascar":"MG","malawi":"MW","malaysia":"MY","maldives":"MV","mali":"ML",
+  "malta":"MT","marshall islands":"MH","mauritania":"MR","mauritius":"MU",
+  "mexico":"MX","micronesia":"FM","moldova":"MD","monaco":"MC","mongolia":"MN",
+  "montenegro":"ME","morocco":"MA","mozambique":"MZ","myanmar":"MM","namibia":"NA",
+  "nauru":"NR","nepal":"NP","netherlands":"NL","new zealand":"NZ","nicaragua":"NI",
+  "niger":"NE","nigeria":"NG","north korea":"KP","north macedonia":"MK",
+  "norway":"NO","oman":"OM","pakistan":"PK","palau":"PW","panama":"PA",
+  "papua new guinea":"PG","paraguay":"PY","peru":"PE","philippines":"PH",
+  "poland":"PL","portugal":"PT","qatar":"QA","romania":"RO","russia":"RU",
+  "rwanda":"RW","saint kitts and nevis":"KN","saint lucia":"LC",
+  "saint vincent and the grenadines":"VC","samoa":"WS","san marino":"SM",
+  "sao tome and principe":"ST","saudi arabia":"SA","senegal":"SN","serbia":"RS",
+  "seychelles":"SC","sierra leone":"SL","singapore":"SG","slovakia":"SK",
+  "slovenia":"SI","solomon islands":"SB","somalia":"SO","south africa":"ZA",
+  "south korea":"KR","south sudan":"SS","spain":"ES","sri lanka":"LK",
+  "sudan":"SD","suriname":"SR","sweden":"SE","switzerland":"CH","syria":"SY",
+  "tajikistan":"TJ","tanzania":"TZ","thailand":"TH","timor-leste":"TL",
+  "togo":"TG","tonga":"TO","trinidad and tobago":"TT","tunisia":"TN",
+  "turkmenistan":"TM","türkiye":"TR","turkey":"TR","tuvalu":"TV","uganda":"UG",
+  "ukraine":"UA","united arab emirates":"AE","united kingdom":"GB","uruguay":"UY",
+  "uzbekistan":"UZ","vanuatu":"VU","venezuela":"VE","vietnam":"VN","yemen":"YE",
+  "zambia":"ZM","zimbabwe":"ZW","taiwan":"TW","taiwan (taiwan)":"TW",
+  "democratic republic of the congo":"CD","republic of the congo":"CG",
+  "burma (myanmar)":"MM",
+};
+
+async function getUsCountries(browser: import("playwright").Browser): Promise<Array<{ iso2: string; url: string }>> {
+  const page = await browser.newPage();
+  const results: Array<{ iso2: string; url: string }> = [];
+  try {
+    await page.goto("https://travel.state.gov/content/travel/en/traveladvisories/traveladvisories.html", {
+      waitUntil: "domcontentloaded",
+      timeout: 30_000,
+    });
+    await page.waitForTimeout(2000);
+    const links = await page.$$eval(
+      'a[href*="International-Travel-Country-Information-Pages"]',
+      (els) => els.map((el) => ({ href: (el as HTMLAnchorElement).href, text: el.textContent?.trim() ?? "" }))
+    );
+    const seen = new Set<string>();
+    for (const { href, text } of links) {
+      if (!href || seen.has(href)) continue;
+      const name = text.toLowerCase().replace(/\s*[-–|].*$/, "").trim();
+      const iso2 = US_NAME_TO_ISO2[name];
+      if (iso2 && !seen.has(iso2)) {
+        seen.add(iso2);
+        seen.add(href);
+        results.push({ iso2, url: href });
+      }
+    }
+  } catch (err) {
+    console.error("Failed to scrape US advisories list:", err);
+  } finally {
+    await page.close().catch(() => {});
+  }
+  console.log(`  US: found ${results.length} countries from main page`);
+  return results;
 }
 
 // Sweden: build URLs from slug map
@@ -306,11 +391,18 @@ function getDenmarkCountries(): Array<{ iso2: string; url: string }> {
 // ─── Source configs ────────────────────────────────────────────────────────────
 
 const SOURCES: Record<string, SourceDef> = {
+  us: {
+    id: "us",
+    language: "English",
+    levels: ["Level 4: Do Not Travel", "Level 3: Reconsider Travel", "Level 2: Exercise Increased Caution", "Level 1: Exercise Normal Precautions"],
+    getCountries: async (browser) => getUsCountries(browser),
+    isPageMissing: (text: string) => text.length < 200,
+  },
   australia: {
     id: "australia",
     language: "English",
     levels: ["Do not travel", "Reconsider your need to travel", "Exercise a high degree of caution", "Exercise normal safety precautions"],
-    getCountries: async () => getAustraliaCountries(),
+    getCountries: async (_browser) => getAustraliaCountries(),
     isPageMissing: (text: string) =>
       text.length < 300 || AUSTRALIA_NO_ADVISORY_PATTERNS.some((p) => p.test(text)),
     fetchPageText: fetchAustraliaPage,
@@ -319,19 +411,19 @@ const SOURCES: Record<string, SourceDef> = {
     id: "germany",
     language: "German",
     levels: ["Reisewarnung", "Von Reisen wird dringend abgeraten", "Teilreisewarnung", "Von nicht notwendigen Reisen abraten", "Erhöhte Vorsicht", "Keine besonderen Sicherheitshinweise"],
-    getCountries: getGermanyCountries,
+    getCountries: async (_browser) => getGermanyCountries(),
   },
   sweden: {
     id: "sweden",
     language: "Swedish",
     levels: ["Avrådan från alla resor", "Avrådan från icke nödvändiga resor", "Var extra uppmärksam", "Inga särskilda restriktioner", "Borttagen avrådan"],
-    getCountries: async () => getSwedenCountries(),
+    getCountries: async (_browser) => getSwedenCountries(),
   },
   denmark: {
     id: "denmark",
     language: "Danish",
     levels: ["Rejse frårådes", "Fråråd ikke-nødvendige rejser", "Vær ekstra forsigtig", "Vær ekstra opmærksom", "Vær forsigtig", "Vær opmærksom", "Ingen særlige advarsler"],
-    getCountries: async () => getDenmarkCountries(),
+    getCountries: async (_browser) => getDenmarkCountries(),
     isPageMissing: (text: string) =>
       text.length < 400 || DENMARK_NO_ADVISORY_PATTERNS.some((p) => p.test(text)),
   },
@@ -449,7 +541,7 @@ async function processSource(
   scrapedAt: Date,
 ) {
   console.log(`\n=== ${def.id.toUpperCase()} ===`);
-  const countries = await def.getCountries();
+  const countries = await def.getCountries(browser);
   console.log(`  ${countries.length} country URLs to process`);
 
   let ok = 0, skipped = 0, failed = 0;

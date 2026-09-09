@@ -222,6 +222,12 @@ function getMultiLevelDisplay(
         { level: "red", area: "Deelgebieden" },
       ];
     }
+    if (key === "level 3: reconsider travel" && hasRed) {
+      return [
+        { level: "orange", area: "Algemeen" },
+        { level: "red", area: "Deelgebieden" },
+      ];
+    }
     if (key === "level 2: exercise increased caution" && hasOrange) {
       return [
         { level: "yellow", area: "Algemeen" },
