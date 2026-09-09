@@ -24,7 +24,7 @@ const HASHES_PATH = path.join(__dirname, "../data/summaries-hashes.json");
 type SummaryData = Record<string, Record<string, string>>;
 type HashData = Record<string, Record<string, string>>;
 
-const PROMPT_VERSION = "v6";
+const PROMPT_VERSION = "v7";
 
 function hashText(text: string): string {
   return crypto.createHash("sha1").update(`${PROMPT_VERSION}:${text}`).digest("hex").slice(0, 12);
@@ -38,7 +38,9 @@ STRIKTE REGELS:
 4. Bij twijfel: weglaten.
 5. Gebruik idiomatische vertalingen: "exercise caution" → "wees voorzichtig", "exercise increased caution" → "wees extra voorzichtig", "reconsider travel" → "heroverweeg uw reis", "do not travel" → "reis niet naar", "avoid non-essential travel" → "vermijd niet-noodzakelijke reizen", "avoid all travel" → "vermijd alle reizen".
 6. Geen inleiding, afsluiting, Markdown-opmaak of asterisken. Maximaal 150 woorden.
-7. Jouw eigen kennis over het land is per definitie verouderd en irrelevant; alleen de brontekst telt.`;
+7. Jouw eigen kennis over het land is per definitie verouderd en irrelevant; alleen de brontekst telt.
+8. Verwerk ALLEEN informatie over het doelland zelf. Als de brontekst ook aangrenzende landen of regio's in andere landen noemt, negeer die volledig.
+9. Als er een hoogste risiconiveau voor een deelgebied geldt, noem dit expliciet en apart — meng het nooit met het algemene niveau.`;
 
 async function generateSummary(
   countryName: string,
