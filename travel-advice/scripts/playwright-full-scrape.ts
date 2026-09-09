@@ -93,15 +93,25 @@ async function getGermanyCountries(): Promise<Array<{ iso2: string; url: string 
       (v): v is NonNullable<typeof v> => typeof v === "object" && v !== null && "countryCode" in v
     );
 
-    return entries
+    const missing: string[] = [];
+    const result = entries
       .map((c) => {
         const iso2 = (c.countryCode ?? "").toUpperCase();
         if (!iso2 || iso2.length !== 2) return null;
-        const url = GERMANY_KNOWN_URLS[iso2] ?? c.reportUrl ?? null;
-        if (!url) return null;
-        return { iso2, url };
+        if (GERMANY_KNOWN_URLS[iso2]) {
+          return { iso2, url: GERMANY_KNOWN_URLS[iso2] };
+        }
+        // Not in known URLs: opendata API returns generic country pages, NOT security pages.
+        // These give wrong results ("Keine besonderen Sicherheitshinweise") — skip and warn.
+        missing.push(iso2);
+        return null;
       })
       .filter((x): x is { iso2: string; url: string } => x !== null);
+
+    if (missing.length > 0) {
+      console.warn(`  [GERMANY] SKIPPED ${missing.length} countries not in GERMANY_KNOWN_URLS (add security-page URLs to fix): ${missing.join(", ")}`);
+    }
+    return result;
   } catch (err) {
     console.error("Failed to fetch Germany country list:", err);
     return Object.entries(GERMANY_KNOWN_URLS).map(([iso2, url]) => ({ iso2, url }));
@@ -498,6 +508,23 @@ ${pageText.slice(0, 5000)}`;
   }
 }
 
+// ─── Severity guard ────────────────────────────────────────────────────────────
+// Never allow Playwright/Mistral to downgrade more than 1 severity step.
+// This prevents a bad scrape (wrong page, Mistral confusion) from silently
+// overwriting correct data with "Keine besonderen Sicherheitshinweise" etc.
+
+const SEVERITY_ORDER: Record<string, number> = {
+  green: 0, unknown: 0, yellow: 1, orange: 2, red: 3,
+};
+
+function isSafeWrite(existingLevel: string | null, newLevel: string): boolean {
+  if (!existingLevel) return true;
+  const oldSev = SEVERITY_ORDER[existingLevel] ?? -1;
+  const newSev = SEVERITY_ORDER[newLevel] ?? -1;
+  if (oldSev === -1 || newSev === -1) return true;
+  return oldSev - newSev <= 1;
+}
+
 // ─── DB write ──────────────────────────────────────────────────────────────────
 
 async function writeToDb(
@@ -527,6 +554,10 @@ async function writeToDb(
   });
 
   if (existing) {
+    if (!isSafeWrite(existing.normalizedLevel, normalizedLevel)) {
+      console.warn(`  ${iso2}: BLOCKED unsafe downgrade ${existing.normalizedLevel} → ${normalizedLevel} (page may be wrong/redirected)`);
+      return;
+    }
     await prisma.advisory.update({ where: { id: existing.id }, data });
   } else {
     const country = await prisma.country.findUnique({ where: { isoAlpha2: iso2 } });
@@ -571,9 +602,18 @@ async function processSource(
             }
           }
 
-          if (!text || text.length < 200) { skipped++; return; }
+          if (!text || text.length < 200) {
+            console.warn(`  ${iso2}: page too short (${text.length} chars) — skipping, check URL`);
+            skipped++; return;
+          }
 
-          if (def.isPageMissing?.(text)) { skipped++; return; }
+          if (def.isPageMissing?.(text)) {
+            if (def.id !== "denmark") {
+              // Denmark has many countries without advisory pages — skip silently
+              console.warn(`  ${iso2}: page missing/redirected — skipping, check URL`);
+            }
+            skipped++; return;
+          }
 
           const extracted = await extractWithMistral(text, def, iso2);
           if (!extracted) { failed++; return; }
