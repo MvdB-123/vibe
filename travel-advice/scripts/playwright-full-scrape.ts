@@ -509,20 +509,39 @@ ${pageText.slice(0, 5000)}`;
 }
 
 // ─── Severity guard ────────────────────────────────────────────────────────────
-// Never allow Playwright/Mistral to downgrade more than 1 severity step.
-// This prevents a bad scrape (wrong page, Mistral confusion) from silently
-// overwriting correct data with "Keine besonderen Sicherheitshinweise" etc.
+// Block writes only when a bad scrape (wrong page, Mistral confusion) returns
+// the ABSOLUTE LOWEST level for a source while the existing level was orange or
+// red. Real improvements (red→orange, orange→yellow, even red→yellow) are always
+// allowed through — only the suspicious "floor" result is blocked.
 
 const SEVERITY_ORDER: Record<string, number> = {
   green: 0, unknown: 0, yellow: 1, orange: 2, red: 3,
 };
 
-function isSafeWrite(existingLevel: string | null, newLevel: string): boolean {
-  if (!existingLevel) return true;
-  const oldSev = SEVERITY_ORDER[existingLevel] ?? -1;
-  const newSev = SEVERITY_ORDER[newLevel] ?? -1;
-  if (oldSev === -1 || newSev === -1) return true;
-  return oldSev - newSev <= 1;
+// The lowest ("no risk") raw level for each source — almost never a real result
+// for a country that was previously at orange/red risk.
+const SUSPICIOUS_FLOOR_LEVELS: Record<string, Set<string>> = {
+  germany:   new Set(["keine besonderen sicherheitshinweise"]),
+  sweden:    new Set(["inga särskilda restriktioner", "borttagen avrådan"]),
+  denmark:   new Set(["ingen særlige advarsler"]),
+  australia: new Set(["exercise normal safety precautions"]),
+  us:        new Set(["level 1: exercise normal precautions"]),
+};
+
+function isSuspiciousDowngrade(
+  sourceId: string,
+  existingNormalizedLevel: string | null,
+  newRawLevel: string,
+  newNormalizedLevel: string,
+): boolean {
+  if (!existingNormalizedLevel) return false;
+  const existingSev = SEVERITY_ORDER[existingNormalizedLevel] ?? -1;
+  if (existingSev < 2) return false; // existing was already low — no concern
+  const newSev = SEVERITY_ORDER[newNormalizedLevel] ?? -1;
+  if (newSev >= existingSev - 1) return false; // improvement of ≤1 step — always safe
+  const floorLevels = SUSPICIOUS_FLOOR_LEVELS[sourceId];
+  // Block only if new level is the absolute floor for this source
+  return !!floorLevels && floorLevels.has(newRawLevel.toLowerCase().trim());
 }
 
 // ─── DB write ──────────────────────────────────────────────────────────────────
@@ -554,8 +573,9 @@ async function writeToDb(
   });
 
   if (existing) {
-    if (!isSafeWrite(existing.normalizedLevel, normalizedLevel)) {
-      console.warn(`  ${iso2}: BLOCKED unsafe downgrade ${existing.normalizedLevel} → ${normalizedLevel} (page may be wrong/redirected)`);
+    if (isSuspiciousDowngrade(sourceId, existing.normalizedLevel, rawLevel, normalizedLevel)) {
+      // Log prominently so it surfaces in GitHub Actions log search
+      console.warn(`[GUARD-BLOCKED] ${sourceId}/${iso2}: suspicious floor result "${rawLevel}" (${normalizedLevel}) while existing is ${existing.normalizedLevel} — page likely wrong/redirected. Keeping existing data.`);
       return;
     }
     await prisma.advisory.update({ where: { id: existing.id }, data });

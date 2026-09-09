@@ -4,7 +4,9 @@
     "rawLevel": "Vigilance renforcée",
     "summary": "La Jordanie est globalement placée sous le niveau vigilance renforcée en raison de la situation sécuritaire régionale et du risque terroriste. Le gouvernorat de Ma'an et les zones frontalières avec les Territoires palestiniens sont déconseillés sauf raison impérative en raison de l'instabilité. Les zones frontalières avec la Syrie et l'Irak sont formellement déconseillées en raison des conflits armés et du risque élevé de terrorisme.",
     "url": "https://www.diplomatie.gouv.fr/fr/conseils-aux-voyageurs/conseils-par-pays-destination/jordanie/",
-    "updatedAt": "2026-08-29"
+    "updatedAt": "2026-08-29",
+    "isManualOverride": true,
+    "overrideNote": "Compound zone keywords not reliably extracted by scraper. Remove once Bug 0/2 (Mistral compound extraction) is fixed and verified."
   },
   {
     "iso2": "ID",
