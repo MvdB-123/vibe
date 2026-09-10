@@ -63,24 +63,33 @@ const KNOWN_ISO_SLUGS: Record<string, string> = {
 };
 
 function extractLevelFromHtml(html: string): string {
-  // Strip nav/header/footer to avoid picking up levels from boilerplate
-  const plain = html
+  // Strip nav/header/footer/aside to avoid boilerplate contamination
+  const stripped = html
     .replace(/<script[\s\S]*?<\/script>/gi, "")
     .replace(/<style[\s\S]*?<\/style>/gi, "")
     .replace(/<nav[\s\S]*?<\/nav>/gi, "")
     .replace(/<header[\s\S]*?<\/header>/gi, "")
     .replace(/<footer[\s\S]*?<\/footer>/gi, "")
-    .replace(/<[^>]*>/g, " ");
+    .replace(/<aside[\s\S]*?<\/aside>/gi, "");
 
-  // Return the LEAST SEVERE level found — this is the general country level.
-  // Regional breakdowns list stricter zones first, so we don't want the max.
-  let minLevel = { rawLevel: "Vigilance normale", severity: Infinity };
-  for (const { pattern, rawLevel, severity } of LEVEL_SELECTORS) {
-    if (pattern.test(plain) && severity < minLevel.severity) {
-      minLevel = { rawLevel, severity };
+  const plain = stripped.replace(/<[^>]*>/g, " ").replace(/\s+/g, " ");
+
+  // Find the FIRST occurrence of any advisory level in the page text.
+  // On French MFA pages the general country advisory level is shown near the top
+  // of the main content (in the colored banner), before the zone-by-zone breakdown.
+  // The first match by character position is therefore the general country level.
+  let firstMatch: { rawLevel: string; index: number } | null = null;
+  for (const { pattern, rawLevel } of LEVEL_SELECTORS) {
+    const m = plain.match(pattern);
+    if (m && m.index !== undefined) {
+      if (!firstMatch || m.index < firstMatch.index) {
+        firstMatch = { rawLevel, index: m.index };
+      }
     }
   }
-  return minLevel.severity === Infinity ? "Vigilance normale" : minLevel.rawLevel;
+  if (firstMatch) return firstMatch.rawLevel;
+
+  return "Vigilance normale";
 }
 
 function extractSummary(html: string): string {
