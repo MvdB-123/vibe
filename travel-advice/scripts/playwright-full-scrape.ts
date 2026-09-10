@@ -443,9 +443,44 @@ const SOURCES: Record<string, SourceDef> = {
 
 interface Extracted {
   level: string;
+  subZoneLevel: string | null;
   summary: string;
   updatedAt: string | null;
 }
+
+// Per-source map: sub-zone rawLevel (lowercase) → phrase to append to summary.
+// These phrases are chosen to match the hasRed/hasOrange regex patterns in
+// getMultiLevelDisplay (page.tsx / multi-level.ts), so compound-zone chips
+// always appear when a real sub-zone exists — even if Mistral's free-text summary
+// doesn't happen to use those exact words.
+const SUBZONE_TRIGGER_PHRASES: Record<string, Record<string, string>> = {
+  us: {
+    "level 4: do not travel": "Do not travel (Level 4) to specific areas.",
+    "level 3: reconsider travel": "Reconsider travel (Level 3) to some areas.",
+  },
+  australia: {
+    "do not travel": "Do not travel to specific regions.",
+    "reconsider your need to travel": "Reconsider your need to travel to some areas.",
+  },
+  germany: {
+    "reisewarnung": "Reisewarnung für das Grenzgebiet.",
+    "von nicht notwendigen reisen abraten": "Von nicht notwendigen Reisen wird für einige Gebiete abgeraten.",
+    "von reisen wird dringend abgeraten": "Von Reisen wird dringend abgeraten für Grenzgebiete.",
+  },
+  sweden: {
+    "avrådan från alla resor": "avråder från alla resor till gränsområdena.",
+    "avråd från resor": "avråder från alla resor till gränsområdena.",
+    "avrådan från icke nödvändiga resor": "avråder från icke nödvändiga resor till vissa områden.",
+    "avråd från icke nödvändiga resor": "avråder från icke nödvändiga resor till vissa områden.",
+  },
+  denmark: {
+    "rejse frarådes": "fraråder alle rejser til grænseområderne.",
+    "undgå alle rejser": "fraråder alle rejser til grænseområderne.",
+    "fråråd ikke-nødvendige rejser": "fraråder ikke-nødvendige rejser til dele af landet.",
+    "vær ekstra forsigtig": "fraråder ikke-nødvendige rejser til dele af landet.",
+    "vær ekstra opmærksom": "fraråder ikke-nødvendige rejser til dele af landet.",
+  },
+};
 
 async function extractWithMistral(
   pageText: string,
@@ -454,26 +489,32 @@ async function extractWithMistral(
 ): Promise<Extracted | null> {
   const prompt = `You are analyzing a government travel advisory page written in ${def.language} for country code ${iso2}.
 
-Extract exactly three things:
+Extract exactly four things:
 
 1. LEVEL – Choose EXACTLY one option from this list (copy verbatim):
 ${def.levels.map((l) => `  - "${l}"`).join("\n")}
    Rule: choose the BASE level for the WHOLE country overall. Many advisories contain both a general country-level warning AND stricter warnings for specific regions/border areas. ALWAYS choose the general country level, NOT the level for a specific region. Example: if the page says "generally be cautious, but avoid all travel near the border with X", choose the lower "be cautious" level, not "avoid all travel".
 
-2. SUMMARY – 2–4 sentences in ${def.language} describing:
+2. SUB_ZONE_LEVEL – If the page mentions specific regions, border areas, or provinces with a HIGHER advisory level than the overall country level from step 1, return the HIGHEST such sub-zone level (copy verbatim from the same list). Return null if no specific sub-region has a higher level than the overall country level, or if the overall level is already the highest.
+   Examples:
+   - Overall: "Vær ekstra opmærksom" but border areas explicitly say "rejse frarådes" → return "Rejse frårådes"
+   - Overall: "Level 2: Exercise Increased Caution" but specific cities say "Level 4: Do Not Travel" → return "Level 4: Do Not Travel"
+   - Overall: "Level 4: Do Not Travel" for entire country → return null
+
+3. SUMMARY – 2–4 sentences in ${def.language} describing:
    - General advisory level and main reason (war, terrorism, crime, etc.)
-   - Specific regions/areas with HIGHER warnings and why, using the EXACT wording from the page (e.g. "border with Syria and Iraq", not paraphrased names)
+   - Specific regions/areas with HIGHER warnings, using VERBATIM wording from the page (e.g. "border with Syria and Iraq", not paraphrased or invented names)
    STRICT RULES for the summary:
-   - ONLY include information that appears VERBATIM or near-verbatim in the provided page text. Do NOT add place names, cities, provinces, or statistics from your training knowledge.
-   - ONLY include content about country ${iso2}. If the page mentions other countries, ignore those completely.
+   - ONLY include information that appears VERBATIM or near-verbatim in the provided page text. Do NOT add place names, cities, provinces, distances, or statistics from your training knowledge — even if they seem obviously correct.
+   - ONLY include content about country ${iso2}. If the page mentions other countries or regions outside ${iso2}, ignore those completely.
    - If a region with higher warnings exists, state its advisory level explicitly (e.g. "avoid all travel", "do not travel") so the level difference is clear.
    - No intro or closing phrases. Factual only.
 
-3. UPDATED – The MOST RECENT update date found anywhere on the page, in YYYY-MM-DD format, or null if not found.
-   Look for: explicit date labels, "OBS: DD.MM.YYYY" timestamps (Danish pages), "Stand:" or "Letzte Änderung:" (German), "Date de mise à jour" (French), or any timestamp near the top.
+4. UPDATED – The MOST RECENT update date found anywhere on the page, in YYYY-MM-DD format, or null if not found.
+   Look for: explicit date labels, "OBS: DD.MM.YYYY" timestamps (Danish pages), "Stand:" or "Letzte Änderung:" (German), "Date de mise à jour" (French), "Date issued:" or "Last updated:" (English), or any timestamp near the top.
    If multiple dates exist, return the LATEST one.
 
-Respond with JSON only: {"level": "...", "summary": "...", "updatedAt": "YYYY-MM-DD or null"}
+Respond with JSON only: {"level": "...", "subZoneLevel": "..." or null, "summary": "...", "updatedAt": "YYYY-MM-DD or null"}
 
 Page text (first 5000 chars):
 ${pageText.slice(0, 5000)}`;
@@ -497,8 +538,12 @@ ${pageText.slice(0, 5000)}`;
       console.error(`  Bad level: "${parsed.level}"`);
       return null;
     }
+    const subZoneLevel = (parsed.subZoneLevel && parsed.subZoneLevel !== "null" && def.levels.includes(parsed.subZoneLevel))
+      ? parsed.subZoneLevel
+      : null;
     return {
       level: parsed.level,
+      subZoneLevel,
       summary: parsed.summary ?? "",
       updatedAt: parsed.updatedAt && parsed.updatedAt !== "null" ? parsed.updatedAt : null,
     };
@@ -509,20 +554,39 @@ ${pageText.slice(0, 5000)}`;
 }
 
 // ─── Severity guard ────────────────────────────────────────────────────────────
-// Never allow Playwright/Mistral to downgrade more than 1 severity step.
-// This prevents a bad scrape (wrong page, Mistral confusion) from silently
-// overwriting correct data with "Keine besonderen Sicherheitshinweise" etc.
+// Block writes only when a bad scrape (wrong page, Mistral confusion) returns
+// the ABSOLUTE LOWEST level for a source while the existing level was orange or
+// red. Real improvements (red→orange, orange→yellow, even red→yellow) are always
+// allowed through — only the suspicious "floor" result is blocked.
 
 const SEVERITY_ORDER: Record<string, number> = {
   green: 0, unknown: 0, yellow: 1, orange: 2, red: 3,
 };
 
-function isSafeWrite(existingLevel: string | null, newLevel: string): boolean {
-  if (!existingLevel) return true;
-  const oldSev = SEVERITY_ORDER[existingLevel] ?? -1;
-  const newSev = SEVERITY_ORDER[newLevel] ?? -1;
-  if (oldSev === -1 || newSev === -1) return true;
-  return oldSev - newSev <= 1;
+// The lowest ("no risk") raw level for each source — almost never a real result
+// for a country that was previously at orange/red risk.
+const SUSPICIOUS_FLOOR_LEVELS: Record<string, Set<string>> = {
+  germany:   new Set(["keine besonderen sicherheitshinweise"]),
+  sweden:    new Set(["inga särskilda restriktioner", "borttagen avrådan"]),
+  denmark:   new Set(["ingen særlige advarsler"]),
+  australia: new Set(["exercise normal safety precautions"]),
+  us:        new Set(["level 1: exercise normal precautions"]),
+};
+
+function isSuspiciousDowngrade(
+  sourceId: string,
+  existingNormalizedLevel: string | null,
+  newRawLevel: string,
+  newNormalizedLevel: string,
+): boolean {
+  if (!existingNormalizedLevel) return false;
+  const existingSev = SEVERITY_ORDER[existingNormalizedLevel] ?? -1;
+  if (existingSev < 2) return false; // existing was already low — no concern
+  const newSev = SEVERITY_ORDER[newNormalizedLevel] ?? -1;
+  if (newSev >= existingSev - 1) return false; // improvement of ≤1 step — always safe
+  const floorLevels = SUSPICIOUS_FLOOR_LEVELS[sourceId];
+  // Block only if new level is the absolute floor for this source
+  return !!floorLevels && floorLevels.has(newRawLevel.toLowerCase().trim());
 }
 
 // ─── DB write ──────────────────────────────────────────────────────────────────
@@ -554,8 +618,9 @@ async function writeToDb(
   });
 
   if (existing) {
-    if (!isSafeWrite(existing.normalizedLevel, normalizedLevel)) {
-      console.warn(`  ${iso2}: BLOCKED unsafe downgrade ${existing.normalizedLevel} → ${normalizedLevel} (page may be wrong/redirected)`);
+    if (isSuspiciousDowngrade(sourceId, existing.normalizedLevel, rawLevel, normalizedLevel)) {
+      // Log prominently so it surfaces in GitHub Actions log search
+      console.warn(`[GUARD-BLOCKED] ${sourceId}/${iso2}: suspicious floor result "${rawLevel}" (${normalizedLevel}) while existing is ${existing.normalizedLevel} — page likely wrong/redirected. Keeping existing data.`);
       return;
     }
     await prisma.advisory.update({ where: { id: existing.id }, data });
@@ -643,6 +708,29 @@ async function processSource(
               if (!isNaN(d.getTime()) && (!officialUpdatedAt || d > officialUpdatedAt)) {
                 officialUpdatedAt = d;
               }
+            }
+          }
+
+          // US: "Date issued: August 29, 2026"
+          const usDateMatch = text.match(/Date\s+issued:\s*([A-Za-z]+)\s+(\d{1,2}),\s*(\d{4})/i);
+          if (usDateMatch) {
+            const month = MONTH_MAP[usDateMatch[1].toLowerCase()];
+            if (month) {
+              const d = new Date(`${usDateMatch[3]}-${month}-${usDateMatch[2].padStart(2, "0")}`);
+              if (!isNaN(d.getTime()) && (!officialUpdatedAt || d > officialUpdatedAt)) {
+                officialUpdatedAt = d;
+              }
+            }
+          }
+
+          // Inject compound-zone trigger phrase into summary if a sub-zone level was
+          // found. This guarantees that hasRed/hasOrange in getMultiLevelDisplay() fire
+          // correctly, regardless of how Mistral phrased the free-text summary.
+          if (extracted.subZoneLevel) {
+            const sourceMap = SUBZONE_TRIGGER_PHRASES[def.id];
+            const triggerPhrase = sourceMap?.[extracted.subZoneLevel.toLowerCase().trim()];
+            if (triggerPhrase && !extracted.summary.toLowerCase().includes(triggerPhrase.slice(0, 20).toLowerCase())) {
+              extracted.summary = extracted.summary.trimEnd() + " " + triggerPhrase;
             }
           }
 

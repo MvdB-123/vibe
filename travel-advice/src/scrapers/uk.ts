@@ -211,8 +211,11 @@ export const ukScraper: Scraper = async () => {
     const staticUrl = "https://raw.githubusercontent.com/MvdB-123/vibe/main/travel-advice/data/uk-advisories.json";
     const res = await fetch(staticUrl, { signal: AbortSignal.timeout(10_000) });
     if (res.ok) {
-      const staticData: Array<{ iso2: string; rawLevel: string; summary: string; url: string; updatedAt?: string }> = await res.json();
+      const staticData: Array<{ iso2: string; rawLevel: string; summary: string; url: string; updatedAt?: string; isManualOverride?: boolean; overrideNote?: string }> = await res.json();
       for (const entry of staticData) {
+        if (entry.isManualOverride) {
+          console.warn(`[MANUAL-OVERRIDE] uk/${entry.iso2}: using static data. Note: ${entry.overrideNote ?? "see supplement JSON"}`);
+        }
         const idx = advisories.findIndex((a) => a.destIso2 === entry.iso2);
         if (idx >= 0) {
           advisories[idx] = { ...advisories[idx], summary: entry.summary, rawLevel: entry.rawLevel, normalizedLevel: normalizeLevel("uk", entry.rawLevel) };

@@ -4,7 +4,9 @@
     "rawLevel": "Vær ekstra forsigtig",
     "summary": "Udenrigsministeriet fraråder ikke-nødvendige rejser til dele af Jordan på grund af den regionale sikkerhedssituation og risikoen for terrorisme. Udenrigsministeriet fraråder alle rejser til grænseområderne mod Syrien og Irak på grund af den volatile sikkerhedssituation og risikoen for terrorisme og væbnet konflikt.",
     "url": "https://um.dk/rejse-og-ophold/rejse-til-udlandet/rejsevejledninger/jordan",
-    "updatedAt": "2026-08-29"
+    "updatedAt": "2026-08-29",
+    "isManualOverride": true,
+    "overrideNote": "Compound zone keywords not reliably extracted by scraper. Remove once Bug 0/2 (Mistral compound extraction) is fixed and verified."
   },
   {
     "iso2": "AF",

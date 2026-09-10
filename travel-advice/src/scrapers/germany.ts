@@ -228,8 +228,11 @@ export const germanyScraper: Scraper = async () => {
       const staticUrl = "https://raw.githubusercontent.com/MvdB-123/vibe/main/travel-advice/data/germany-advisories.json";
       const sRes = await fetch(staticUrl, { signal: AbortSignal.timeout(10_000) });
       if (sRes.ok) {
-        const staticData: Array<{ iso2: string; rawLevel: string; summary: string; url: string; updatedAt?: string }> = await sRes.json();
+        const staticData: Array<{ iso2: string; rawLevel: string; summary: string; url: string; updatedAt?: string; isManualOverride?: boolean; overrideNote?: string }> = await sRes.json();
         for (const entry of staticData) {
+        if (entry.isManualOverride) {
+          console.warn(`[MANUAL-OVERRIDE] germany/${entry.iso2}: using static data. Note: ${entry.overrideNote ?? "see supplement JSON"}`);
+        }
           const idx = advisories.findIndex((a) => a.destIso2 === entry.iso2);
           if (idx >= 0) {
             advisories[idx] = {
